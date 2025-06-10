@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Jun  5 17:21:00 2025
+# Process ID: 22316
+# Current directory: C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.runs/impl_1
+# Command line: vivado.exe -log debug_module_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source debug_module_wrapper.tcl -notrace
+# Log file: C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.runs/impl_1/debug_module_wrapper.vdi
+# Journal file: C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.runs/impl_1\vivado.jou
+# Running On: LAPTOP-PGUMC0OJ, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 6, Host memory: 16931 MB
+#-----------------------------------------------------------
+source debug_module_wrapper.tcl -notrace

@@ -1,0 +1,15 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../Test_design/project_1/project_1.srcs/sources_1/new/Clock_div.vhd" \
+"../../../../../../Test_design/project_1/project_1.srcs/sources_1/new/echo_analyzer.vhd" \
+"../../../../../../Test_design/project_1/project_1.srcs/sources_1/new/segment_test_2.vhd" \
+"../../../../../../Test_design/project_1/project_1.srcs/sources_1/new/trigger_pulse_gen_1.vhd" \
+"../../../../project_1.ip_user_files/bd/Simulation/ip/Simulation_Clock_div_0_1/sim/Simulation_Clock_div_0_1.vhd" \
+"../../../../project_1.ip_user_files/bd/Simulation/ip/Simulation_echo_analyzer_0_0/sim/Simulation_echo_analyzer_0_0.vhd" \
+"../../../../project_1.ip_user_files/bd/Simulation/ip/Simulation_segment_test_2_0_0/sim/Simulation_segment_test_2_0_0.vhd" \
+"../../../../project_1.ip_user_files/bd/Simulation/ip/Simulation_trigger_pulse_gen_1_0_0/sim/Simulation_trigger_pulse_gen_1_0_0.vhd" \
+"../../../../project_1.ip_user_files/bd/Simulation/sim/Simulation.vhd" \
+"../../../../project_1.gen/sim_1/bd/Simulation/hdl/Simulation_wrapper.vhd" \
+
+# Do not sort compile order
+nosort
