@@ -15,7 +15,14 @@
       "ClockDivider1kHz_0": "",
       "speedcalc_0": "",
       "speedcalc_1": "",
-      "bin14_to_bcd_0": ""
+      "bin14_to_bcd_0": "",
+      "pwmcalculator_0": "",
+      "pwmcalculator_1": "",
+      "pwmsimple_0": "",
+      "ClockDivider100kHz_0": "",
+      "pwmsimple_1": "",
+      "SevenSegmentDriver_0": "",
+      "ClockDivider4kHz_0": ""
     },
     "ports": {
       "speed_sensor_input_left": {
@@ -24,25 +31,21 @@
       "speed_sensor_input_right": {
         "direction": "I"
       },
-      "first_seg": {
+      "Segment": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "Sel": {
         "direction": "O",
         "left": "3",
         "right": "0"
       },
-      "second_seg": {
-        "direction": "O",
-        "left": "3",
-        "right": "0"
+      "PWM_left": {
+        "direction": "O"
       },
-      "third_seg": {
-        "direction": "O",
-        "left": "3",
-        "right": "0"
-      },
-      "fourth_seg": {
-        "direction": "O",
-        "left": "3",
-        "right": "0"
+      "PWM_right": {
+        "direction": "O"
       }
     },
     "components": {
@@ -228,9 +231,252 @@
             "right": "0"
           }
         }
+      },
+      "pwmcalculator_0": {
+        "vlnv": "xilinx.com:module_ref:pwmcalculator:1.0",
+        "xci_name": "Main_block_pwmcalculator_0_0",
+        "xci_path": "ip\\Main_block_pwmcalculator_0_0\\Main_block_pwmcalculator_0_0.xci",
+        "inst_hier_path": "pwmcalculator_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pwmcalculator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "desiredspeed": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "measuredspeed": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "dutycycle": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "pwmcalculator_1": {
+        "vlnv": "xilinx.com:module_ref:pwmcalculator:1.0",
+        "xci_name": "Main_block_pwmcalculator_1_0",
+        "xci_path": "ip\\Main_block_pwmcalculator_1_0\\Main_block_pwmcalculator_1_0.xci",
+        "inst_hier_path": "pwmcalculator_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pwmcalculator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "desiredspeed": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "measuredspeed": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "dutycycle": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "pwmsimple_0": {
+        "vlnv": "xilinx.com:module_ref:pwmsimple:1.0",
+        "xci_name": "Main_block_pwmsimple_0_0",
+        "xci_path": "ip\\Main_block_pwmsimple_0_0\\Main_block_pwmsimple_0_0.xci",
+        "inst_hier_path": "pwmsimple_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pwmsimple",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "duty_cycle": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "pwm_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "ClockDivider100kHz_0": {
+        "vlnv": "xilinx.com:module_ref:ClockDivider100kHz:1.0",
+        "xci_name": "Main_block_ClockDivider100kHz_0_0",
+        "xci_path": "ip\\Main_block_ClockDivider100kHz_0_0\\Main_block_ClockDivider100kHz_0_0.xci",
+        "inst_hier_path": "ClockDivider100kHz_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ClockDivider100kHz",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_in": {
+            "direction": "I"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "pwmsimple_1": {
+        "vlnv": "xilinx.com:module_ref:pwmsimple:1.0",
+        "xci_name": "Main_block_pwmsimple_1_0",
+        "xci_path": "ip\\Main_block_pwmsimple_1_0\\Main_block_pwmsimple_1_0.xci",
+        "inst_hier_path": "pwmsimple_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pwmsimple",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "duty_cycle": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "pwm_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "SevenSegmentDriver_0": {
+        "vlnv": "xilinx.com:module_ref:SevenSegmentDriver:1.0",
+        "xci_name": "Main_block_SevenSegmentDriver_0_0",
+        "xci_path": "ip\\Main_block_SevenSegmentDriver_0_0\\Main_block_SevenSegmentDriver_0_0.xci",
+        "inst_hier_path": "SevenSegmentDriver_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "SevenSegmentDriver",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "BCD0": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "BCD1": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "BCD2": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "BCD3": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "SEG": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          },
+          "SEL": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "ClockDivider4kHz_0": {
+        "vlnv": "xilinx.com:module_ref:ClockDivider4kHz:1.0",
+        "xci_name": "Main_block_ClockDivider4kHz_0_0",
+        "xci_path": "ip\\Main_block_ClockDivider4kHz_0_0\\Main_block_ClockDivider4kHz_0_0.xci",
+        "inst_hier_path": "ClockDivider4kHz_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ClockDivider4kHz",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clkin": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clkout": {
+            "direction": "O"
+          }
+        }
       }
     },
     "nets": {
+      "ClockDivider100kHz_0_clk_out": {
+        "ports": [
+          "ClockDivider100kHz_0/clk_out",
+          "pwmsimple_0/clk",
+          "pwmsimple_1/clk"
+        ]
+      },
       "ClockDivider1kHz_0_clk_out": {
         "ports": [
           "ClockDivider1kHz_0/clk_out",
@@ -238,35 +484,62 @@
           "pulsecounter_1/clk"
         ]
       },
+      "ClockDivider4kHz_0_clkout": {
+        "ports": [
+          "ClockDivider4kHz_0/clkout",
+          "SevenSegmentDriver_0/clk"
+        ]
+      },
       "Net": {
         "ports": [
+          "ClockDivider4kHz_0/rst",
+          "SevenSegmentDriver_0/rst",
           "pulsecounter_0/rst",
           "ClockDivider1kHz_0/rst",
           "pulsecounter_1/rst"
         ]
       },
+      "Net1": {
+        "ports": [
+          "pwmsimple_0/reset",
+          "ClockDivider100kHz_0/rst",
+          "pwmsimple_1/reset"
+        ]
+      },
+      "SevenSegmentDriver_0_SEG": {
+        "ports": [
+          "SevenSegmentDriver_0/SEG",
+          "Segment"
+        ]
+      },
+      "SevenSegmentDriver_0_SEL": {
+        "ports": [
+          "SevenSegmentDriver_0/SEL",
+          "Sel"
+        ]
+      },
       "bin14_to_bcd_0_bcd_hundredth": {
         "ports": [
           "bin14_to_bcd_0/bcd_hundredth",
-          "third_seg"
+          "SevenSegmentDriver_0/BCD1"
         ]
       },
       "bin14_to_bcd_0_bcd_one": {
         "ports": [
           "bin14_to_bcd_0/bcd_one",
-          "first_seg"
+          "SevenSegmentDriver_0/BCD3"
         ]
       },
       "bin14_to_bcd_0_bcd_tenth": {
         "ports": [
           "bin14_to_bcd_0/bcd_tenth",
-          "second_seg"
+          "SevenSegmentDriver_0/BCD2"
         ]
       },
       "bin14_to_bcd_0_bcd_thousandth": {
         "ports": [
           "bin14_to_bcd_0/bcd_thousandth",
-          "fourth_seg"
+          "SevenSegmentDriver_0/BCD0"
         ]
       },
       "pulsecounter_0_pulse_time": {
@@ -281,6 +554,18 @@
           "speedcalc_1/time_in"
         ]
       },
+      "pwmsimple_0_pwm_out": {
+        "ports": [
+          "pwmsimple_0/pwm_out",
+          "PWM_left"
+        ]
+      },
+      "pwmsimple_1_pwm_out": {
+        "ports": [
+          "pwmsimple_1/pwm_out",
+          "PWM_right"
+        ]
+      },
       "speed_sensor_input_left_1": {
         "ports": [
           "speed_sensor_input_left",
@@ -291,6 +576,18 @@
         "ports": [
           "speed_sensor_input_right",
           "pulsecounter_1/pulse_in"
+        ]
+      },
+      "speedcalc_0_speed": {
+        "ports": [
+          "speedcalc_0/speed",
+          "pwmcalculator_0/measuredspeed"
+        ]
+      },
+      "speedcalc_1_speed": {
+        "ports": [
+          "speedcalc_1/speed",
+          "pwmcalculator_1/measuredspeed"
         ]
       }
     }
