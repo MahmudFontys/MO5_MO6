@@ -13,7 +13,9 @@
       "pulsecounter_0": "",
       "pulsecounter_1": "",
       "ClockDivider1kHz_0": "",
-      "ClockDivider1kHz_1": ""
+      "speedcalc_0": "",
+      "speedcalc_1": "",
+      "bin14_to_bcd_0": ""
     },
     "ports": {
       "speed_sensor_input_left": {
@@ -21,6 +23,26 @@
       },
       "speed_sensor_input_right": {
         "direction": "I"
+      },
+      "first_seg": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "second_seg": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "third_seg": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "fourth_seg": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
       }
     },
     "components": {
@@ -123,26 +145,87 @@
           }
         }
       },
-      "ClockDivider1kHz_1": {
-        "vlnv": "xilinx.com:module_ref:ClockDivider1kHz:1.0",
-        "xci_name": "Main_block_ClockDivider1kHz_1_0",
-        "xci_path": "ip\\Main_block_ClockDivider1kHz_1_0\\Main_block_ClockDivider1kHz_1_0.xci",
-        "inst_hier_path": "ClockDivider1kHz_1",
+      "speedcalc_0": {
+        "vlnv": "xilinx.com:module_ref:speedcalc:1.0",
+        "xci_name": "Main_block_speedcalc_0_0",
+        "xci_path": "ip\\Main_block_speedcalc_0_0\\Main_block_speedcalc_0_0.xci",
+        "inst_hier_path": "speedcalc_0",
         "reference_info": {
           "ref_type": "hdl",
-          "ref_name": "ClockDivider1kHz",
+          "ref_name": "speedcalc",
           "boundary_crc": "0x0"
         },
         "ports": {
-          "clk_in": {
-            "direction": "I"
+          "time_in": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
           },
-          "rst": {
-            "type": "rst",
-            "direction": "I"
+          "speed": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          }
+        }
+      },
+      "speedcalc_1": {
+        "vlnv": "xilinx.com:module_ref:speedcalc:1.0",
+        "xci_name": "Main_block_speedcalc_1_0",
+        "xci_path": "ip\\Main_block_speedcalc_1_0\\Main_block_speedcalc_1_0.xci",
+        "inst_hier_path": "speedcalc_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "speedcalc",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "time_in": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
           },
-          "clk_out": {
-            "direction": "O"
+          "speed": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          }
+        }
+      },
+      "bin14_to_bcd_0": {
+        "vlnv": "xilinx.com:module_ref:bin14_to_bcd:1.0",
+        "xci_name": "Main_block_bin14_to_bcd_0_0",
+        "xci_path": "ip\\Main_block_bin14_to_bcd_0_0\\Main_block_bin14_to_bcd_0_0.xci",
+        "inst_hier_path": "bin14_to_bcd_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "bin14_to_bcd",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "bin_input": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
+          },
+          "bcd_thousandth": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "bcd_hundredth": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "bcd_tenth": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "bcd_one": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
           }
         }
       }
@@ -151,25 +234,51 @@
       "ClockDivider1kHz_0_clk_out": {
         "ports": [
           "ClockDivider1kHz_0/clk_out",
-          "pulsecounter_0/clk"
-        ]
-      },
-      "ClockDivider1kHz_1_clk_out": {
-        "ports": [
-          "ClockDivider1kHz_1/clk_out",
+          "pulsecounter_0/clk",
           "pulsecounter_1/clk"
         ]
       },
       "Net": {
         "ports": [
           "pulsecounter_0/rst",
-          "ClockDivider1kHz_0/rst"
+          "ClockDivider1kHz_0/rst",
+          "pulsecounter_1/rst"
         ]
       },
-      "Net1": {
+      "bin14_to_bcd_0_bcd_hundredth": {
         "ports": [
-          "pulsecounter_1/rst",
-          "ClockDivider1kHz_1/rst"
+          "bin14_to_bcd_0/bcd_hundredth",
+          "third_seg"
+        ]
+      },
+      "bin14_to_bcd_0_bcd_one": {
+        "ports": [
+          "bin14_to_bcd_0/bcd_one",
+          "first_seg"
+        ]
+      },
+      "bin14_to_bcd_0_bcd_tenth": {
+        "ports": [
+          "bin14_to_bcd_0/bcd_tenth",
+          "second_seg"
+        ]
+      },
+      "bin14_to_bcd_0_bcd_thousandth": {
+        "ports": [
+          "bin14_to_bcd_0/bcd_thousandth",
+          "fourth_seg"
+        ]
+      },
+      "pulsecounter_0_pulse_time": {
+        "ports": [
+          "pulsecounter_0/pulse_time",
+          "speedcalc_0/time_in"
+        ]
+      },
+      "pulsecounter_1_pulse_time": {
+        "ports": [
+          "pulsecounter_1/pulse_time",
+          "speedcalc_1/time_in"
         ]
       },
       "speed_sensor_input_left_1": {

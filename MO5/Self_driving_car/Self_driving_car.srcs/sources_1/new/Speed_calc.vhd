@@ -4,8 +4,8 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity speedcalc is
     Port (
-        time_in     : in  STD_LOGIC_VECTOR(31 downto 0);
-        speed       : out STD_LOGIC_VECTOR(31 downto 0)
+        time_in     : in  STD_LOGIC_VECTOR(13 downto 0);
+        speed       : out STD_LOGIC_VECTOR(13 downto 0)
     );
 end speedcalc;
 
