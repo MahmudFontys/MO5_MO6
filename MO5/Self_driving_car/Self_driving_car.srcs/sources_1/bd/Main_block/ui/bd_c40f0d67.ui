@@ -1,50 +1,50 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.351936",
-   "Default View_TopLeft":"-929,-11",
+   "Default View_ScaleFactor":"1.47682",
+   "Default View_TopLeft":"431,3",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
-preplace port port-id_speed_sensor_input_left -pg 1 -lvl 0 -x 0 -y 550 -defaultsOSRD
-preplace port port-id_speed_sensor_input_right -pg 1 -lvl 0 -x 0 -y 710 -defaultsOSRD
-preplace port port-id_PWM_left -pg 1 -lvl 5 -x 1190 -y 0 -defaultsOSRD
-preplace port port-id_PWM_right -pg 1 -lvl 5 -x 1190 -y 30 -defaultsOSRD
-preplace portBus Segment -pg 1 -lvl 5 -x 1190 -y 370 -defaultsOSRD
-preplace portBus Sel -pg 1 -lvl 5 -x 1190 -y 400 -defaultsOSRD
-preplace inst pulsecounter_0 -pg 1 -lvl 2 -x 360 -y 570 -defaultsOSRD
-preplace inst pulsecounter_1 -pg 1 -lvl 2 -x 360 -y 730 -defaultsOSRD
-preplace inst ClockDivider1kHz_0 -pg 1 -lvl 1 -x 120 -y 780 -defaultsOSRD
-preplace inst speedcalc_0 -pg 1 -lvl 3 -x 650 -y 580 -defaultsOSRD
-preplace inst speedcalc_1 -pg 1 -lvl 3 -x 650 -y 740 -defaultsOSRD
-preplace inst bin14_to_bcd_0 -pg 1 -lvl 3 -x 650 -y 450 -defaultsOSRD
-preplace inst pwmcalculator_0 -pg 1 -lvl 4 -x 1000 -y 570 -defaultsOSRD
-preplace inst pwmcalculator_1 -pg 1 -lvl 4 -x 1000 -y 730 -defaultsOSRD
-preplace inst pwmsimple_0 -pg 1 -lvl 4 -x 1000 -y 80 -defaultsOSRD
-preplace inst ClockDivider100kHz_0 -pg 1 -lvl 3 -x 650 -y 70 -defaultsOSRD
-preplace inst pwmsimple_1 -pg 1 -lvl 4 -x 1000 -y 220 -defaultsOSRD
-preplace inst SevenSegmentDriver_0 -pg 1 -lvl 4 -x 1000 -y 390 -defaultsOSRD
-preplace inst ClockDivider4kHz_0 -pg 1 -lvl 3 -x 650 -y 290 -defaultsOSRD
-preplace netloc speed_sensor_input_left_1 1 0 2 NJ 550 NJ
-preplace netloc speed_sensor_input_right_1 1 0 2 NJ 710 NJ
-preplace netloc ClockDivider1kHz_0_clk_out 1 1 1 230 570n
-preplace netloc pulsecounter_0_pulse_time 1 2 1 NJ 580
-preplace netloc pulsecounter_1_pulse_time 1 2 1 NJ 740
-preplace netloc speedcalc_0_speed 1 3 1 NJ 580
-preplace netloc speedcalc_1_speed 1 3 1 NJ 740
-preplace netloc ClockDivider100kHz_0_clk_out 1 3 1 830 60n
-preplace netloc Net1 1 2 2 490 0 810
-preplace netloc ClockDivider4kHz_0_clkout 1 3 1 830J 290n
-preplace netloc Net 1 0 4 20 850 220 360 490 360 NJ
-preplace netloc bin14_to_bcd_0_bcd_one 1 3 1 840 440n
-preplace netloc bin14_to_bcd_0_bcd_tenth 1 3 1 830 420n
-preplace netloc bin14_to_bcd_0_bcd_hundredth 1 3 1 820 400n
-preplace netloc bin14_to_bcd_0_bcd_thousandth 1 3 1 810 380n
-preplace netloc SevenSegmentDriver_0_SEG 1 4 1 1160J 370n
-preplace netloc SevenSegmentDriver_0_SEL 1 4 1 NJ 400
-preplace netloc pwmsimple_0_pwm_out 1 4 1 1160 0n
-preplace netloc pwmsimple_1_pwm_out 1 4 1 1170 30n
-levelinfo -pg 1 0 120 360 650 1000 1190
-pagesize -pg 1 -db -bbox -sgen -210 -20 1330 860
+preplace port port-id_speed_sensor_input_left -pg 1 -lvl 0 -x 0 -y 590 -defaultsOSRD
+preplace port port-id_speed_sensor_input_right -pg 1 -lvl 0 -x 0 -y 750 -defaultsOSRD
+preplace port port-id_PWM_left -pg 1 -lvl 5 -x 1190 -y 340 -defaultsOSRD
+preplace port port-id_PWM_right -pg 1 -lvl 5 -x 1190 -y 480 -defaultsOSRD
+preplace portBus Segment -pg 1 -lvl 5 -x 1190 -y 160 -defaultsOSRD
+preplace portBus Sel -pg 1 -lvl 5 -x 1190 -y 190 -defaultsOSRD
+preplace inst pulsecounter_0 -pg 1 -lvl 2 -x 360 -y 610 -defaultsOSRD
+preplace inst pulsecounter_1 -pg 1 -lvl 2 -x 360 -y 770 -defaultsOSRD
+preplace inst ClockDivider1kHz_0 -pg 1 -lvl 1 -x 120 -y 820 -defaultsOSRD
+preplace inst speedcalc_0 -pg 1 -lvl 3 -x 660 -y 620 -defaultsOSRD
+preplace inst speedcalc_1 -pg 1 -lvl 3 -x 660 -y 780 -defaultsOSRD
+preplace inst bin14_to_bcd_0 -pg 1 -lvl 3 -x 660 -y 230 -defaultsOSRD
+preplace inst pwmcalculator_0 -pg 1 -lvl 4 -x 1010 -y 610 -defaultsOSRD
+preplace inst pwmcalculator_1 -pg 1 -lvl 4 -x 1010 -y 770 -defaultsOSRD
+preplace inst pwmsimple_0 -pg 1 -lvl 4 -x 1010 -y 340 -defaultsOSRD
+preplace inst ClockDivider100kHz_0 -pg 1 -lvl 3 -x 660 -y 370 -defaultsOSRD
+preplace inst pwmsimple_1 -pg 1 -lvl 4 -x 1010 -y 480 -defaultsOSRD
+preplace inst ClockDivider4kHz_0 -pg 1 -lvl 3 -x 660 -y 70 -defaultsOSRD
+preplace inst SevenSegmentDriver_0 -pg 1 -lvl 4 -x 1010 -y 170 -defaultsOSRD
+preplace netloc speed_sensor_input_left_1 1 0 2 NJ 590 NJ
+preplace netloc speed_sensor_input_right_1 1 0 2 NJ 750 NJ
+preplace netloc ClockDivider1kHz_0_clk_out 1 1 1 230 610n
+preplace netloc pulsecounter_0_pulse_time 1 2 1 NJ 620
+preplace netloc pulsecounter_1_pulse_time 1 2 1 NJ 780
+preplace netloc speedcalc_0_speed 1 3 1 NJ 620
+preplace netloc speedcalc_1_speed 1 3 1 NJ 780
+preplace netloc ClockDivider100kHz_0_clk_out 1 3 1 820 320n
+preplace netloc Net1 1 2 2 500 440 850
+preplace netloc ClockDivider4kHz_0_clkout 1 3 1 820J 70n
+preplace netloc Net 1 0 4 20 890 220 140 500 140 NJ
+preplace netloc bin14_to_bcd_0_bcd_one 1 3 1 850 220n
+preplace netloc bin14_to_bcd_0_bcd_tenth 1 3 1 840 200n
+preplace netloc bin14_to_bcd_0_bcd_hundredth 1 3 1 830 180n
+preplace netloc bin14_to_bcd_0_bcd_thousandth 1 3 1 820 160n
+preplace netloc SevenSegmentDriver_0_SEG 1 4 1 NJ 160
+preplace netloc SevenSegmentDriver_0_SEL 1 4 1 1170J 180n
+preplace netloc pwmsimple_0_pwm_out 1 4 1 NJ 340
+preplace netloc pwmsimple_1_pwm_out 1 4 1 NJ 480
+levelinfo -pg 1 0 120 360 660 1010 1190
+pagesize -pg 1 -db -bbox -sgen -210 0 1330 900
 "
 }
 

@@ -21,8 +21,8 @@
       "pwmsimple_0": "",
       "ClockDivider100kHz_0": "",
       "pwmsimple_1": "",
-      "SevenSegmentDriver_0": "",
-      "ClockDivider4kHz_0": ""
+      "ClockDivider4kHz_0": "",
+      "SevenSegmentDriver_0": ""
     },
     "ports": {
       "speed_sensor_input_left": {
@@ -381,6 +381,36 @@
           }
         }
       },
+      "ClockDivider4kHz_0": {
+        "vlnv": "xilinx.com:module_ref:ClockDivider4kHz:1.0",
+        "xci_name": "Main_block_ClockDivider4kHz_0_0",
+        "xci_path": "ip\\Main_block_ClockDivider4kHz_0_0\\Main_block_ClockDivider4kHz_0_0.xci",
+        "inst_hier_path": "ClockDivider4kHz_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ClockDivider4kHz",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clkin": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clkout": {
+            "direction": "O"
+          }
+        }
+      },
       "SevenSegmentDriver_0": {
         "vlnv": "xilinx.com:module_ref:SevenSegmentDriver:1.0",
         "xci_name": "Main_block_SevenSegmentDriver_0_0",
@@ -437,36 +467,6 @@
             "right": "0"
           }
         }
-      },
-      "ClockDivider4kHz_0": {
-        "vlnv": "xilinx.com:module_ref:ClockDivider4kHz:1.0",
-        "xci_name": "Main_block_ClockDivider4kHz_0_0",
-        "xci_path": "ip\\Main_block_ClockDivider4kHz_0_0\\Main_block_ClockDivider4kHz_0_0.xci",
-        "inst_hier_path": "ClockDivider4kHz_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "ClockDivider4kHz",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clkin": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              }
-            }
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "clkout": {
-            "direction": "O"
-          }
-        }
       }
     },
     "nets": {
@@ -493,10 +493,10 @@
       "Net": {
         "ports": [
           "ClockDivider4kHz_0/rst",
-          "SevenSegmentDriver_0/rst",
           "pulsecounter_0/rst",
           "ClockDivider1kHz_0/rst",
-          "pulsecounter_1/rst"
+          "pulsecounter_1/rst",
+          "SevenSegmentDriver_0/rst"
         ]
       },
       "Net1": {
