@@ -1,0 +1,166 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x55C33172308BD60A",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../Self_driving_car.gen/sources_1/bd/Speed_sensor_input_dec",
+      "name": "Speed_sensor_input_dec",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "pulsecounter_0": "",
+      "ClockDivider1kHz_0": "",
+      "speedcalc_0": ""
+    },
+    "ports": {
+      "Pulse_in": {
+        "direction": "I"
+      },
+      "clk": {
+        "direction": "I"
+      },
+      "rst": {
+        "direction": "I"
+      },
+      "Pulse_Time_out": {
+        "direction": "O",
+        "left": "13",
+        "right": "0"
+      },
+      "Speed_out": {
+        "direction": "O",
+        "left": "13",
+        "right": "0"
+      }
+    },
+    "components": {
+      "pulsecounter_0": {
+        "vlnv": "xilinx.com:module_ref:pulsecounter:1.0",
+        "xci_name": "Speed_sensor_input_dec_pulsecounter_0_0",
+        "xci_path": "ip\\Speed_sensor_input_dec_pulsecounter_0_0\\Speed_sensor_input_dec_pulsecounter_0_0.xci",
+        "inst_hier_path": "pulsecounter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pulsecounter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "pulse_in": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "available": {
+            "direction": "O"
+          },
+          "pulse_time": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          }
+        }
+      },
+      "ClockDivider1kHz_0": {
+        "vlnv": "xilinx.com:module_ref:ClockDivider1kHz:1.0",
+        "xci_name": "Speed_sensor_input_dec_ClockDivider1kHz_0_0",
+        "xci_path": "ip\\Speed_sensor_input_dec_ClockDivider1kHz_0_0\\Speed_sensor_input_dec_ClockDivider1kHz_0_0.xci",
+        "inst_hier_path": "ClockDivider1kHz_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ClockDivider1kHz",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_in": {
+            "direction": "I"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "speedcalc_0": {
+        "vlnv": "xilinx.com:module_ref:speedcalc:1.0",
+        "xci_name": "Speed_sensor_input_dec_speedcalc_0_0",
+        "xci_path": "ip\\Speed_sensor_input_dec_speedcalc_0_0\\Speed_sensor_input_dec_speedcalc_0_0.xci",
+        "inst_hier_path": "speedcalc_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "speedcalc",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "time_in": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
+          },
+          "speed": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "ClockDivider1kHz_0_clk_out": {
+        "ports": [
+          "ClockDivider1kHz_0/clk_out",
+          "pulsecounter_0/clk"
+        ]
+      },
+      "Net": {
+        "ports": [
+          "rst",
+          "ClockDivider1kHz_0/rst",
+          "pulsecounter_0/rst"
+        ]
+      },
+      "Pulse_in_1": {
+        "ports": [
+          "Pulse_in",
+          "pulsecounter_0/pulse_in"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "ClockDivider1kHz_0/clk_in"
+        ]
+      },
+      "pulsecounter_0_pulse_time": {
+        "ports": [
+          "pulsecounter_0/pulse_time",
+          "Pulse_Time_out",
+          "speedcalc_0/time_in"
+        ]
+      },
+      "speedcalc_0_speed": {
+        "ports": [
+          "speedcalc_0/speed",
+          "Speed_out"
+        ]
+      }
+    }
+  }
+}

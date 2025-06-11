@@ -1,0 +1,173 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xFD53FDD0253C4D1C",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../Self_driving_car.gen/sources_1/bd/PWM_Gen_Daan",
+      "name": "PWM_Gen_Daan",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "pwmcalculator_0": "",
+      "pwmsimple_0": "",
+      "ClockDivider100kHz_0": ""
+    },
+    "ports": {
+      "clk": {
+        "direction": "I"
+      },
+      "rst": {
+        "direction": "I"
+      },
+      "pwm_out": {
+        "direction": "O"
+      },
+      "desired_speed": {
+        "direction": "I",
+        "left": "13",
+        "right": "0"
+      },
+      "measured_speed": {
+        "direction": "I",
+        "left": "13",
+        "right": "0"
+      }
+    },
+    "components": {
+      "pwmcalculator_0": {
+        "vlnv": "xilinx.com:module_ref:pwmcalculator:1.0",
+        "xci_name": "PWM_Gen_Daan_pwmcalculator_0_0",
+        "xci_path": "ip\\PWM_Gen_Daan_pwmcalculator_0_0\\PWM_Gen_Daan_pwmcalculator_0_0.xci",
+        "inst_hier_path": "pwmcalculator_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pwmcalculator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "desiredspeed": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
+          },
+          "measuredspeed": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
+          },
+          "dutycycle": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "pwmsimple_0": {
+        "vlnv": "xilinx.com:module_ref:pwmsimple:1.0",
+        "xci_name": "PWM_Gen_Daan_pwmsimple_0_0",
+        "xci_path": "ip\\PWM_Gen_Daan_pwmsimple_0_0\\PWM_Gen_Daan_pwmsimple_0_0.xci",
+        "inst_hier_path": "pwmsimple_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pwmsimple",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "duty_cycle": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "pwm_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "ClockDivider100kHz_0": {
+        "vlnv": "xilinx.com:module_ref:ClockDivider100kHz:1.0",
+        "xci_name": "PWM_Gen_Daan_ClockDivider100kHz_0_0",
+        "xci_path": "ip\\PWM_Gen_Daan_ClockDivider100kHz_0_0\\PWM_Gen_Daan_ClockDivider100kHz_0_0.xci",
+        "inst_hier_path": "ClockDivider100kHz_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ClockDivider100kHz",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_in": {
+            "direction": "I"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_out": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "ClockDivider100kHz_0_clk_out": {
+        "ports": [
+          "ClockDivider100kHz_0/clk_out",
+          "pwmsimple_0/clk"
+        ]
+      },
+      "Net": {
+        "ports": [
+          "rst",
+          "ClockDivider100kHz_0/rst",
+          "pwmsimple_0/reset"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "ClockDivider100kHz_0/clk_in"
+        ]
+      },
+      "desired_speed_1": {
+        "ports": [
+          "desired_speed",
+          "pwmcalculator_0/desiredspeed"
+        ]
+      },
+      "measured_speed_1": {
+        "ports": [
+          "measured_speed",
+          "pwmcalculator_0/measuredspeed"
+        ]
+      },
+      "pwmcalculator_0_dutycycle": {
+        "ports": [
+          "pwmcalculator_0/dutycycle",
+          "pwmsimple_0/duty_cycle"
+        ]
+      },
+      "pwmsimple_0_pwm_out": {
+        "ports": [
+          "pwmsimple_0/pwm_out",
+          "pwm_out"
+        ]
+      }
+    }
+  }
+}
