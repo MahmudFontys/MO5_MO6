@@ -1,0 +1,35 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.717938",
+   "Default View_TopLeft":"25,-327",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 threadsafe
+#  -string -flagsOSRD
+preplace port port-id_GPIO_U12 -pg 1 -lvl 7 -x 1580 -y -140 -defaultsOSRD
+preplace port port-id_GPIO_T14 -pg 1 -lvl 0 -x -30 -y 40 -defaultsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x -30 -y -130 -defaultsOSRD
+preplace port port-id_nrst -pg 1 -lvl 0 -x -30 -y -20 -defaultsOSRD
+preplace portBus sgmnt -pg 1 -lvl 7 -x 1580 -y 0 -defaultsOSRD
+preplace portBus control_seg -pg 1 -lvl 7 -x 1580 -y 40 -defaultsOSRD
+preplace inst Clock_div_0 -pg 1 -lvl 2 -x 290 -y -140 -defaultsOSRD
+preplace inst segment_test_2_0 -pg 1 -lvl 6 -x 1410 -y 0 -defaultsOSRD
+preplace inst trigger_pulse_gen_1_0 -pg 1 -lvl 5 -x 1150 -y -200 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 80 -y -150 -defaultsOSRD
+preplace inst echo_analyzer_0 -pg 1 -lvl 3 -x 600 -y 30 -defaultsOSRD
+preplace inst seg_buff_0 -pg 1 -lvl 4 -x 910 -y 30 -defaultsOSRD
+preplace netloc Clock_div_0_clk_out_400Hz 1 2 4 N -150 760J -40 N -40 1250
+preplace netloc trigger_pulse_gen_1_0_GPIO_U12 1 5 2 1250 -140 N
+preplace netloc GPIO_T14_1 1 0 3 N 40 N 40 NJ
+preplace netloc segment_test_2_0_sgmnt 1 6 1 1560 -10n
+preplace netloc segment_test_2_0_control_seg 1 6 1 1560 10n
+preplace netloc clk_1 1 0 1 -10 -140n
+preplace netloc clk_wiz_0_clk_out1 1 1 1 170 -160n
+preplace netloc nrst_1 1 0 2 NJ -20 170
+preplace netloc echo_analyzer_0_pulse_duration 1 3 1 770 20n
+preplace netloc Clock_div_0_clk_out_1MHz 1 2 3 450 -200 N -200 N
+preplace netloc seg_buff_0_distance 1 4 2 1050 10 NJ
+levelinfo -pg 1 -30 80 290 600 910 1150 1410 1580
+pagesize -pg 1 -db -bbox -sgen -150 -260 1740 140
+"
+}
+0

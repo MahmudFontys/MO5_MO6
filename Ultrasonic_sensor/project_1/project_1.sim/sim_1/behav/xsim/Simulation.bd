@@ -1,0 +1,222 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x7C5136957C513695",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../project_1.gen/sim_1/bd/Simulation",
+      "name": "Simulation",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "None",
+      "tool_version": "2023.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "Clock_div_1": "",
+      "segment_test_2_0": "",
+      "trigger_pulse_gen_1_0": "",
+      "sim_clk_gen_0": "",
+      "echo_analyzer_0": ""
+    },
+    "ports": {
+      "GPIO_U12": {
+        "direction": "O"
+      },
+      "control_seg": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "sgmnt": {
+        "direction": "O",
+        "left": "6",
+        "right": "0"
+      }
+    },
+    "components": {
+      "Clock_div_1": {
+        "vlnv": "xilinx.com:module_ref:Clock_div:1.0",
+        "xci_name": "Simulation_Clock_div_0_1",
+        "xci_path": "ip\\Simulation_Clock_div_0_1\\Simulation_Clock_div_0_1.xci",
+        "inst_hier_path": "Clock_div_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Clock_div",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "Simulation_sim_clk_gen_0_0_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "nrst": {
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "clk_out_400Hz": {
+            "direction": "O"
+          },
+          "clk_out_1MHz": {
+            "direction": "O"
+          }
+        }
+      },
+      "segment_test_2_0": {
+        "vlnv": "xilinx.com:module_ref:segment_test_2:1.0",
+        "xci_name": "Simulation_segment_test_2_0_0",
+        "xci_path": "ip\\Simulation_segment_test_2_0_0\\Simulation_segment_test_2_0_0.xci",
+        "inst_hier_path": "segment_test_2_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "segment_test_2",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "distance": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "sgmnt": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          },
+          "control_seg": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "trigger_pulse_gen_1_0": {
+        "vlnv": "xilinx.com:module_ref:trigger_pulse_gen_1:1.0",
+        "xci_name": "Simulation_trigger_pulse_gen_1_0_0",
+        "xci_path": "ip\\Simulation_trigger_pulse_gen_1_0_0\\Simulation_trigger_pulse_gen_1_0_0.xci",
+        "inst_hier_path": "trigger_pulse_gen_1_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "trigger_pulse_gen_1",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "GPIO_U12": {
+            "direction": "O"
+          }
+        }
+      },
+      "sim_clk_gen_0": {
+        "vlnv": "xilinx.com:ip:sim_clk_gen:1.0",
+        "xci_name": "Simulation_sim_clk_gen_0_0",
+        "xci_path": "ip\\Simulation_sim_clk_gen_0_0\\Simulation_sim_clk_gen_0_0.xci",
+        "inst_hier_path": "sim_clk_gen_0",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "50000000"
+          },
+          "RESET_POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "echo_analyzer_0": {
+        "vlnv": "xilinx.com:module_ref:echo_analyzer:1.0",
+        "xci_name": "Simulation_echo_analyzer_0_0",
+        "xci_path": "ip\\Simulation_echo_analyzer_0_0\\Simulation_echo_analyzer_0_0.xci",
+        "inst_hier_path": "echo_analyzer_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "echo_analyzer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "echo_pulse": {
+            "direction": "I"
+          },
+          "pulse_duration": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Clock_div_0_clk_out_1MHz": {
+        "ports": [
+          "Clock_div_1/clk_out_1MHz",
+          "trigger_pulse_gen_1_0/clk",
+          "echo_analyzer_0/clk"
+        ]
+      },
+      "Clock_div_0_clk_out_400Hz": {
+        "ports": [
+          "Clock_div_1/clk_out_400Hz",
+          "segment_test_2_0/clk"
+        ]
+      },
+      "echo_analyzer_0_pulse_duration": {
+        "ports": [
+          "echo_analyzer_0/pulse_duration",
+          "segment_test_2_0/distance"
+        ]
+      },
+      "segment_test_2_0_control_seg": {
+        "ports": [
+          "segment_test_2_0/control_seg",
+          "control_seg"
+        ]
+      },
+      "segment_test_2_0_sgmnt": {
+        "ports": [
+          "segment_test_2_0/sgmnt",
+          "sgmnt"
+        ]
+      },
+      "sim_clk_gen_0_clk": {
+        "ports": [
+          "sim_clk_gen_0/clk",
+          "Clock_div_1/clk"
+        ]
+      },
+      "sim_clk_gen_0_sync_rst": {
+        "ports": [
+          "sim_clk_gen_0/sync_rst",
+          "Clock_div_1/nrst"
+        ]
+      },
+      "trigger_pulse_gen_1_0_GPIO_U12": {
+        "ports": [
+          "trigger_pulse_gen_1_0/GPIO_U12",
+          "GPIO_U12"
+        ]
+      }
+    }
+  }
+}

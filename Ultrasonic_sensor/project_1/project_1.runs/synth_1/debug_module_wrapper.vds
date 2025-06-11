@@ -1,0 +1,272 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Jun  5 17:20:11 2025
+# Process ID: 12796
+# Current directory: C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.runs/synth_1
+# Command line: vivado.exe -log debug_module_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source debug_module_wrapper.tcl
+# Log file: C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.runs/synth_1/debug_module_wrapper.vds
+# Journal file: C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.runs/synth_1\vivado.jou
+# Running On: LAPTOP-PGUMC0OJ, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 6, Host memory: 16931 MB
+#-----------------------------------------------------------
+source debug_module_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1371.973 ; gain = 158.434
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programs/Xilinx/Vivado/2023.1/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.srcs/utils_1/imports/synth_1/Ultrasonic_module_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.srcs/utils_1/imports/synth_1/Ultrasonic_module_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top debug_module_wrapper -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1932
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2234.074 ; gain = 412.641
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'debug_module_wrapper' [c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/hdl/debug_module_wrapper.vhd:26]
+INFO: [Synth 8-3491] module 'debug_module' declared at 'c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/synth/debug_module.vhd:15' bound to instance 'debug_module_i' of component 'debug_module' [c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/hdl/debug_module_wrapper.vhd:38]
+INFO: [Synth 8-638] synthesizing module 'debug_module' [c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/synth/debug_module.vhd:30]
+INFO: [Synth 8-3491] module 'debug_module_Clock_div_0_0' declared at 'C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.runs/synth_1/.Xil/Vivado-12796-LAPTOP-PGUMC0OJ/realtime/debug_module_Clock_div_0_0_stub.vhdl:6' bound to instance 'Clock_div_0' of component 'debug_module_Clock_div_0_0' [c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/synth/debug_module.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'debug_module_Clock_div_0_0' [C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.runs/synth_1/.Xil/Vivado-12796-LAPTOP-PGUMC0OJ/realtime/debug_module_Clock_div_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'debug_module_clk_wiz_0_0' declared at 'C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.runs/synth_1/.Xil/Vivado-12796-LAPTOP-PGUMC0OJ/realtime/debug_module_clk_wiz_0_0_stub.vhdl:6' bound to instance 'clk_wiz_0' of component 'debug_module_clk_wiz_0_0' [c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/synth/debug_module.vhd:101]
+INFO: [Synth 8-638] synthesizing module 'debug_module_clk_wiz_0_0' [C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.runs/synth_1/.Xil/Vivado-12796-LAPTOP-PGUMC0OJ/realtime/debug_module_clk_wiz_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'debug_module_echo_analyzer_0_0' declared at 'C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.runs/synth_1/.Xil/Vivado-12796-LAPTOP-PGUMC0OJ/realtime/debug_module_echo_analyzer_0_0_stub.vhdl:6' bound to instance 'echo_analyzer_0' of component 'debug_module_echo_analyzer_0_0' [c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/synth/debug_module.vhd:108]
+INFO: [Synth 8-638] synthesizing module 'debug_module_echo_analyzer_0_0' [C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.runs/synth_1/.Xil/Vivado-12796-LAPTOP-PGUMC0OJ/realtime/debug_module_echo_analyzer_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'debug_module_seg_buff_0_0' declared at 'C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.runs/synth_1/.Xil/Vivado-12796-LAPTOP-PGUMC0OJ/realtime/debug_module_seg_buff_0_0_stub.vhdl:6' bound to instance 'seg_buff_0' of component 'debug_module_seg_buff_0_0' [c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/synth/debug_module.vhd:114]
+INFO: [Synth 8-638] synthesizing module 'debug_module_seg_buff_0_0' [C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.runs/synth_1/.Xil/Vivado-12796-LAPTOP-PGUMC0OJ/realtime/debug_module_seg_buff_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'debug_module_segment_test_2_0_0' declared at 'C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.runs/synth_1/.Xil/Vivado-12796-LAPTOP-PGUMC0OJ/realtime/debug_module_segment_test_2_0_0_stub.vhdl:6' bound to instance 'segment_test_2_0' of component 'debug_module_segment_test_2_0_0' [c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/synth/debug_module.vhd:120]
+INFO: [Synth 8-638] synthesizing module 'debug_module_segment_test_2_0_0' [C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.runs/synth_1/.Xil/Vivado-12796-LAPTOP-PGUMC0OJ/realtime/debug_module_segment_test_2_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'debug_module_trigger_pulse_gen_1_0_0' declared at 'C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.runs/synth_1/.Xil/Vivado-12796-LAPTOP-PGUMC0OJ/realtime/debug_module_trigger_pulse_gen_1_0_0_stub.vhdl:6' bound to instance 'trigger_pulse_gen_1_0' of component 'debug_module_trigger_pulse_gen_1_0_0' [c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/synth/debug_module.vhd:127]
+INFO: [Synth 8-638] synthesizing module 'debug_module_trigger_pulse_gen_1_0_0' [C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.runs/synth_1/.Xil/Vivado-12796-LAPTOP-PGUMC0OJ/realtime/debug_module_trigger_pulse_gen_1_0_0_stub.vhdl:14]
+INFO: [Synth 8-256] done synthesizing module 'debug_module' (0#1) [c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/synth/debug_module.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'debug_module_wrapper' (0#1) [c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/hdl/debug_module_wrapper.vhd:26]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2324.445 ; gain = 503.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2342.328 ; gain = 520.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2342.328 ; gain = 520.895
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2342.328 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/ip/debug_module_Clock_div_0_0/debug_module_Clock_div_0_0/Ultrasonic_module_Clock_div_0_0_in_context.xdc] for cell 'debug_module_i/Clock_div_0'
+Finished Parsing XDC File [c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/ip/debug_module_Clock_div_0_0/debug_module_Clock_div_0_0/Ultrasonic_module_Clock_div_0_0_in_context.xdc] for cell 'debug_module_i/Clock_div_0'
+Parsing XDC File [c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/ip/debug_module_segment_test_2_0_0/debug_module_segment_test_2_0_0/Ultrasonic_module_segment_test_2_0_0_in_context.xdc] for cell 'debug_module_i/segment_test_2_0'
+Finished Parsing XDC File [c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/ip/debug_module_segment_test_2_0_0/debug_module_segment_test_2_0_0/Ultrasonic_module_segment_test_2_0_0_in_context.xdc] for cell 'debug_module_i/segment_test_2_0'
+Parsing XDC File [c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/ip/debug_module_trigger_pulse_gen_1_0_0/debug_module_trigger_pulse_gen_1_0_0/Ultrasonic_module_trigger_pulse_gen_1_0_0_in_context.xdc] for cell 'debug_module_i/trigger_pulse_gen_1_0'
+Finished Parsing XDC File [c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/ip/debug_module_trigger_pulse_gen_1_0_0/debug_module_trigger_pulse_gen_1_0_0/Ultrasonic_module_trigger_pulse_gen_1_0_0_in_context.xdc] for cell 'debug_module_i/trigger_pulse_gen_1_0'
+Parsing XDC File [c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/ip/debug_module_clk_wiz_0_0/debug_module_clk_wiz_0_0/debug_module_clk_wiz_0_0_in_context.xdc] for cell 'debug_module_i/clk_wiz_0'
+Finished Parsing XDC File [c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/ip/debug_module_clk_wiz_0_0/debug_module_clk_wiz_0_0/debug_module_clk_wiz_0_0_in_context.xdc] for cell 'debug_module_i/clk_wiz_0'
+Parsing XDC File [c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/ip/debug_module_echo_analyzer_0_0/debug_module_echo_analyzer_0_0/debug_module_echo_analyzer_0_0_in_context.xdc] for cell 'debug_module_i/echo_analyzer_0'
+Finished Parsing XDC File [c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/ip/debug_module_echo_analyzer_0_0/debug_module_echo_analyzer_0_0/debug_module_echo_analyzer_0_0_in_context.xdc] for cell 'debug_module_i/echo_analyzer_0'
+Parsing XDC File [c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/ip/debug_module_seg_buff_0_0/debug_module_seg_buff_0_0/debug_module_seg_buff_0_0_in_context.xdc] for cell 'debug_module_i/seg_buff_0'
+Finished Parsing XDC File [c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/ip/debug_module_seg_buff_0_0/debug_module_seg_buff_0_0/debug_module_seg_buff_0_0_in_context.xdc] for cell 'debug_module_i/seg_buff_0'
+Parsing XDC File [C:/Users/mgurl/Downloads/base.xdc]
+WARNING: [Vivado 12-584] No ports matched 'SW[0]'. [C:/Users/mgurl/Downloads/base.xdc:200]
+WARNING: [Vivado 12-584] No ports matched 'SW[1]'. [C:/Users/mgurl/Downloads/base.xdc:201]
+WARNING: [Vivado 12-584] No ports matched 'SW[2]'. [C:/Users/mgurl/Downloads/base.xdc:202]
+WARNING: [Vivado 12-584] No ports matched 'SW[3]'. [C:/Users/mgurl/Downloads/base.xdc:203]
+WARNING: [Vivado 12-584] No ports matched 'SW[4]'. [C:/Users/mgurl/Downloads/base.xdc:204]
+WARNING: [Vivado 12-584] No ports matched 'SW[5]'. [C:/Users/mgurl/Downloads/base.xdc:205]
+WARNING: [Vivado 12-584] No ports matched 'SW[6]'. [C:/Users/mgurl/Downloads/base.xdc:206]
+WARNING: [Vivado 12-584] No ports matched 'SW[7]'. [C:/Users/mgurl/Downloads/base.xdc:212]
+Finished Parsing XDC File [C:/Users/mgurl/Downloads/base.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/mgurl/Downloads/base.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/debug_module_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/mgurl/Downloads/base.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/debug_module_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/debug_module_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2370.219 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2370.219 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2370.219 ; gain = 548.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2370.219 ; gain = 548.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/ip/debug_module_clk_wiz_0_0/debug_module_clk_wiz_0_0/debug_module_clk_wiz_0_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/ip/debug_module_clk_wiz_0_0/debug_module_clk_wiz_0_0/debug_module_clk_wiz_0_0_in_context.xdc, line 4).
+Applied set_property KEEP_HIERARCHY = SOFT for debug_module_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for debug_module_i/Clock_div_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for debug_module_i/segment_test_2_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for debug_module_i/trigger_pulse_gen_1_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for debug_module_i/clk_wiz_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for debug_module_i/echo_analyzer_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for debug_module_i/seg_buff_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2370.219 ; gain = 548.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2370.219 ; gain = 548.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2370.219 ; gain = 548.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2370.219 ; gain = 548.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2370.219 ; gain = 548.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2370.219 ; gain = 548.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2370.219 ; gain = 548.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2370.219 ; gain = 548.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2370.219 ; gain = 548.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2370.219 ; gain = 548.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2370.219 ; gain = 548.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2370.219 ; gain = 548.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-------------------------------------+----------+
+|      |BlackBox name                        |Instances |
++------+-------------------------------------+----------+
+|1     |debug_module_Clock_div_0_0           |         1|
+|2     |debug_module_clk_wiz_0_0             |         1|
+|3     |debug_module_echo_analyzer_0_0       |         1|
+|4     |debug_module_seg_buff_0_0            |         1|
+|5     |debug_module_segment_test_2_0_0      |         1|
+|6     |debug_module_trigger_pulse_gen_1_0_0 |         1|
++------+-------------------------------------+----------+
+
+Report Cell Usage: 
++------+------------------------------------------+------+
+|      |Cell                                      |Count |
++------+------------------------------------------+------+
+|1     |debug_module_Clock_div_0_0_bbox           |     1|
+|2     |debug_module_clk_wiz_0_0_bbox             |     1|
+|3     |debug_module_echo_analyzer_0_0_bbox       |     1|
+|4     |debug_module_seg_buff_0_0_bbox            |     1|
+|5     |debug_module_segment_test_2_0_0_bbox      |     1|
+|6     |debug_module_trigger_pulse_gen_1_0_0_bbox |     1|
+|7     |IBUF                                      |     2|
+|8     |OBUF                                      |    12|
++------+------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2370.219 ; gain = 548.785
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 2370.219 ; gain = 520.895
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2370.219 ; gain = 548.785
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2370.219 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2370.219 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: f41420c3
+INFO: [Common 17-83] Releasing license: Synthesis
+39 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2370.219 ; gain = 954.387
+INFO: [Common 17-1381] The checkpoint 'C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.runs/synth_1/debug_module_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file debug_module_wrapper_utilization_synth.rpt -pb debug_module_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jun  5 17:20:52 2025...
