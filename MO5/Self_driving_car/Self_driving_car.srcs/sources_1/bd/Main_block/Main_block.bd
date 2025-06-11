@@ -581,7 +581,8 @@
       "speedcalc_0_speed": {
         "ports": [
           "speedcalc_0/speed",
-          "pwmcalculator_0/measuredspeed"
+          "pwmcalculator_0/measuredspeed",
+          "bin14_to_bcd_0/bin_input"
         ]
       },
       "speedcalc_1_speed": {
