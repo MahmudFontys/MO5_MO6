@@ -1,0 +1,231 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../Self_driving_car.gen/sources_1/bd/seg_display_Daan",
+      "name": "seg_display_Daan",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.1"
+    },
+    "design_tree": {
+      "bin14_to_bcd_0": "",
+      "ClockDivider4kHz_0": "",
+      "SevenSegmentDriver_0": ""
+    },
+    "ports": {
+      "clk": {
+        "direction": "I"
+      },
+      "seg": {
+        "direction": "O",
+        "left": "6",
+        "right": "0"
+      },
+      "sel": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "Speed_input": {
+        "direction": "I",
+        "left": "13",
+        "right": "0"
+      },
+      "rst": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "bin14_to_bcd_0": {
+        "vlnv": "xilinx.com:module_ref:bin14_to_bcd:1.0",
+        "xci_name": "seg_display_Daan_bin14_to_bcd_0_0",
+        "xci_path": "ip\\seg_display_Daan_bin14_to_bcd_0_0\\seg_display_Daan_bin14_to_bcd_0_0.xci",
+        "inst_hier_path": "bin14_to_bcd_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "bin14_to_bcd",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "bin_input": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
+          },
+          "bcd_thousandth": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "bcd_hundredth": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "bcd_tenth": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "bcd_one": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "ClockDivider4kHz_0": {
+        "vlnv": "xilinx.com:module_ref:ClockDivider4kHz:1.0",
+        "xci_name": "seg_display_Daan_ClockDivider4kHz_0_0",
+        "xci_path": "ip\\seg_display_Daan_ClockDivider4kHz_0_0\\seg_display_Daan_ClockDivider4kHz_0_0.xci",
+        "inst_hier_path": "ClockDivider4kHz_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ClockDivider4kHz",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clkin": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clkout": {
+            "direction": "O"
+          }
+        }
+      },
+      "SevenSegmentDriver_0": {
+        "vlnv": "xilinx.com:module_ref:SevenSegmentDriver:1.0",
+        "xci_name": "seg_display_Daan_SevenSegmentDriver_0_0",
+        "xci_path": "ip\\seg_display_Daan_SevenSegmentDriver_0_0\\seg_display_Daan_SevenSegmentDriver_0_0.xci",
+        "inst_hier_path": "SevenSegmentDriver_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "SevenSegmentDriver",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "BCD0": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "BCD1": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "BCD2": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "BCD3": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "SEG": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          },
+          "SEL": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "ClockDivider4kHz_0_clkout": {
+        "ports": [
+          "ClockDivider4kHz_0/clkout",
+          "SevenSegmentDriver_0/clk"
+        ]
+      },
+      "Net": {
+        "ports": [
+          "rst",
+          "SevenSegmentDriver_0/rst",
+          "ClockDivider4kHz_0/rst"
+        ]
+      },
+      "SevenSegmentDriver_0_SEG": {
+        "ports": [
+          "SevenSegmentDriver_0/SEG",
+          "seg"
+        ]
+      },
+      "SevenSegmentDriver_0_SEL": {
+        "ports": [
+          "SevenSegmentDriver_0/SEL",
+          "sel"
+        ]
+      },
+      "Speed_input_1": {
+        "ports": [
+          "Speed_input",
+          "bin14_to_bcd_0/bin_input"
+        ]
+      },
+      "bin14_to_bcd_0_bcd_hundredth": {
+        "ports": [
+          "bin14_to_bcd_0/bcd_hundredth",
+          "SevenSegmentDriver_0/BCD1"
+        ]
+      },
+      "bin14_to_bcd_0_bcd_one": {
+        "ports": [
+          "bin14_to_bcd_0/bcd_one",
+          "SevenSegmentDriver_0/BCD3"
+        ]
+      },
+      "bin14_to_bcd_0_bcd_tenth": {
+        "ports": [
+          "bin14_to_bcd_0/bcd_tenth",
+          "SevenSegmentDriver_0/BCD2"
+        ]
+      },
+      "bin14_to_bcd_0_bcd_thousandth": {
+        "ports": [
+          "bin14_to_bcd_0/bcd_thousandth",
+          "SevenSegmentDriver_0/BCD0"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "ClockDivider4kHz_0/clkin"
+        ]
+      }
+    }
+  }
+}

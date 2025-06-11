@@ -1,0 +1,30 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.848485",
+   "Default View_TopLeft":"-369,-207",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x -30 -y -190 -defaultsOSRD
+preplace port port-id_rst -pg 1 -lvl 0 -x -30 -y -130 -defaultsOSRD
+preplace portBus seg -pg 1 -lvl 3 -x 610 -y -190 -defaultsOSRD
+preplace portBus sel -pg 1 -lvl 3 -x 610 -y -160 -defaultsOSRD
+preplace portBus Speed_input -pg 1 -lvl 0 -x -30 -y -160 -defaultsOSRD
+preplace inst bin14_to_bcd_0 -pg 1 -lvl 1 -x 160 -y 200 -defaultsOSRD
+preplace inst ClockDivider4kHz_0 -pg 1 -lvl 1 -x 160 -y -140 -defaultsOSRD
+preplace inst SevenSegmentDriver_0 -pg 1 -lvl 2 -x 470 -y -100 -defaultsOSRD
+preplace netloc bin14_to_bcd_0_bcd_thousandth 1 1 1 330 -110n
+preplace netloc bin14_to_bcd_0_bcd_hundredth 1 1 1 340 -90n
+preplace netloc bin14_to_bcd_0_bcd_tenth 1 1 1 350 -70n
+preplace netloc bin14_to_bcd_0_bcd_one 1 1 1 360 -50n
+preplace netloc ClockDivider4kHz_0_clkout 1 1 1 320 -150n
+preplace netloc Net 1 0 2 0 -70 320
+preplace netloc clk_1 1 0 1 0 -190n
+preplace netloc SevenSegmentDriver_0_SEG 1 2 1 580 -190n
+preplace netloc SevenSegmentDriver_0_SEL 1 2 1 590 -160n
+preplace netloc Speed_input_1 1 0 1 -10 -160n
+levelinfo -pg 1 -30 160 470 610
+pagesize -pg 1 -db -bbox -sgen -200 -210 710 290
+"
+}
+
