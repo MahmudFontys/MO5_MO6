@@ -19,3 +19,95 @@ set_property location {4.5 1457 616} [get_bd_cells pwmcalculator_0]
 undo
 update_module_reference {Main_block_pwmcalculator_0_0 Main_block_pwmcalculator_1_0}
 update_module_reference {Main_block_pwmcalculator_0_0 Main_block_pwmcalculator_1_0}
+connect_bd_net [get_bd_pins pwmcalculator_0/dutycycle] [get_bd_pins pwmsimple_0/duty_cycle]
+connect_bd_net [get_bd_pins pwmcalculator_1/dutycycle] [get_bd_pins pwmsimple_1/duty_cycle]
+regenerate_bd_layout
+undo
+undo
+undo
+set_property location {4 1098 606} [get_bd_cells pwmcalculator_0]
+set_property location {4 1108 606} [get_bd_cells pwmcalculator_0]
+create_bd_design "Speed_sensor_input_de"
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/daanv/Documents/GitHub/MO5_MO6/MO5/Self_driving_car/Self_driving_car.srcs/sources_1/bd/Speed_sensor_input_de/Speed_sensor_input_de.bd] -no_script -reset -force -quiet
+remove_files  C:/Users/daanv/Documents/GitHub/MO5_MO6/MO5/Self_driving_car/Self_driving_car.srcs/sources_1/bd/Speed_sensor_input_de/Speed_sensor_input_de.bd
+file delete -force C:/Users/daanv/Documents/GitHub/MO5_MO6/MO5/Self_driving_car/Self_driving_car.srcs/sources_1/bd/Speed_sensor_input_de
+file delete -force c:/Users/daanv/Documents/GitHub/MO5_MO6/MO5/Self_driving_car/Self_driving_car.gen/sources_1/bd/Speed_sensor_input_de
+create_bd_design "Speed_sensor_input_dec"
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference pulsecounter pulsecounter_0
+create_bd_port -dir I Pulse_in
+set_property location {22 -14} [get_bd_ports Pulse_in]
+connect_bd_net [get_bd_ports Pulse_in] [get_bd_pins pulsecounter_0/pulse_in]
+regenerate_bd_layout
+regenerate_bd_layout
+set_property location {-9 116} [get_bd_ports Pulse_in]
+save_bd_design
+create_bd_cell -type module -reference ClockDivider1kHz ClockDivider1kHz_0
+connect_bd_net [get_bd_pins ClockDivider1kHz_0/clk_out] [get_bd_pins pulsecounter_0/clk]
+connect_bd_net [get_bd_pins ClockDivider1kHz_0/rst] [get_bd_pins pulsecounter_0/rst]
+save_bd_design
+create_bd_port -dir I clock
+set_property name clk [get_bd_ports clock]
+connect_bd_net [get_bd_ports clk] [get_bd_pins ClockDivider1kHz_0/clk_in]
+save_bd_design
+create_bd_port -dir I rst
+set_property location {-86 14} [get_bd_ports rst]
+set_property location {-3 15} [get_bd_ports rst]
+connect_bd_net [get_bd_ports rst] [get_bd_pins ClockDivider1kHz_0/rst]
+save_bd_design
+create_bd_port -dir O -from 13 -to 0 Pulse_Time_out
+connect_bd_net [get_bd_ports Pulse_Time_out] [get_bd_pins pulsecounter_0/pulse_time]
+save_bd_design
+create_bd_cell -type module -reference speedcalc speedcalc_0
+connect_bd_net [get_bd_pins speedcalc_0/time_in] [get_bd_pins pulsecounter_0/pulse_time]
+save_bd_design
+create_bd_port -dir O -from 13 -to 0 Speed_out
+connect_bd_net [get_bd_ports Speed_out] [get_bd_pins speedcalc_0/speed]
+regenerate_bd_layout
+save_bd_design
+make_wrapper -files [get_files C:/Users/daanv/Documents/GitHub/MO5_MO6/MO5/Self_driving_car/Self_driving_car.srcs/sources_1/bd/Speed_sensor_input_dec/Speed_sensor_input_dec.bd] -top
+add_files -norecurse c:/Users/daanv/Documents/GitHub/MO5_MO6/MO5/Self_driving_car/Self_driving_car.gen/sources_1/bd/Speed_sensor_input_dec/hdl/Speed_sensor_input_dec_wrapper.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+make_wrapper -files [get_files C:/Users/daanv/Documents/GitHub/MO5_MO6/MO5/Self_driving_car/Self_driving_car.srcs/sources_1/bd/Main_block/Main_block.bd] -top
+open_bd_design {C:/Users/daanv/Documents/GitHub/MO5_MO6/MO5/Self_driving_car/Self_driving_car.srcs/sources_1/bd/Main_block/Main_block.bd}
+close [ open C:/Users/daanv/Documents/GitHub/MO5_MO6/MO5/Self_driving_car/Self_driving_car.srcs/sources_1/new/PWM_Gen_Daan.vhd w ]
+add_files C:/Users/daanv/Documents/GitHub/MO5_MO6/MO5/Self_driving_car/Self_driving_car.srcs/sources_1/new/PWM_Gen_Daan.vhd
+update_compile_order -fileset sources_1
+create_bd_design "PWM_Gen_Daan"
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference pwmcalculator pwmcalculator_0
+create_bd_cell -type module -reference pwmsimple pwmsimple_0
+connect_bd_net [get_bd_pins pwmcalculator_0/dutycycle] [get_bd_pins pwmsimple_0/duty_cycle]
+create_bd_port -dir I clk
+create_bd_port -dir I rst
+create_bd_port -dir O pwm_out
+connect_bd_net [get_bd_ports pwm_out] [get_bd_pins pwmsimple_0/pwm_out]
+connect_bd_net [get_bd_ports clk] [get_bd_pins pwmsimple_0/clk]
+delete_bd_objs [get_bd_nets clk_1]
+create_bd_cell -type module -reference ClockDivider100kHz ClockDivider100kHz_0
+connect_bd_net [get_bd_pins ClockDivider100kHz_0/clk_out] [get_bd_pins pwmsimple_0/clk]
+connect_bd_net [get_bd_ports clk] [get_bd_pins ClockDivider100kHz_0/clk_in]
+connect_bd_net [get_bd_pins ClockDivider100kHz_0/rst] [get_bd_pins pwmsimple_0/reset]
+connect_bd_net [get_bd_ports rst] [get_bd_pins ClockDivider100kHz_0/rst]
+save_bd_design
+create_bd_port -dir I -from 13 -to 0 desired_speed
+connect_bd_net [get_bd_ports desired_speed] [get_bd_pins pwmcalculator_0/desiredspeed]
+set_property location {-51 23} [get_bd_ports desired_speed]
+current_bd_design [get_bd_designs Speed_sensor_input_dec]
+current_bd_design [get_bd_designs PWM_Gen_Daan]
+open_bd_design {C:/Users/daanv/Documents/GitHub/MO5_MO6/MO5/Self_driving_car/Self_driving_car.srcs/sources_1/bd/Main_block/Main_block.bd}
+current_bd_design [get_bd_designs PWM_Gen_Daan]
+current_bd_design [get_bd_designs Speed_sensor_input_dec]
+close_bd_design [get_bd_designs Speed_sensor_input_dec]
+save_bd_design
+current_bd_design [get_bd_designs PWM_Gen_Daan]
+save_bd_design
+create_bd_port -dir I -from 13 -to 0 measured_speed
+connect_bd_net [get_bd_ports measured_speed] [get_bd_pins pwmcalculator_0/measuredspeed]
+save_bd_design
+regenerate_bd_layout
+make_wrapper -files [get_files C:/Users/daanv/Documents/GitHub/MO5_MO6/MO5/Self_driving_car/Self_driving_car.srcs/sources_1/bd/PWM_Gen_Daan/PWM_Gen_Daan.bd] -top
+add_files -norecurse c:/Users/daanv/Documents/GitHub/MO5_MO6/MO5/Self_driving_car/Self_driving_car.gen/sources_1/bd/PWM_Gen_Daan/hdl/PWM_Gen_Daan_wrapper.v
+update_compile_order -fileset sources_1
