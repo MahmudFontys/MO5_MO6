@@ -1,0 +1,24 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.08805",
+   "Default View_TopLeft":"-359,2",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_speed_sensor_input_left -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace port port-id_speed_sensor_input_right -pg 1 -lvl 0 -x 0 -y 170 -defaultsOSRD
+preplace inst pulsecounter_0 -pg 1 -lvl 2 -x 350 -y 90 -defaultsOSRD
+preplace inst pulsecounter_1 -pg 1 -lvl 2 -x 350 -y 240 -defaultsOSRD
+preplace inst ClockDivider1kHz_0 -pg 1 -lvl 1 -x 120 -y 90 -defaultsOSRD
+preplace inst ClockDivider1kHz_1 -pg 1 -lvl 1 -x 120 -y 240 -defaultsOSRD
+preplace netloc speed_sensor_input_left_1 1 0 2 NJ 20 220J
+preplace netloc speed_sensor_input_right_1 1 0 2 NJ 170 220J
+preplace netloc ClockDivider1kHz_0_clk_out 1 1 1 NJ 90
+preplace netloc ClockDivider1kHz_1_clk_out 1 1 1 NJ 240
+preplace netloc Net 1 0 2 20 160 220J
+preplace netloc Net1 1 0 2 20 310 220J
+levelinfo -pg 1 0 120 350 480
+pagesize -pg 1 -db -bbox -sgen -210 0 480 320
+"
+}
+

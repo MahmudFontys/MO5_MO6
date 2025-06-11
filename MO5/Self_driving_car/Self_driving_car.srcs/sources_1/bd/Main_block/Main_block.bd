@@ -2,12 +2,188 @@
   "design": {
     "design_info": {
       "boundary_crc": "0x0",
+      "device": "xc7z020clg400-1",
       "gen_directory": "../../../../Self_driving_car.gen/sources_1/bd/Main_block",
       "name": "Main_block",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
       "tool_version": "2023.1"
     },
-    "design_tree": {}
+    "design_tree": {
+      "pulsecounter_0": "",
+      "pulsecounter_1": "",
+      "ClockDivider1kHz_0": "",
+      "ClockDivider1kHz_1": ""
+    },
+    "ports": {
+      "speed_sensor_input_left": {
+        "direction": "I"
+      },
+      "speed_sensor_input_right": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "pulsecounter_0": {
+        "vlnv": "xilinx.com:module_ref:pulsecounter:1.0",
+        "xci_name": "Main_block_pulsecounter_0_0",
+        "xci_path": "ip\\Main_block_pulsecounter_0_0\\Main_block_pulsecounter_0_0.xci",
+        "inst_hier_path": "pulsecounter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pulsecounter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "pulse_in": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "available": {
+            "direction": "O"
+          },
+          "pulse_time": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          }
+        }
+      },
+      "pulsecounter_1": {
+        "vlnv": "xilinx.com:module_ref:pulsecounter:1.0",
+        "xci_name": "Main_block_pulsecounter_1_0",
+        "xci_path": "ip\\Main_block_pulsecounter_1_0\\Main_block_pulsecounter_1_0.xci",
+        "inst_hier_path": "pulsecounter_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pulsecounter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "pulse_in": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "available": {
+            "direction": "O"
+          },
+          "pulse_time": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          }
+        }
+      },
+      "ClockDivider1kHz_0": {
+        "vlnv": "xilinx.com:module_ref:ClockDivider1kHz:1.0",
+        "xci_name": "Main_block_ClockDivider1kHz_0_0",
+        "xci_path": "ip\\Main_block_ClockDivider1kHz_0_0\\Main_block_ClockDivider1kHz_0_0.xci",
+        "inst_hier_path": "ClockDivider1kHz_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ClockDivider1kHz",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_in": {
+            "direction": "I"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "ClockDivider1kHz_1": {
+        "vlnv": "xilinx.com:module_ref:ClockDivider1kHz:1.0",
+        "xci_name": "Main_block_ClockDivider1kHz_1_0",
+        "xci_path": "ip\\Main_block_ClockDivider1kHz_1_0\\Main_block_ClockDivider1kHz_1_0.xci",
+        "inst_hier_path": "ClockDivider1kHz_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ClockDivider1kHz",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_in": {
+            "direction": "I"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_out": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "ClockDivider1kHz_0_clk_out": {
+        "ports": [
+          "ClockDivider1kHz_0/clk_out",
+          "pulsecounter_0/clk"
+        ]
+      },
+      "ClockDivider1kHz_1_clk_out": {
+        "ports": [
+          "ClockDivider1kHz_1/clk_out",
+          "pulsecounter_1/clk"
+        ]
+      },
+      "Net": {
+        "ports": [
+          "pulsecounter_0/rst",
+          "ClockDivider1kHz_0/rst"
+        ]
+      },
+      "Net1": {
+        "ports": [
+          "pulsecounter_1/rst",
+          "ClockDivider1kHz_1/rst"
+        ]
+      },
+      "speed_sensor_input_left_1": {
+        "ports": [
+          "speed_sensor_input_left",
+          "pulsecounter_0/pulse_in"
+        ]
+      },
+      "speed_sensor_input_right_1": {
+        "ports": [
+          "speed_sensor_input_right",
+          "pulsecounter_1/pulse_in"
+        ]
+      }
+    }
   }
 }
