@@ -1,0 +1,19 @@
+//Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+//Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+//--------------------------------------------------------------------------------
+//Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+//Date        : Wed Jun 11 15:09:58 2025
+//Host        : Asus_Daan running 64-bit major release  (build 9200)
+//Command     : generate_target Main_block_wrapper.bd
+//Design      : Main_block_wrapper
+//Purpose     : IP block netlist
+//--------------------------------------------------------------------------------
+`timescale 1 ps / 1 ps
+
+module Main_block_wrapper
+   ();
+
+
+  Main_block Main_block_i
+       ();
+endmodule
