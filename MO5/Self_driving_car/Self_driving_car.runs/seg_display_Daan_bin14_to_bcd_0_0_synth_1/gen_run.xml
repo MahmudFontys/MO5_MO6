@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="seg_display_Daan_bin14_to_bcd_0_0_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1749724031">
+<GenRun Id="seg_display_Daan_bin14_to_bcd_0_0_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1749726244">
   <File Type="PA-TCL" Name="seg_display_Daan_bin14_to_bcd_0_0.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="seg_display_Daan_bin14_to_bcd_0_0_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="seg_display_Daan_bin14_to_bcd_0_0_reports.tcl"/>
@@ -44,9 +44,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

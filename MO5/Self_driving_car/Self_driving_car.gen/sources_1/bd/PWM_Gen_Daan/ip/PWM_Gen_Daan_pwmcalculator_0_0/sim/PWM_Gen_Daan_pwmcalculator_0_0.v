@@ -62,7 +62,7 @@ module PWM_Gen_Daan_pwmcalculator_0_0 (
 
 input wire [13 : 0] desiredspeed;
 input wire [13 : 0] measuredspeed;
-output wire [7 : 0] dutycycle;
+output wire [6 : 0] dutycycle;
 
   pwmcalculator inst (
     .desiredspeed(desiredspeed),

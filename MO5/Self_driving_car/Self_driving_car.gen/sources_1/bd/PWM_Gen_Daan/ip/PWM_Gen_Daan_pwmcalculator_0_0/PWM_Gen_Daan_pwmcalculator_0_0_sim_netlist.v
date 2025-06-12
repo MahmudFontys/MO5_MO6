@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Thu Jun 12 12:31:02 2025
+// Date        : Thu Jun 12 13:55:23 2025
 // Host        : Asus_Daan running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/daanv/Documents/GitHub/MO5_MO6/MO5/Self_driving_car/Self_driving_car.gen/sources_1/bd/PWM_Gen_Daan/ip/PWM_Gen_Daan_pwmcalculator_0_0/PWM_Gen_Daan_pwmcalculator_0_0_sim_netlist.v
+//               c:/Users/daanv/Desktop/MO5_MO6/MO5/Self_driving_car/Self_driving_car.gen/sources_1/bd/PWM_Gen_Daan/ip/PWM_Gen_Daan_pwmcalculator_0_0/PWM_Gen_Daan_pwmcalculator_0_0_sim_netlist.v
 // Design      : PWM_Gen_Daan_pwmcalculator_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -22,26 +22,22 @@ module PWM_Gen_Daan_pwmcalculator_0_0
     dutycycle);
   input [13:0]desiredspeed;
   input [13:0]measuredspeed;
-  output [7:0]dutycycle;
+  output [6:0]dutycycle;
 
   wire \<const0> ;
   wire [13:0]desiredspeed;
-  wire [7:1]\^dutycycle ;
+  wire [6:0]\^dutycycle ;
   wire [13:0]measuredspeed;
 
-  assign dutycycle[7] = \^dutycycle [7];
-  assign dutycycle[6] = \^dutycycle [5];
-  assign dutycycle[5] = \^dutycycle [5];
-  assign dutycycle[4] = \^dutycycle [5];
-  assign dutycycle[3] = \^dutycycle [3];
-  assign dutycycle[2] = \^dutycycle [5];
-  assign dutycycle[1] = \^dutycycle [1];
-  assign dutycycle[0] = \<const0> ;
+  assign dutycycle[6:4] = \^dutycycle [6:4];
+  assign dutycycle[3] = \^dutycycle [0];
+  assign dutycycle[2] = \<const0> ;
+  assign dutycycle[1:0] = \^dutycycle [1:0];
   GND GND
        (.G(\<const0> ));
   PWM_Gen_Daan_pwmcalculator_0_0_pwmcalculator inst
        (.desiredspeed(desiredspeed),
-        .dutycycle({\^dutycycle [7],\^dutycycle [5],\^dutycycle [3],\^dutycycle [1]}),
+        .dutycycle({\^dutycycle [6:4],\^dutycycle [0],\^dutycycle [1]}),
         .measuredspeed(measuredspeed));
 endmodule
 
@@ -50,12 +46,12 @@ module PWM_Gen_Daan_pwmcalculator_0_0_pwmcalculator
    (dutycycle,
     desiredspeed,
     measuredspeed);
-  output [3:0]dutycycle;
+  output [4:0]dutycycle;
   input [13:0]desiredspeed;
   input [13:0]measuredspeed;
 
   wire [13:0]desiredspeed;
-  wire [3:0]dutycycle;
+  wire [4:0]dutycycle;
   wire dutycycle0_carry__0_i_1_n_0;
   wire dutycycle0_carry__0_n_3;
   wire dutycycle0_carry_i_1_n_0;
@@ -66,7 +62,6 @@ module PWM_Gen_Daan_pwmcalculator_0_0_pwmcalculator
   wire dutycycle0_carry_n_1;
   wire dutycycle0_carry_n_2;
   wire dutycycle0_carry_n_3;
-  wire dutycycle10_in;
   wire dutycycle1_carry__0_i_1_n_0;
   wire dutycycle1_carry__0_i_2_n_0;
   wire dutycycle1_carry__0_i_3_n_0;
@@ -88,14 +83,15 @@ module PWM_Gen_Daan_pwmcalculator_0_0_pwmcalculator
   wire dutycycle1_carry_n_1;
   wire dutycycle1_carry_n_2;
   wire dutycycle1_carry_n_3;
+  wire \dutycycle1_inferred__0/i__carry__0_n_1 ;
   wire \dutycycle1_inferred__0/i__carry__0_n_2 ;
   wire \dutycycle1_inferred__0/i__carry__0_n_3 ;
   wire \dutycycle1_inferred__0/i__carry_n_0 ;
   wire \dutycycle1_inferred__0/i__carry_n_1 ;
   wire \dutycycle1_inferred__0/i__carry_n_2 ;
   wire \dutycycle1_inferred__0/i__carry_n_3 ;
-  wire \dutycycle_reg[1]_i_1_n_0 ;
-  wire \dutycycle_reg[7]_i_1_n_0 ;
+  wire \dutycycle_reg[5]_i_1_n_0 ;
+  wire \dutycycle_reg[6]_i_1_n_0 ;
   wire i__carry__0_i_1_n_0;
   wire i__carry__0_i_2_n_0;
   wire i__carry__0_i_3_n_0;
@@ -322,51 +318,61 @@ module PWM_Gen_Daan_pwmcalculator_0_0_pwmcalculator
   (* COMPARATOR_THRESHOLD = "11" *) 
   CARRY4 \dutycycle1_inferred__0/i__carry__0 
        (.CI(\dutycycle1_inferred__0/i__carry_n_0 ),
-        .CO({\NLW_dutycycle1_inferred__0/i__carry__0_CO_UNCONNECTED [3],dutycycle10_in,\dutycycle1_inferred__0/i__carry__0_n_2 ,\dutycycle1_inferred__0/i__carry__0_n_3 }),
+        .CO({\NLW_dutycycle1_inferred__0/i__carry__0_CO_UNCONNECTED [3],\dutycycle1_inferred__0/i__carry__0_n_1 ,\dutycycle1_inferred__0/i__carry__0_n_2 ,\dutycycle1_inferred__0/i__carry__0_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,i__carry__0_i_1_n_0,i__carry__0_i_2_n_0,i__carry__0_i_3_n_0}),
         .O(\NLW_dutycycle1_inferred__0/i__carry__0_O_UNCONNECTED [3:0]),
         .S({1'b0,i__carry__0_i_4_n_0,i__carry__0_i_5_n_0,i__carry__0_i_6_n_0}));
+  LDCP \dutycycle_reg[1] 
+       (.CLR(\dutycycle_reg[6]_i_1_n_0 ),
+        .D(1'b1),
+        .G(dutycycle0_carry__0_n_3),
+        .PRE(\dutycycle1_inferred__0/i__carry__0_n_1 ),
+        .Q(dutycycle[0]));
   (* XILINX_LEGACY_PRIM = "LDP" *) 
   (* XILINX_TRANSFORM_PINMAP = "VCC:GE" *) 
   LDPE #(
     .INIT(1'b1)) 
-    \dutycycle_reg[1] 
+    \dutycycle_reg[3] 
        (.D(1'b0),
         .G(dutycycle0_carry__0_n_3),
         .GE(1'b1),
-        .PRE(\dutycycle_reg[1]_i_1_n_0 ),
-        .Q(dutycycle[0]));
-  LUT2 #(
-    .INIT(4'hE)) 
-    \dutycycle_reg[1]_i_1 
-       (.I0(dutycycle10_in),
-        .I1(dutycycle1_carry__0_n_1),
-        .O(\dutycycle_reg[1]_i_1_n_0 ));
-  LDCP \dutycycle_reg[3] 
-       (.CLR(\dutycycle_reg[7]_i_1_n_0 ),
-        .D(1'b0),
-        .G(dutycycle0_carry__0_n_3),
-        .PRE(dutycycle10_in),
+        .PRE(\dutycycle_reg[5]_i_1_n_0 ),
         .Q(dutycycle[1]));
-  LDCP \dutycycle_reg[6] 
-       (.CLR(dutycycle10_in),
-        .D(1'b0),
+  LDCP \dutycycle_reg[4] 
+       (.CLR(\dutycycle1_inferred__0/i__carry__0_n_1 ),
+        .D(1'b1),
         .G(dutycycle0_carry__0_n_3),
         .PRE(dutycycle1_carry__0_n_1),
         .Q(dutycycle[2]));
-  LDCP \dutycycle_reg[7] 
-       (.CLR(\dutycycle_reg[7]_i_1_n_0 ),
+  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* XILINX_TRANSFORM_PINMAP = "VCC:GE" *) 
+  LDCE #(
+    .INIT(1'b0)) 
+    \dutycycle_reg[5] 
+       (.CLR(\dutycycle_reg[5]_i_1_n_0 ),
         .D(1'b1),
         .G(dutycycle0_carry__0_n_3),
-        .PRE(dutycycle10_in),
+        .GE(1'b1),
         .Q(dutycycle[3]));
   LUT2 #(
+    .INIT(4'hE)) 
+    \dutycycle_reg[5]_i_1 
+       (.I0(\dutycycle1_inferred__0/i__carry__0_n_1 ),
+        .I1(dutycycle1_carry__0_n_1),
+        .O(\dutycycle_reg[5]_i_1_n_0 ));
+  LDCP \dutycycle_reg[6] 
+       (.CLR(\dutycycle_reg[6]_i_1_n_0 ),
+        .D(1'b0),
+        .G(dutycycle0_carry__0_n_3),
+        .PRE(\dutycycle1_inferred__0/i__carry__0_n_1 ),
+        .Q(dutycycle[4]));
+  LUT2 #(
     .INIT(4'h2)) 
-    \dutycycle_reg[7]_i_1 
+    \dutycycle_reg[6]_i_1 
        (.I0(dutycycle1_carry__0_n_1),
-        .I1(dutycycle10_in),
-        .O(\dutycycle_reg[7]_i_1_n_0 ));
+        .I1(\dutycycle1_inferred__0/i__carry__0_n_1 ),
+        .O(\dutycycle_reg[6]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h2F02)) 
     i__carry__0_i_1

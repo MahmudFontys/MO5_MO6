@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Thu Jun 12 12:26:50 2025
+//Date        : Thu Jun 12 13:54:03 2025
 //Host        : Asus_Daan running 64-bit major release  (build 9200)
 //Command     : generate_target PWM_Gen_Daan.bd
 //Design      : PWM_Gen_Daan
@@ -23,12 +23,12 @@ module PWM_Gen_Daan
   output pwm_out;
   input rst;
 
-  wire ClockDivider100kHz_0_clk_out;
+  wire ClockDivider10mHz_0_clk_out;
   wire Net;
   wire clk_1;
   wire [13:0]desired_speed_1;
   wire [13:0]measured_speed_1;
-  wire [7:0]pwmcalculator_0_dutycycle;
+  wire [6:0]pwmcalculator_0_dutycycle;
   wire pwmsimple_0_pwm_out;
 
   assign Net = rst;
@@ -36,16 +36,16 @@ module PWM_Gen_Daan
   assign desired_speed_1 = desired_speed[13:0];
   assign measured_speed_1 = measured_speed[13:0];
   assign pwm_out = pwmsimple_0_pwm_out;
-  PWM_Gen_Daan_ClockDivider100kHz_0_0 ClockDivider100kHz_0
+  PWM_Gen_Daan_ClockDivider10mHz_0_0 ClockDivider10mHz_0
        (.clk_in(clk_1),
-        .clk_out(ClockDivider100kHz_0_clk_out),
+        .clk_out(ClockDivider10mHz_0_clk_out),
         .rst(Net));
   PWM_Gen_Daan_pwmcalculator_0_0 pwmcalculator_0
        (.desiredspeed(desired_speed_1),
         .dutycycle(pwmcalculator_0_dutycycle),
         .measuredspeed(measured_speed_1));
   PWM_Gen_Daan_pwmsimple_0_0 pwmsimple_0
-       (.clk(ClockDivider100kHz_0_clk_out),
+       (.clk(ClockDivider10mHz_0_clk_out),
         .duty_cycle(pwmcalculator_0_dutycycle),
         .pwm_out(pwmsimple_0_pwm_out),
         .reset(Net));

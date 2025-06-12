@@ -13,7 +13,7 @@
     "design_tree": {
       "pwmcalculator_0": "",
       "pwmsimple_0": "",
-      "ClockDivider100kHz_0": ""
+      "ClockDivider10mHz_0": ""
     },
     "ports": {
       "clk": {
@@ -60,7 +60,7 @@
           },
           "dutycycle": {
             "direction": "O",
-            "left": "7",
+            "left": "6",
             "right": "0"
           }
         }
@@ -92,7 +92,7 @@
           },
           "duty_cycle": {
             "direction": "I",
-            "left": "7",
+            "left": "6",
             "right": "0"
           },
           "pwm_out": {
@@ -100,14 +100,14 @@
           }
         }
       },
-      "ClockDivider100kHz_0": {
-        "vlnv": "xilinx.com:module_ref:ClockDivider100kHz:1.0",
-        "xci_name": "PWM_Gen_Daan_ClockDivider100kHz_0_0",
-        "xci_path": "ip\\PWM_Gen_Daan_ClockDivider100kHz_0_0\\PWM_Gen_Daan_ClockDivider100kHz_0_0.xci",
-        "inst_hier_path": "ClockDivider100kHz_0",
+      "ClockDivider10mHz_0": {
+        "vlnv": "xilinx.com:module_ref:ClockDivider10mHz:1.0",
+        "xci_name": "PWM_Gen_Daan_ClockDivider10mHz_0_0",
+        "xci_path": "ip\\PWM_Gen_Daan_ClockDivider10mHz_0_0\\PWM_Gen_Daan_ClockDivider10mHz_0_0.xci",
+        "inst_hier_path": "ClockDivider10mHz_0",
         "reference_info": {
           "ref_type": "hdl",
-          "ref_name": "ClockDivider100kHz",
+          "ref_name": "ClockDivider10mHz",
           "boundary_crc": "0x0"
         },
         "ports": {
@@ -125,23 +125,23 @@
       }
     },
     "nets": {
-      "ClockDivider100kHz_0_clk_out": {
+      "ClockDivider10mHz_0_clk_out": {
         "ports": [
-          "ClockDivider100kHz_0/clk_out",
+          "ClockDivider10mHz_0/clk_out",
           "pwmsimple_0/clk"
         ]
       },
       "Net": {
         "ports": [
           "rst",
-          "ClockDivider100kHz_0/rst",
-          "pwmsimple_0/reset"
+          "pwmsimple_0/reset",
+          "ClockDivider10mHz_0/rst"
         ]
       },
       "clk_1": {
         "ports": [
           "clk",
-          "ClockDivider100kHz_0/clk_in"
+          "ClockDivider10mHz_0/clk_in"
         ]
       },
       "desired_speed_1": {

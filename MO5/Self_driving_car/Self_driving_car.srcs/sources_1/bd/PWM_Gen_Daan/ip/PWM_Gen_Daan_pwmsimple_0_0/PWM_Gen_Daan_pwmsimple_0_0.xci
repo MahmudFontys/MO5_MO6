@@ -38,7 +38,7 @@
       "ports": {
         "clk": [ { "direction": "in" } ],
         "reset": [ { "direction": "in" } ],
-        "duty_cycle": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
+        "duty_cycle": [ { "direction": "in", "size_left": "6", "size_right": "0" } ],
         "pwm_out": [ { "direction": "out" } ]
       },
       "interfaces": {

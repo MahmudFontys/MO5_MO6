@@ -68,7 +68,7 @@ input wire clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *)
 input wire reset;
-input wire [7 : 0] duty_cycle;
+input wire [6 : 0] duty_cycle;
 output wire pwm_out;
 
   pwmsimple inst (

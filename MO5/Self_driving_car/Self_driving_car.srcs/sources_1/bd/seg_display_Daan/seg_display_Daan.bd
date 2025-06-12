@@ -175,8 +175,8 @@
       "Net": {
         "ports": [
           "rst",
-          "SevenSegmentDriver_0/rst",
-          "ClockDivider4kHz_0/rst"
+          "ClockDivider4kHz_0/rst",
+          "SevenSegmentDriver_0/rst"
         ]
       },
       "SevenSegmentDriver_0_SEG": {

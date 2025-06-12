@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Thu Jun 12 12:31:02 2025
+// Date        : Thu Jun 12 13:55:23 2025
 // Host        : Asus_Daan running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/daanv/Documents/GitHub/MO5_MO6/MO5/Self_driving_car/Self_driving_car.gen/sources_1/bd/PWM_Gen_Daan/ip/PWM_Gen_Daan_pwmsimple_0_0/PWM_Gen_Daan_pwmsimple_0_0_sim_netlist.v
+//               c:/Users/daanv/Desktop/MO5_MO6/MO5/Self_driving_car/Self_driving_car.gen/sources_1/bd/PWM_Gen_Daan/ip/PWM_Gen_Daan_pwmsimple_0_0/PWM_Gen_Daan_pwmsimple_0_0_sim_netlist.v
 // Design      : PWM_Gen_Daan_pwmsimple_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -23,11 +23,11 @@ module PWM_Gen_Daan_pwmsimple_0_0
     pwm_out);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *) input clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input reset;
-  input [7:0]duty_cycle;
+  input [6:0]duty_cycle;
   output pwm_out;
 
   wire clk;
-  wire [7:0]duty_cycle;
+  wire [6:0]duty_cycle;
   wire pwm_out;
   wire reset;
 
@@ -41,21 +41,21 @@ endmodule
 (* ORIG_REF_NAME = "pwmsimple" *) 
 module PWM_Gen_Daan_pwmsimple_0_0_pwmsimple
    (pwm_out,
+    duty_cycle,
     clk,
-    reset,
-    duty_cycle);
+    reset);
   output pwm_out;
+  input [6:0]duty_cycle;
   input clk;
   input reset;
-  input [7:0]duty_cycle;
 
   wire clk;
   wire \counter[0]_i_1_n_0 ;
-  wire \counter[7]_i_2_n_0 ;
-  wire [7:0]counter_reg;
-  wire [7:0]duty_cycle;
+  wire \counter[6]_i_2_n_0 ;
+  wire [6:0]counter_reg;
+  wire [6:0]duty_cycle;
   wire p_0_in;
-  wire [7:1]plusOp;
+  wire [6:1]plusOp;
   wire pwm_out;
   wire pwm_out0_carry_i_1_n_0;
   wire pwm_out0_carry_i_2_n_0;
@@ -71,6 +71,7 @@ module PWM_Gen_Daan_pwmsimple_0_0_pwmsimple
   wire reset;
   wire [3:0]NLW_pwm_out0_carry_O_UNCONNECTED;
 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \counter[0]_i_1 
@@ -83,7 +84,7 @@ module PWM_Gen_Daan_pwmsimple_0_0_pwmsimple
        (.I0(counter_reg[0]),
         .I1(counter_reg[1]),
         .O(plusOp[1]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \counter[2]_i_1 
@@ -91,7 +92,7 @@ module PWM_Gen_Daan_pwmsimple_0_0_pwmsimple
         .I1(counter_reg[1]),
         .I2(counter_reg[2]),
         .O(plusOp[2]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \counter[3]_i_1 
@@ -120,31 +121,23 @@ module PWM_Gen_Daan_pwmsimple_0_0_pwmsimple
         .I4(counter_reg[4]),
         .I5(counter_reg[5]),
         .O(plusOp[5]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT2 #(
-    .INIT(4'h6)) 
-    \counter[6]_i_1 
-       (.I0(\counter[7]_i_2_n_0 ),
-        .I1(counter_reg[6]),
-        .O(plusOp[6]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
     .INIT(8'h78)) 
-    \counter[7]_i_1 
-       (.I0(\counter[7]_i_2_n_0 ),
-        .I1(counter_reg[6]),
-        .I2(counter_reg[7]),
-        .O(plusOp[7]));
-  LUT6 #(
-    .INIT(64'h8000000000000000)) 
-    \counter[7]_i_2 
-       (.I0(counter_reg[5]),
-        .I1(counter_reg[3]),
-        .I2(counter_reg[1]),
-        .I3(counter_reg[0]),
-        .I4(counter_reg[2]),
-        .I5(counter_reg[4]),
-        .O(\counter[7]_i_2_n_0 ));
+    \counter[6]_i_1 
+       (.I0(\counter[6]_i_2_n_0 ),
+        .I1(counter_reg[5]),
+        .I2(counter_reg[6]),
+        .O(plusOp[6]));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT5 #(
+    .INIT(32'h80000000)) 
+    \counter[6]_i_2 
+       (.I0(counter_reg[4]),
+        .I1(counter_reg[2]),
+        .I2(counter_reg[0]),
+        .I3(counter_reg[1]),
+        .I4(counter_reg[3]),
+        .O(\counter[6]_i_2_n_0 ));
   FDCE #(
     .INIT(1'b0)) 
     \counter_reg[0] 
@@ -201,14 +194,6 @@ module PWM_Gen_Daan_pwmsimple_0_0_pwmsimple
         .CLR(reset),
         .D(plusOp[6]),
         .Q(counter_reg[6]));
-  FDCE #(
-    .INIT(1'b0)) 
-    \counter_reg[7] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(reset),
-        .D(plusOp[7]),
-        .Q(counter_reg[7]));
   (* COMPARATOR_THRESHOLD = "11" *) 
   CARRY4 pwm_out0_carry
        (.CI(1'b0),
@@ -217,13 +202,11 @@ module PWM_Gen_Daan_pwmsimple_0_0_pwmsimple
         .DI({pwm_out0_carry_i_1_n_0,pwm_out0_carry_i_2_n_0,pwm_out0_carry_i_3_n_0,pwm_out0_carry_i_4_n_0}),
         .O(NLW_pwm_out0_carry_O_UNCONNECTED[3:0]),
         .S({pwm_out0_carry_i_5_n_0,pwm_out0_carry_i_6_n_0,pwm_out0_carry_i_7_n_0,pwm_out0_carry_i_8_n_0}));
-  LUT4 #(
-    .INIT(16'h2F02)) 
+  LUT2 #(
+    .INIT(4'h2)) 
     pwm_out0_carry_i_1
        (.I0(duty_cycle[6]),
         .I1(counter_reg[6]),
-        .I2(counter_reg[7]),
-        .I3(duty_cycle[7]),
         .O(pwm_out0_carry_i_1_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
@@ -249,13 +232,11 @@ module PWM_Gen_Daan_pwmsimple_0_0_pwmsimple
         .I2(counter_reg[1]),
         .I3(duty_cycle[1]),
         .O(pwm_out0_carry_i_4_n_0));
-  LUT4 #(
-    .INIT(16'h9009)) 
+  LUT2 #(
+    .INIT(4'h9)) 
     pwm_out0_carry_i_5
-       (.I0(duty_cycle[6]),
-        .I1(counter_reg[6]),
-        .I2(duty_cycle[7]),
-        .I3(counter_reg[7]),
+       (.I0(counter_reg[6]),
+        .I1(duty_cycle[6]),
         .O(pwm_out0_carry_i_5_n_0));
   LUT4 #(
     .INIT(16'h9009)) 

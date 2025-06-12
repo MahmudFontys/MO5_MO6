@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1749724816">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1749729255" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/Main_block_wrapper.dcp">
   <File Type="PA-TCL" Name="Main_block_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="Main_block_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Main_block_wrapper_reports.tcl"/>
@@ -11,51 +11,19 @@
   <File Type="VDS-TIMING-PB" Name="Main_block_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../../../MO5_Speed/Extra/Pulse_counter.vhd">
+    <File Path="$PPRDIR/../../../../Documents/GitHub/MO5_Speed/MO5_Speed/MO5_Speed.srcs/sources_1/new/pwmcalculator.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../../MO5_Speed/MO5_Speed/MO5_Speed.srcs/sources_1/new/clockdivider1k.vhd">
+    <File Path="$PPRDIR/../../../../Documents/GitHub/MO5_Speed/MO5_Speed/MO5_Speed.srcs/sources_1/new/pwmsimple.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/Speed_calc.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/Speed_sensor_input_dec/Speed_sensor_input_dec.bd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PGENDIR/sources_1/bd/Speed_sensor_input_dec/hdl/Speed_sensor_input_dec_wrapper.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../../MO5_Speed/MO5_Speed/MO5_Speed.srcs/sources_1/new/pwmcalculator.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../../MO5_Speed/MO5_Speed/MO5_Speed.srcs/sources_1/new/pwmsimple.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../../MO5_Speed/MO5_Speed/MO5_Speed.srcs/sources_1/new/ClockDivider100kHz.vhd">
+    <File Path="$PPRDIR/../../../../Documents/GitHub/MO5_Speed/MO5_Speed/MO5_Speed.srcs/sources_1/new/ClockDivider100kHz.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -75,19 +43,19 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../../MO5_Speed/Extra/bin14_to_bcd.vhd">
+    <File Path="$PPRDIR/../../../../Documents/GitHub/MO5_Speed/Extra/bin14_to_bcd.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../../MO5_Speed/MO5_Speed/MO5_Speed.srcs/sources_1/new/clockdivider.vhd">
+    <File Path="$PPRDIR/../../../../Documents/GitHub/MO5_Speed/MO5_Speed/MO5_Speed.srcs/sources_1/new/clockdivider.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../../MO5_Speed/MO5_Speed/MO5_Speed.srcs/sources_1/new/segmentdriver.vhd">
+    <File Path="$PPRDIR/../../../../Documents/GitHub/MO5_Speed/MO5_Speed/MO5_Speed.srcs/sources_1/new/segmentdriver.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -101,6 +69,38 @@
       </FileInfo>
     </File>
     <File Path="$PGENDIR/sources_1/bd/seg_display_Daan/hdl/seg_display_Daan_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../Documents/GitHub/MO5_Speed/Extra/Pulse_counter.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../Documents/GitHub/MO5_Speed/MO5_Speed/MO5_Speed.srcs/sources_1/new/clockdivider1k.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/speed_calc.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/Speed_sensor_input_dec/Speed_sensor_input_dec.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/Speed_sensor_input_dec/hdl/Speed_sensor_input_dec_wrapper.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -121,14 +121,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../../MO5_Speed/Extra/Calc_speed.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/PWM_Gen_Daan.vhd">
+    <File Path="$PPRDIR/../../sensor_table.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -149,11 +142,20 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PPRDIR/../../base.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
     <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/Main_block_wrapper.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
@@ -162,17 +164,17 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="Main_block_Speed_sensor_input_d_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Speed_sensor_input_dec_pulsecounter_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="seg_display_Daan_bin14_to_bcd_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="seg_display_Daan_ClockDivider4kHz_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Speed_sensor_input_dec_ClockDivider1kHz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="seg_display_Daan_SevenSegmentDriver_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="PWM_Gen_Daan_ClockDivider100kHz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Main_block_clk_wiz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="PWM_Gen_Daan_pwmsimple_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="PWM_Gen_Daan_pwmcalculator_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Main_block_seg_display_Daan_wra_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Main_block_PWM_Gen_Daan_wrapper_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="PWM_Gen_Daan_pwmsimple_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Main_block_clk_wiz_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Speed_sensor_input_dec_speedcalc_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Main_block_Speed_sensor_input_d_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="seg_display_Daan_SevenSegmentDriver_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Main_block_PWM_Gen_Daan_wrapper_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Main_block_seg_display_Daan_wra_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="PWM_Gen_Daan_ClockDivider10mHz_0_0"/>
 </GenRun>
