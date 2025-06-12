@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="Speed_sensor_input_dec_speedcalc_0_0_synth_1" LaunchDir="C:/Users/daanv/Documents/GitHub/MO5_MO6/MO5/Self_driving_car/Self_driving_car.runs/Speed_sensor_input_dec_speedcalc_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Main_block_clk_wiz_0_0_synth_1" LaunchDir="C:/Users/daanv/Documents/GitHub/MO5_MO6/MO5/Self_driving_car/Self_driving_car.runs/Main_block_clk_wiz_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Main_block_seg_display_Daan_wra_0_0_synth_1" LaunchDir="C:/Users/daanv/Documents/GitHub/MO5_MO6/MO5/Self_driving_car/Self_driving_car.runs/Main_block_seg_display_Daan_wra_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Main_block_PWM_Gen_Daan_wrapper_0_0_synth_1" LaunchDir="C:/Users/daanv/Documents/GitHub/MO5_MO6/MO5/Self_driving_car/Self_driving_car.runs/Main_block_PWM_Gen_Daan_wrapper_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Main_block_Speed_sensor_input_d_0_0_synth_1" LaunchDir="C:/Users/daanv/Documents/GitHub/MO5_MO6/MO5/Self_driving_car/Self_driving_car.runs/Main_block_Speed_sensor_input_d_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="Speed_sensor_input_dec_speedcalc_0_0_synth_1"/>
+	</Run>
+	<Run Id="synth_1" LaunchDir="C:/Users/daanv/Documents/GitHub/MO5_MO6/MO5/Self_driving_car/Self_driving_car.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="Speed_sensor_input_dec_speedcalc_0_0_synth_1"/>
+		<Parent Id="Main_block_clk_wiz_0_0_synth_1"/>
+		<Parent Id="Main_block_seg_display_Daan_wra_0_0_synth_1"/>
+		<Parent Id="Main_block_PWM_Gen_Daan_wrapper_0_0_synth_1"/>
+		<Parent Id="Main_block_Speed_sensor_input_d_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

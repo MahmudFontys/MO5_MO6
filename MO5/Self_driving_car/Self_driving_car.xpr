@@ -115,6 +115,15 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="Speed_sensor_input_dec.bd" FileRelPathName="ip/Speed_sensor_input_dec_pulsecounter_0_0/Speed_sensor_input_dec_pulsecounter_0_0.xci">
+          <Proxy FileSetName="Speed_sensor_input_dec_pulsecounter_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Speed_sensor_input_dec.bd" FileRelPathName="ip/Speed_sensor_input_dec_ClockDivider1kHz_0_0/Speed_sensor_input_dec_ClockDivider1kHz_0_0.xci">
+          <Proxy FileSetName="Speed_sensor_input_dec_ClockDivider1kHz_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Speed_sensor_input_dec.bd" FileRelPathName="ip/Speed_sensor_input_dec_speedcalc_0_0/Speed_sensor_input_dec_speedcalc_0_0.xci">
+          <Proxy FileSetName="Speed_sensor_input_dec_speedcalc_0_0"/>
+        </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/Speed_sensor_input_dec/hdl/Speed_sensor_input_dec_wrapper.v">
         <FileInfo>
@@ -147,6 +156,15 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="PWM_Gen_Daan.bd" FileRelPathName="ip/PWM_Gen_Daan_ClockDivider100kHz_0_0/PWM_Gen_Daan_ClockDivider100kHz_0_0.xci">
+          <Proxy FileSetName="PWM_Gen_Daan_ClockDivider100kHz_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="PWM_Gen_Daan.bd" FileRelPathName="ip/PWM_Gen_Daan_pwmcalculator_0_0/PWM_Gen_Daan_pwmcalculator_0_0.xci">
+          <Proxy FileSetName="PWM_Gen_Daan_pwmcalculator_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="PWM_Gen_Daan.bd" FileRelPathName="ip/PWM_Gen_Daan_pwmsimple_0_0/PWM_Gen_Daan_pwmsimple_0_0.xci">
+          <Proxy FileSetName="PWM_Gen_Daan_pwmsimple_0_0"/>
+        </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/PWM_Gen_Daan/hdl/PWM_Gen_Daan_wrapper.v">
         <FileInfo>
@@ -179,6 +197,15 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="seg_display_Daan.bd" FileRelPathName="ip/seg_display_Daan_SevenSegmentDriver_0_0/seg_display_Daan_SevenSegmentDriver_0_0.xci">
+          <Proxy FileSetName="seg_display_Daan_SevenSegmentDriver_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="seg_display_Daan.bd" FileRelPathName="ip/seg_display_Daan_bin14_to_bcd_0_0/seg_display_Daan_bin14_to_bcd_0_0.xci">
+          <Proxy FileSetName="seg_display_Daan_bin14_to_bcd_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="seg_display_Daan.bd" FileRelPathName="ip/seg_display_Daan_ClockDivider4kHz_0_0/seg_display_Daan_ClockDivider4kHz_0_0.xci">
+          <Proxy FileSetName="seg_display_Daan_ClockDivider4kHz_0_0"/>
+        </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/seg_display_Daan/hdl/seg_display_Daan_wrapper.v">
         <FileInfo>
@@ -193,6 +220,15 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="Main_block.bd" FileRelPathName="ip/Main_block_seg_display_Daan_wra_0_0/Main_block_seg_display_Daan_wra_0_0.xci">
+          <Proxy FileSetName="Main_block_seg_display_Daan_wra_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Main_block.bd" FileRelPathName="ip/Main_block_PWM_Gen_Daan_wrapper_0_0/Main_block_PWM_Gen_Daan_wrapper_0_0.xci">
+          <Proxy FileSetName="Main_block_PWM_Gen_Daan_wrapper_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Main_block.bd" FileRelPathName="ip/Main_block_clk_wiz_0_0/Main_block_clk_wiz_0_0.xci">
+          <Proxy FileSetName="Main_block_clk_wiz_0_0"/>
+        </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/Main_block/hdl/Main_block_wrapper.v">
         <FileInfo>
@@ -256,6 +292,78 @@
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
+    <FileSet Name="Speed_sensor_input_dec_pulsecounter_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Speed_sensor_input_dec_pulsecounter_0_0" RelGenDir="$PGENDIR/Speed_sensor_input_dec_pulsecounter_0_0">
+      <Config>
+        <Option Name="TopModule" Val="Speed_sensor_input_dec_pulsecounter_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="Speed_sensor_input_dec_ClockDivider1kHz_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Speed_sensor_input_dec_ClockDivider1kHz_0_0" RelGenDir="$PGENDIR/Speed_sensor_input_dec_ClockDivider1kHz_0_0">
+      <Config>
+        <Option Name="TopModule" Val="Speed_sensor_input_dec_ClockDivider1kHz_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="PWM_Gen_Daan_ClockDivider100kHz_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/PWM_Gen_Daan_ClockDivider100kHz_0_0" RelGenDir="$PGENDIR/PWM_Gen_Daan_ClockDivider100kHz_0_0">
+      <Config>
+        <Option Name="TopModule" Val="PWM_Gen_Daan_ClockDivider100kHz_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="PWM_Gen_Daan_pwmcalculator_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/PWM_Gen_Daan_pwmcalculator_0_0" RelGenDir="$PGENDIR/PWM_Gen_Daan_pwmcalculator_0_0">
+      <Config>
+        <Option Name="TopModule" Val="PWM_Gen_Daan_pwmcalculator_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="PWM_Gen_Daan_pwmsimple_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/PWM_Gen_Daan_pwmsimple_0_0" RelGenDir="$PGENDIR/PWM_Gen_Daan_pwmsimple_0_0">
+      <Config>
+        <Option Name="TopModule" Val="PWM_Gen_Daan_pwmsimple_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="seg_display_Daan_SevenSegmentDriver_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/seg_display_Daan_SevenSegmentDriver_0_0" RelGenDir="$PGENDIR/seg_display_Daan_SevenSegmentDriver_0_0">
+      <Config>
+        <Option Name="TopModule" Val="seg_display_Daan_SevenSegmentDriver_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="seg_display_Daan_bin14_to_bcd_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/seg_display_Daan_bin14_to_bcd_0_0" RelGenDir="$PGENDIR/seg_display_Daan_bin14_to_bcd_0_0">
+      <Config>
+        <Option Name="TopModule" Val="seg_display_Daan_bin14_to_bcd_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="seg_display_Daan_ClockDivider4kHz_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/seg_display_Daan_ClockDivider4kHz_0_0" RelGenDir="$PGENDIR/seg_display_Daan_ClockDivider4kHz_0_0">
+      <Config>
+        <Option Name="TopModule" Val="seg_display_Daan_ClockDivider4kHz_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="Main_block_clk_wiz_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Main_block_clk_wiz_0_0" RelGenDir="$PGENDIR/Main_block_clk_wiz_0_0">
+      <Config>
+        <Option Name="TopModule" Val="Main_block_clk_wiz_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="Main_block_seg_display_Daan_wra_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Main_block_seg_display_Daan_wra_0_0" RelGenDir="$PGENDIR/Main_block_seg_display_Daan_wra_0_0">
+      <Config>
+        <Option Name="TopModule" Val="Main_block_seg_display_Daan_wra_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="Main_block_PWM_Gen_Daan_wrapper_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Main_block_PWM_Gen_Daan_wrapper_0_0" RelGenDir="$PGENDIR/Main_block_PWM_Gen_Daan_wrapper_0_0">
+      <Config>
+        <Option Name="TopModule" Val="Main_block_PWM_Gen_Daan_wrapper_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="Speed_sensor_input_dec_speedcalc_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Speed_sensor_input_dec_speedcalc_0_0" RelGenDir="$PGENDIR/Speed_sensor_input_dec_speedcalc_0_0">
+      <Config>
+        <Option Name="TopModule" Val="Speed_sensor_input_dec_speedcalc_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -276,11 +384,156 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="20">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Speed_sensor_input_dec_pulsecounter_0_0_synth_1" Type="Ft3:Synth" SrcSet="Speed_sensor_input_dec_pulsecounter_0_0" Part="xc7z020clg400-1" ConstrsSet="Speed_sensor_input_dec_pulsecounter_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Speed_sensor_input_dec_pulsecounter_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Speed_sensor_input_dec_pulsecounter_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/Speed_sensor_input_dec_pulsecounter_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Speed_sensor_input_dec_ClockDivider1kHz_0_0_synth_1" Type="Ft3:Synth" SrcSet="Speed_sensor_input_dec_ClockDivider1kHz_0_0" Part="xc7z020clg400-1" ConstrsSet="Speed_sensor_input_dec_ClockDivider1kHz_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Speed_sensor_input_dec_ClockDivider1kHz_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Speed_sensor_input_dec_ClockDivider1kHz_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/Speed_sensor_input_dec_ClockDivider1kHz_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="PWM_Gen_Daan_ClockDivider100kHz_0_0_synth_1" Type="Ft3:Synth" SrcSet="PWM_Gen_Daan_ClockDivider100kHz_0_0" Part="xc7z020clg400-1" ConstrsSet="PWM_Gen_Daan_ClockDivider100kHz_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/PWM_Gen_Daan_ClockDivider100kHz_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/PWM_Gen_Daan_ClockDivider100kHz_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/PWM_Gen_Daan_ClockDivider100kHz_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="PWM_Gen_Daan_pwmcalculator_0_0_synth_1" Type="Ft3:Synth" SrcSet="PWM_Gen_Daan_pwmcalculator_0_0" Part="xc7z020clg400-1" ConstrsSet="PWM_Gen_Daan_pwmcalculator_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/PWM_Gen_Daan_pwmcalculator_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/PWM_Gen_Daan_pwmcalculator_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/PWM_Gen_Daan_pwmcalculator_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="PWM_Gen_Daan_pwmsimple_0_0_synth_1" Type="Ft3:Synth" SrcSet="PWM_Gen_Daan_pwmsimple_0_0" Part="xc7z020clg400-1" ConstrsSet="PWM_Gen_Daan_pwmsimple_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/PWM_Gen_Daan_pwmsimple_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/PWM_Gen_Daan_pwmsimple_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/PWM_Gen_Daan_pwmsimple_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="seg_display_Daan_SevenSegmentDriver_0_0_synth_1" Type="Ft3:Synth" SrcSet="seg_display_Daan_SevenSegmentDriver_0_0" Part="xc7z020clg400-1" ConstrsSet="seg_display_Daan_SevenSegmentDriver_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/seg_display_Daan_SevenSegmentDriver_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/seg_display_Daan_SevenSegmentDriver_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/seg_display_Daan_SevenSegmentDriver_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="seg_display_Daan_bin14_to_bcd_0_0_synth_1" Type="Ft3:Synth" SrcSet="seg_display_Daan_bin14_to_bcd_0_0" Part="xc7z020clg400-1" ConstrsSet="seg_display_Daan_bin14_to_bcd_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/seg_display_Daan_bin14_to_bcd_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/seg_display_Daan_bin14_to_bcd_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/seg_display_Daan_bin14_to_bcd_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="seg_display_Daan_ClockDivider4kHz_0_0_synth_1" Type="Ft3:Synth" SrcSet="seg_display_Daan_ClockDivider4kHz_0_0" Part="xc7z020clg400-1" ConstrsSet="seg_display_Daan_ClockDivider4kHz_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/seg_display_Daan_ClockDivider4kHz_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/seg_display_Daan_ClockDivider4kHz_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/seg_display_Daan_ClockDivider4kHz_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Main_block_clk_wiz_0_0_synth_1" Type="Ft3:Synth" SrcSet="Main_block_clk_wiz_0_0" Part="xc7z020clg400-1" ConstrsSet="Main_block_clk_wiz_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Main_block_clk_wiz_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Main_block_clk_wiz_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/Main_block_clk_wiz_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Main_block_seg_display_Daan_wra_0_0_synth_1" Type="Ft3:Synth" SrcSet="Main_block_seg_display_Daan_wra_0_0" Part="xc7z020clg400-1" ConstrsSet="Main_block_seg_display_Daan_wra_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Main_block_seg_display_Daan_wra_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Main_block_seg_display_Daan_wra_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/Main_block_seg_display_Daan_wra_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Main_block_PWM_Gen_Daan_wrapper_0_0_synth_1" Type="Ft3:Synth" SrcSet="Main_block_PWM_Gen_Daan_wrapper_0_0" Part="xc7z020clg400-1" ConstrsSet="Main_block_PWM_Gen_Daan_wrapper_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Main_block_PWM_Gen_Daan_wrapper_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Main_block_PWM_Gen_Daan_wrapper_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/Main_block_PWM_Gen_Daan_wrapper_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Speed_sensor_input_dec_speedcalc_0_0_synth_1" Type="Ft3:Synth" SrcSet="Speed_sensor_input_dec_speedcalc_0_0" Part="xc7z020clg400-1" ConstrsSet="Speed_sensor_input_dec_speedcalc_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Speed_sensor_input_dec_speedcalc_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Speed_sensor_input_dec_speedcalc_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/Speed_sensor_input_dec_speedcalc_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
@@ -288,6 +541,234 @@
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Speed_sensor_input_dec_pulsecounter_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="Speed_sensor_input_dec_pulsecounter_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Speed_sensor_input_dec_pulsecounter_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Speed_sensor_input_dec_pulsecounter_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/Speed_sensor_input_dec_pulsecounter_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Speed_sensor_input_dec_ClockDivider1kHz_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="Speed_sensor_input_dec_ClockDivider1kHz_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Speed_sensor_input_dec_ClockDivider1kHz_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Speed_sensor_input_dec_ClockDivider1kHz_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/Speed_sensor_input_dec_ClockDivider1kHz_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="PWM_Gen_Daan_ClockDivider100kHz_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="PWM_Gen_Daan_ClockDivider100kHz_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="PWM_Gen_Daan_ClockDivider100kHz_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/PWM_Gen_Daan_ClockDivider100kHz_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/PWM_Gen_Daan_ClockDivider100kHz_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="PWM_Gen_Daan_pwmcalculator_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="PWM_Gen_Daan_pwmcalculator_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="PWM_Gen_Daan_pwmcalculator_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/PWM_Gen_Daan_pwmcalculator_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/PWM_Gen_Daan_pwmcalculator_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="PWM_Gen_Daan_pwmsimple_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="PWM_Gen_Daan_pwmsimple_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="PWM_Gen_Daan_pwmsimple_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/PWM_Gen_Daan_pwmsimple_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/PWM_Gen_Daan_pwmsimple_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="seg_display_Daan_SevenSegmentDriver_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="seg_display_Daan_SevenSegmentDriver_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="seg_display_Daan_SevenSegmentDriver_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/seg_display_Daan_SevenSegmentDriver_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/seg_display_Daan_SevenSegmentDriver_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="seg_display_Daan_bin14_to_bcd_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="seg_display_Daan_bin14_to_bcd_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="seg_display_Daan_bin14_to_bcd_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/seg_display_Daan_bin14_to_bcd_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/seg_display_Daan_bin14_to_bcd_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="seg_display_Daan_ClockDivider4kHz_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="seg_display_Daan_ClockDivider4kHz_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="seg_display_Daan_ClockDivider4kHz_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/seg_display_Daan_ClockDivider4kHz_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/seg_display_Daan_ClockDivider4kHz_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Main_block_clk_wiz_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="Main_block_clk_wiz_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Main_block_clk_wiz_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Main_block_clk_wiz_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/Main_block_clk_wiz_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Main_block_seg_display_Daan_wra_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="Main_block_seg_display_Daan_wra_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Main_block_seg_display_Daan_wra_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Main_block_seg_display_Daan_wra_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/Main_block_seg_display_Daan_wra_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Main_block_PWM_Gen_Daan_wrapper_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="Main_block_PWM_Gen_Daan_wrapper_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Main_block_PWM_Gen_Daan_wrapper_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Main_block_PWM_Gen_Daan_wrapper_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/Main_block_PWM_Gen_Daan_wrapper_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Speed_sensor_input_dec_speedcalc_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="Speed_sensor_input_dec_speedcalc_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Speed_sensor_input_dec_speedcalc_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Speed_sensor_input_dec_speedcalc_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/Speed_sensor_input_dec_speedcalc_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

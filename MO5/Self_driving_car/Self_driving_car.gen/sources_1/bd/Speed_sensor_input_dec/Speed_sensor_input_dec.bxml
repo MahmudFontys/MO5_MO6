@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="40">
   <CompositeFile CompositeFileTopName="Speed_sensor_input_dec" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1749646537"/>
-    <Generation Name="SIMULATION" State="STALE" Timestamp="1749646537"/>
-    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1749646537"/>
-    <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1749646315"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1749724812"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1749724812"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1749724812"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1749724812"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth\Speed_sensor_input_dec.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
@@ -26,6 +26,30 @@
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="OUT_OF_CONTEXT"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="hw_handoff\Speed_sensor_input_dec.hwh" Type="HwHandoff">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="Speed_sensor_input_dec.bda">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="synth\Speed_sensor_input_dec.hwdef">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="sim\Speed_sensor_input_dec.protoinst">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
     </FileCollection>
