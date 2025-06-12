@@ -7,12 +7,11 @@
       "name": "Speed_sensor_input_dec",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.1",
-      "validated": "true"
+      "tool_version": "2023.1"
     },
     "design_tree": {
-      "pulsecounter_0": "",
       "ClockDivider1kHz_0": "",
+      "pulsecounter_0": "",
       "speedcalc_0": ""
     },
     "ports": {
@@ -37,10 +36,33 @@
       }
     },
     "components": {
+      "ClockDivider1kHz_0": {
+        "vlnv": "xilinx.com:module_ref:ClockDivider1kHz:1.0",
+        "xci_name": "Speed_sensor_input_dec_ClockDivider1kHz_0_1",
+        "xci_path": "ip\\Speed_sensor_input_dec_ClockDivider1kHz_0_1\\Speed_sensor_input_dec_ClockDivider1kHz_0_1.xci",
+        "inst_hier_path": "ClockDivider1kHz_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ClockDivider1kHz",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_in": {
+            "direction": "I"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_out": {
+            "direction": "O"
+          }
+        }
+      },
       "pulsecounter_0": {
         "vlnv": "xilinx.com:module_ref:pulsecounter:1.0",
-        "xci_name": "Speed_sensor_input_dec_pulsecounter_0_0",
-        "xci_path": "ip\\Speed_sensor_input_dec_pulsecounter_0_0\\Speed_sensor_input_dec_pulsecounter_0_0.xci",
+        "xci_name": "Speed_sensor_input_dec_pulsecounter_0_1",
+        "xci_path": "ip\\Speed_sensor_input_dec_pulsecounter_0_1\\Speed_sensor_input_dec_pulsecounter_0_1.xci",
         "inst_hier_path": "pulsecounter_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -75,33 +97,10 @@
           }
         }
       },
-      "ClockDivider1kHz_0": {
-        "vlnv": "xilinx.com:module_ref:ClockDivider1kHz:1.0",
-        "xci_name": "Speed_sensor_input_dec_ClockDivider1kHz_0_0",
-        "xci_path": "ip\\Speed_sensor_input_dec_ClockDivider1kHz_0_0\\Speed_sensor_input_dec_ClockDivider1kHz_0_0.xci",
-        "inst_hier_path": "ClockDivider1kHz_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "ClockDivider1kHz",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk_in": {
-            "direction": "I"
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "clk_out": {
-            "direction": "O"
-          }
-        }
-      },
       "speedcalc_0": {
         "vlnv": "xilinx.com:module_ref:speedcalc:1.0",
-        "xci_name": "Speed_sensor_input_dec_speedcalc_0_0",
-        "xci_path": "ip\\Speed_sensor_input_dec_speedcalc_0_0\\Speed_sensor_input_dec_speedcalc_0_0.xci",
+        "xci_name": "Speed_sensor_input_dec_speedcalc_0_1",
+        "xci_path": "ip\\Speed_sensor_input_dec_speedcalc_0_1\\Speed_sensor_input_dec_speedcalc_0_1.xci",
         "inst_hier_path": "speedcalc_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -129,13 +128,6 @@
           "pulsecounter_0/clk"
         ]
       },
-      "Net": {
-        "ports": [
-          "rst",
-          "ClockDivider1kHz_0/rst",
-          "pulsecounter_0/rst"
-        ]
-      },
       "Pulse_in_1": {
         "ports": [
           "Pulse_in",
@@ -151,8 +143,15 @@
       "pulsecounter_0_pulse_time": {
         "ports": [
           "pulsecounter_0/pulse_time",
-          "Pulse_Time_out",
-          "speedcalc_0/time_in"
+          "speedcalc_0/time_in",
+          "Pulse_Time_out"
+        ]
+      },
+      "rst_1": {
+        "ports": [
+          "rst",
+          "ClockDivider1kHz_0/rst",
+          "pulsecounter_0/rst"
         ]
       },
       "speedcalc_0_speed": {

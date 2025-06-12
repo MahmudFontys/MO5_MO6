@@ -1,30 +1,30 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.08819",
-   "Default View_TopLeft":"-412,-31",
+   "Default View_ScaleFactor":"1.25",
+   "Default View_TopLeft":"-198,-54",
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 threadsafe
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
-preplace port port-id_clk -pg 1 -lvl 0 -x -10 -y 60 -defaultsOSRD
-preplace port port-id_rst -pg 1 -lvl 0 -x -10 -y 90 -defaultsOSRD
-preplace portBus seg -pg 1 -lvl 3 -x 620 -y 190 -defaultsOSRD
-preplace portBus sel -pg 1 -lvl 3 -x 620 -y 220 -defaultsOSRD
-preplace portBus Speed_input -pg 1 -lvl 0 -x -10 -y 230 -defaultsOSRD
-preplace inst bin14_to_bcd_0 -pg 1 -lvl 1 -x 180 -y 230 -defaultsOSRD
-preplace inst ClockDivider4kHz_0 -pg 1 -lvl 1 -x 180 -y 70 -defaultsOSRD
-preplace inst SevenSegmentDriver_0 -pg 1 -lvl 2 -x 480 -y 210 -defaultsOSRD
-preplace netloc ClockDivider4kHz_0_clkout 1 1 1 350 70n
-preplace netloc Net 1 0 2 20 140 340J
-preplace netloc SevenSegmentDriver_0_SEG 1 2 1 590J 190n
-preplace netloc SevenSegmentDriver_0_SEL 1 2 1 NJ 220
-preplace netloc Speed_input_1 1 0 1 NJ 230
-preplace netloc bin14_to_bcd_0_bcd_hundredth 1 1 1 N 220
-preplace netloc bin14_to_bcd_0_bcd_one 1 1 1 N 260
-preplace netloc bin14_to_bcd_0_bcd_tenth 1 1 1 N 240
-preplace netloc bin14_to_bcd_0_bcd_thousandth 1 1 1 N 200
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_rst -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
+preplace portBus seg -pg 1 -lvl 3 -x 520 -y 150 -defaultsOSRD
+preplace portBus sel -pg 1 -lvl 3 -x 520 -y 180 -defaultsOSRD
+preplace portBus Speed_input -pg 1 -lvl 0 -x 0 -y 250 -defaultsOSRD
+preplace inst BinaryToBCD_0 -pg 1 -lvl 1 -x 140 -y 250 -defaultsOSRD
+preplace inst SevenSegmentDriver_0 -pg 1 -lvl 2 -x 390 -y 170 -defaultsOSRD
+preplace inst ClockDivider4kHz_0 -pg 1 -lvl 1 -x 140 -y 70 -defaultsOSRD
+preplace netloc BinaryToBCD_0_bcd0 1 1 1 260 160n
+preplace netloc BinaryToBCD_0_bcd1 1 1 1 270 180n
+preplace netloc BinaryToBCD_0_bcd2 1 1 1 280 200n
+preplace netloc BinaryToBCD_0_bcd3 1 1 1 N 220
+preplace netloc SevenSegmentDriver_0_SEL 1 2 1 NJ 180
+preplace netloc SevenSegmentDriver_0_SEG 1 2 1 500J 150n
+preplace netloc ClockDivider4kHz_0_clkout 1 1 1 260 70n
+preplace netloc Speed_input_1 1 0 1 NJ 250
 preplace netloc clk_1 1 0 1 NJ 60
-levelinfo -pg 1 -10 180 480 620
-pagesize -pg 1 -db -bbox -sgen -190 0 730 320
+preplace netloc rst_1 1 0 2 20 140 NJ
+levelinfo -pg 1 0 140 390 520
+pagesize -pg 1 -db -bbox -sgen -170 0 620 340
 "
 }
 0

@@ -7,13 +7,12 @@
       "name": "PWM_Gen_Daan",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.1",
-      "validated": "true"
+      "tool_version": "2023.1"
     },
     "design_tree": {
-      "pwmcalculator_0": "",
+      "ClockDivider10mHz_0": "",
       "pwmsimple_0": "",
-      "ClockDivider10mHz_0": ""
+      "pwmcalculator_0": ""
     },
     "ports": {
       "clk": {
@@ -37,38 +36,33 @@
       }
     },
     "components": {
-      "pwmcalculator_0": {
-        "vlnv": "xilinx.com:module_ref:pwmcalculator:1.0",
-        "xci_name": "PWM_Gen_Daan_pwmcalculator_0_0",
-        "xci_path": "ip\\PWM_Gen_Daan_pwmcalculator_0_0\\PWM_Gen_Daan_pwmcalculator_0_0.xci",
-        "inst_hier_path": "pwmcalculator_0",
+      "ClockDivider10mHz_0": {
+        "vlnv": "xilinx.com:module_ref:ClockDivider10mHz:1.0",
+        "xci_name": "PWM_Gen_Daan_ClockDivider10mHz_0_1",
+        "xci_path": "ip\\PWM_Gen_Daan_ClockDivider10mHz_0_1\\PWM_Gen_Daan_ClockDivider10mHz_0_1.xci",
+        "inst_hier_path": "ClockDivider10mHz_0",
         "reference_info": {
           "ref_type": "hdl",
-          "ref_name": "pwmcalculator",
+          "ref_name": "ClockDivider10mHz",
           "boundary_crc": "0x0"
         },
         "ports": {
-          "desiredspeed": {
-            "direction": "I",
-            "left": "13",
-            "right": "0"
+          "clk_in": {
+            "direction": "I"
           },
-          "measuredspeed": {
-            "direction": "I",
-            "left": "13",
-            "right": "0"
+          "rst": {
+            "type": "rst",
+            "direction": "I"
           },
-          "dutycycle": {
-            "direction": "O",
-            "left": "6",
-            "right": "0"
+          "clk_out": {
+            "direction": "O"
           }
         }
       },
       "pwmsimple_0": {
         "vlnv": "xilinx.com:module_ref:pwmsimple:1.0",
-        "xci_name": "PWM_Gen_Daan_pwmsimple_0_0",
-        "xci_path": "ip\\PWM_Gen_Daan_pwmsimple_0_0\\PWM_Gen_Daan_pwmsimple_0_0.xci",
+        "xci_name": "PWM_Gen_Daan_pwmsimple_0_1",
+        "xci_path": "ip\\PWM_Gen_Daan_pwmsimple_0_1\\PWM_Gen_Daan_pwmsimple_0_1.xci",
         "inst_hier_path": "pwmsimple_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -100,26 +94,31 @@
           }
         }
       },
-      "ClockDivider10mHz_0": {
-        "vlnv": "xilinx.com:module_ref:ClockDivider10mHz:1.0",
-        "xci_name": "PWM_Gen_Daan_ClockDivider10mHz_0_0",
-        "xci_path": "ip\\PWM_Gen_Daan_ClockDivider10mHz_0_0\\PWM_Gen_Daan_ClockDivider10mHz_0_0.xci",
-        "inst_hier_path": "ClockDivider10mHz_0",
+      "pwmcalculator_0": {
+        "vlnv": "xilinx.com:module_ref:pwmcalculator:1.0",
+        "xci_name": "PWM_Gen_Daan_pwmcalculator_0_1",
+        "xci_path": "ip\\PWM_Gen_Daan_pwmcalculator_0_1\\PWM_Gen_Daan_pwmcalculator_0_1.xci",
+        "inst_hier_path": "pwmcalculator_0",
         "reference_info": {
           "ref_type": "hdl",
-          "ref_name": "ClockDivider10mHz",
+          "ref_name": "pwmcalculator",
           "boundary_crc": "0x0"
         },
         "ports": {
-          "clk_in": {
-            "direction": "I"
+          "desiredspeed": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
           },
-          "rst": {
-            "type": "rst",
-            "direction": "I"
+          "measuredspeed": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
           },
-          "clk_out": {
-            "direction": "O"
+          "dutycycle": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
           }
         }
       }
@@ -129,13 +128,6 @@
         "ports": [
           "ClockDivider10mHz_0/clk_out",
           "pwmsimple_0/clk"
-        ]
-      },
-      "Net": {
-        "ports": [
-          "rst",
-          "pwmsimple_0/reset",
-          "ClockDivider10mHz_0/rst"
         ]
       },
       "clk_1": {
@@ -166,6 +158,13 @@
         "ports": [
           "pwmsimple_0/pwm_out",
           "pwm_out"
+        ]
+      },
+      "rst_1": {
+        "ports": [
+          "rst",
+          "ClockDivider10mHz_0/rst",
+          "pwmsimple_0/reset"
         ]
       }
     }

@@ -12,9 +12,9 @@
     "design_tree": {
       "xlconstant_0": "",
       "clk_wiz_0": "",
-      "Speed_sensor_input_d_0": "",
+      "seg_display_Daan_wra_0": "",
       "PWM_Gen_Daan_wrapper_0": "",
-      "seg_display_Daan_wra_0": ""
+      "Speed_sensor_input_d_0": ""
     },
     "ports": {
       "Pulse_in": {
@@ -85,108 +85,10 @@
           }
         }
       },
-      "Speed_sensor_input_d_0": {
-        "vlnv": "xilinx.com:module_ref:Speed_sensor_input_dec_wrapper:1.0",
-        "xci_name": "Main_block_Speed_sensor_input_d_0_0",
-        "xci_path": "ip\\Main_block_Speed_sensor_input_d_0_0\\Main_block_Speed_sensor_input_d_0_0.xci",
-        "inst_hier_path": "Speed_sensor_input_d_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "Speed_sensor_input_dec_wrapper",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "Pulse_Time_out": {
-            "direction": "O",
-            "left": "13",
-            "right": "0"
-          },
-          "Pulse_in": {
-            "direction": "I"
-          },
-          "Speed_out": {
-            "direction": "O",
-            "left": "13",
-            "right": "0"
-          },
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_HIGH",
-                "value_src": "user_prop"
-              }
-            }
-          }
-        }
-      },
-      "PWM_Gen_Daan_wrapper_0": {
-        "vlnv": "xilinx.com:module_ref:PWM_Gen_Daan_wrapper:1.0",
-        "xci_name": "Main_block_PWM_Gen_Daan_wrapper_0_0",
-        "xci_path": "ip\\Main_block_PWM_Gen_Daan_wrapper_0_0\\Main_block_PWM_Gen_Daan_wrapper_0_0.xci",
-        "inst_hier_path": "PWM_Gen_Daan_wrapper_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "PWM_Gen_Daan_wrapper",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              }
-            }
-          },
-          "desired_speed": {
-            "direction": "I",
-            "left": "13",
-            "right": "0"
-          },
-          "measured_speed": {
-            "direction": "I",
-            "left": "13",
-            "right": "0"
-          },
-          "pwm_out": {
-            "direction": "O"
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I"
-          }
-        }
-      },
       "seg_display_Daan_wra_0": {
         "vlnv": "xilinx.com:module_ref:seg_display_Daan_wrapper:1.0",
-        "xci_name": "Main_block_seg_display_Daan_wra_0_0",
-        "xci_path": "ip\\Main_block_seg_display_Daan_wra_0_0\\Main_block_seg_display_Daan_wra_0_0.xci",
+        "xci_name": "Main_block_seg_display_Daan_wra_0_1",
+        "xci_path": "ip\\Main_block_seg_display_Daan_wra_0_1\\Main_block_seg_display_Daan_wra_0_1.xci",
         "inst_hier_path": "seg_display_Daan_wra_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -224,6 +126,86 @@
             "right": "0"
           }
         }
+      },
+      "PWM_Gen_Daan_wrapper_0": {
+        "vlnv": "xilinx.com:module_ref:PWM_Gen_Daan_wrapper:1.0",
+        "xci_name": "Main_block_PWM_Gen_Daan_wrapper_0_1",
+        "xci_path": "ip\\Main_block_PWM_Gen_Daan_wrapper_0_1\\Main_block_PWM_Gen_Daan_wrapper_0_1.xci",
+        "inst_hier_path": "PWM_Gen_Daan_wrapper_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PWM_Gen_Daan_wrapper",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "desired_speed": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
+          },
+          "measured_speed": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
+          },
+          "pwm_out": {
+            "direction": "O"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          }
+        }
+      },
+      "Speed_sensor_input_d_0": {
+        "vlnv": "xilinx.com:module_ref:Speed_sensor_input_dec_wrapper:1.0",
+        "xci_name": "Main_block_Speed_sensor_input_d_0_1",
+        "xci_path": "ip\\Main_block_Speed_sensor_input_d_0_1\\Main_block_Speed_sensor_input_d_0_1.xci",
+        "inst_hier_path": "Speed_sensor_input_d_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Speed_sensor_input_dec_wrapper",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Pulse_Time_out": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          },
+          "Pulse_in": {
+            "direction": "I"
+          },
+          "Speed_out": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          }
+        }
       }
     },
     "nets": {
@@ -249,9 +231,9 @@
       "clk_wiz_0_clk_out1": {
         "ports": [
           "clk_wiz_0/clk_out1",
-          "Speed_sensor_input_d_0/clk",
           "PWM_Gen_Daan_wrapper_0/clk",
-          "seg_display_Daan_wra_0/clk"
+          "seg_display_Daan_wra_0/clk",
+          "Speed_sensor_input_d_0/clk"
         ]
       },
       "reset_rtl_1": {
@@ -259,7 +241,6 @@
           "reset_rtl",
           "clk_wiz_0/reset",
           "Speed_sensor_input_d_0/rst",
-          "PWM_Gen_Daan_wrapper_0/rst",
           "seg_display_Daan_wra_0/rst"
         ]
       },

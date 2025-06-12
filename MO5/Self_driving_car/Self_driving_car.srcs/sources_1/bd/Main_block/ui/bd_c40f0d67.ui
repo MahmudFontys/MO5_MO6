@@ -1,32 +1,32 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.25",
-   "Default View_TopLeft":"-204,-34",
+   "Default View_ScaleFactor":"1.0114",
+   "Default View_TopLeft":"-107,-60",
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 threadsafe
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
 preplace port port-id_Pulse_in -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
 preplace port port-id_sys_clock -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
 preplace port port-id_reset_rtl -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
-preplace port port-id_pwm_out -pg 1 -lvl 4 -x 830 -y 240 -defaultsOSRD
-preplace portBus seg_out -pg 1 -lvl 4 -x 830 -y 80 -defaultsOSRD
-preplace portBus sel -pg 1 -lvl 4 -x 830 -y 110 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 2 -x 350 -y 230 -defaultsOSRD
+preplace port port-id_pwm_out -pg 1 -lvl 4 -x 820 -y 300 -defaultsOSRD
+preplace portBus seg_out -pg 1 -lvl 4 -x 820 -y 140 -defaultsOSRD
+preplace portBus sel -pg 1 -lvl 4 -x 820 -y 170 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 2 -x 350 -y 290 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 110 -y 170 -defaultsOSRD
+preplace inst seg_display_Daan_wra_0 -pg 1 -lvl 3 -x 650 -y 150 -defaultsOSRD
+preplace inst PWM_Gen_Daan_wrapper_0 -pg 1 -lvl 3 -x 650 -y 300 -defaultsOSRD
 preplace inst Speed_sensor_input_d_0 -pg 1 -lvl 2 -x 350 -y 80 -defaultsOSRD
-preplace inst PWM_Gen_Daan_wrapper_0 -pg 1 -lvl 3 -x 660 -y 240 -defaultsOSRD
-preplace inst seg_display_Daan_wra_0 -pg 1 -lvl 3 -x 660 -y 90 -defaultsOSRD
-preplace netloc PWM_Gen_Daan_wrapper_0_pwm_out 1 3 1 NJ 240
-preplace netloc Pulse_in_1 1 0 2 NJ 60 NJ
-preplace netloc Speed_sensor_input_d_0_Speed_out 1 2 1 490 70n
-preplace netloc clk_wiz_0_clk_out1 1 1 2 210 160 510
-preplace netloc reset_rtl_1 1 0 3 20 100 200 170 500
-preplace netloc seg_display_Daan_wra_0_seg 1 3 1 NJ 80
-preplace netloc seg_display_Daan_wra_0_sel 1 3 1 810J 100n
+preplace netloc reset_rtl_1 1 0 3 20 100 200 170 NJ
 preplace netloc sys_clock_1 1 0 1 NJ 180
-preplace netloc xlconstant_0_dout 1 2 1 NJ 230
-levelinfo -pg 1 0 110 350 660 830
-pagesize -pg 1 -db -bbox -sgen -110 0 960 330
+preplace netloc xlconstant_0_dout 1 2 1 NJ 290
+preplace netloc clk_wiz_0_clk_out1 1 1 2 210 160 500
+preplace netloc Speed_sensor_input_d_0_Speed_out 1 2 1 490 90n
+preplace netloc Pulse_in_1 1 0 2 NJ 60 NJ
+preplace netloc PWM_Gen_Daan_wrapper_0_pwm_out 1 3 1 NJ 300
+preplace netloc seg_display_Daan_wra_0_sel 1 3 1 800J 160n
+preplace netloc seg_display_Daan_wra_0_seg 1 3 1 NJ 140
+levelinfo -pg 1 0 110 350 650 820
+pagesize -pg 1 -db -bbox -sgen -110 0 950 390
 "
 }
 {

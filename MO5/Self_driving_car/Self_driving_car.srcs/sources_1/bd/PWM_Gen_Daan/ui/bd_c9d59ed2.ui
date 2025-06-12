@@ -1,27 +1,27 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.15887",
-   "Default View_TopLeft":"-191,-46",
+   "Default View_TopLeft":"-191,-85",
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 threadsafe
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
-preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
-preplace port port-id_rst -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
-preplace port port-id_pwm_out -pg 1 -lvl 3 -x 620 -y 140 -defaultsOSRD
-preplace portBus desired_speed -pg 1 -lvl 0 -x 0 -y 190 -defaultsOSRD
-preplace portBus measured_speed -pg 1 -lvl 0 -x 0 -y 220 -defaultsOSRD
-preplace inst pwmcalculator_0 -pg 1 -lvl 1 -x 180 -y 210 -defaultsOSRD
-preplace inst pwmsimple_0 -pg 1 -lvl 2 -x 470 -y 140 -defaultsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x -10 -y 60 -defaultsOSRD
+preplace port port-id_rst -pg 1 -lvl 0 -x -10 -y 90 -defaultsOSRD
+preplace port port-id_pwm_out -pg 1 -lvl 3 -x 630 -y 140 -defaultsOSRD
+preplace portBus desired_speed -pg 1 -lvl 0 -x -10 -y 190 -defaultsOSRD
+preplace portBus measured_speed -pg 1 -lvl 0 -x -10 -y 220 -defaultsOSRD
 preplace inst ClockDivider10mHz_0 -pg 1 -lvl 1 -x 180 -y 70 -defaultsOSRD
-preplace netloc Net 1 0 2 20 140 NJ
-preplace netloc desired_speed_1 1 0 1 20J 190n
+preplace inst pwmsimple_0 -pg 1 -lvl 2 -x 480 -y 140 -defaultsOSRD
+preplace inst pwmcalculator_0 -pg 1 -lvl 1 -x 180 -y 210 -defaultsOSRD
+preplace netloc ClockDivider10mHz_0_clk_out 1 1 1 340 70n
+preplace netloc clk_1 1 0 1 NJ 60
+preplace netloc desired_speed_1 1 0 1 10J 190n
 preplace netloc measured_speed_1 1 0 1 NJ 220
 preplace netloc pwmcalculator_0_dutycycle 1 1 1 340 160n
 preplace netloc pwmsimple_0_pwm_out 1 2 1 N 140
-preplace netloc ClockDivider10mHz_0_clk_out 1 1 1 340 70n
-preplace netloc clk_1 1 0 1 NJ 60
-levelinfo -pg 1 0 180 470 620
-pagesize -pg 1 -db -bbox -sgen -190 0 730 280
+preplace netloc rst_1 1 0 2 20 140 NJ
+levelinfo -pg 1 -10 180 480 630
+pagesize -pg 1 -db -bbox -sgen -210 0 740 280
 "
 }
 0
