@@ -1,0 +1,8 @@
+vhdl xil_defaultlib  \
+"../../../bd/simulator/ip/simulator_Clock_div_0_0/sim/simulator_Clock_div_0_0.vhd" \
+"../../../bd/simulator/ip/simulator_pwm_gen_0_0/sim/simulator_pwm_gen_0_0.vhd" \
+"../../../bd/simulator/ip/simulator_trig_pulse_0_0/sim/simulator_trig_pulse_0_0.vhd" \
+"../../../bd/simulator/sim/simulator.vhd" \
+
+# Do not sort compile order
+nosort

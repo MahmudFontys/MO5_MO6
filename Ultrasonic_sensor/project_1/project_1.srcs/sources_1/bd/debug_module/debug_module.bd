@@ -1,30 +1,22 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x218E13E3EE25F060",
+      "boundary_crc": "0x534D59C2EF4B7946",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../project_1.gen/sources_1/bd/debug_module",
       "name": "debug_module",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.1",
-      "validated": "true"
+      "tool_version": "2023.1"
     },
     "design_tree": {
-      "Clock_div_0": "",
       "segment_test_2_0": "",
-      "trigger_pulse_gen_1_0": "",
-      "clk_wiz_0": "",
-      "echo_analyzer_0": "",
-      "seg_buff_0": ""
+      "ultrasonic_sensor_left": "",
+      "ultrasonic_sensor_middle": "",
+      "ultrasonic_sensor_right": "",
+      "global_clock_0": ""
     },
     "ports": {
-      "GPIO_U12": {
-        "direction": "O"
-      },
-      "GPIO_T14": {
-        "direction": "I"
-      },
       "sgmnt": {
         "direction": "O",
         "left": "6",
@@ -43,46 +35,6 @@
       }
     },
     "components": {
-      "Clock_div_0": {
-        "vlnv": "xilinx.com:module_ref:Clock_div:1.0",
-        "xci_name": "debug_module_Clock_div_0_0",
-        "xci_path": "ip\\debug_module_Clock_div_0_0\\debug_module_Clock_div_0_0.xci",
-        "inst_hier_path": "Clock_div_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "Clock_div",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "50000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "nrst": {
-            "direction": "I"
-          },
-          "clk_out_400Hz": {
-            "direction": "O"
-          },
-          "clk_out_1MHz": {
-            "direction": "O"
-          }
-        }
-      },
       "segment_test_2_0": {
         "vlnv": "xilinx.com:module_ref:segment_test_2:1.0",
         "xci_name": "debug_module_segment_test_2_0_0",
@@ -115,143 +67,208 @@
           }
         }
       },
-      "trigger_pulse_gen_1_0": {
-        "vlnv": "xilinx.com:module_ref:trigger_pulse_gen_1:1.0",
-        "xci_name": "debug_module_trigger_pulse_gen_1_0_0",
-        "xci_path": "ip\\debug_module_trigger_pulse_gen_1_0_0\\debug_module_trigger_pulse_gen_1_0_0.xci",
-        "inst_hier_path": "trigger_pulse_gen_1_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "trigger_pulse_gen_1",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "GPIO_U12": {
-            "direction": "O"
-          }
-        }
-      },
-      "clk_wiz_0": {
-        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
-        "xci_name": "debug_module_clk_wiz_0_0",
-        "xci_path": "ip\\debug_module_clk_wiz_0_0\\debug_module_clk_wiz_0_0.xci",
-        "inst_hier_path": "clk_wiz_0",
+      "ultrasonic_sensor_left": {
         "parameters": {
-          "CLKIN1_JITTER_PS": {
-            "value": "80.0"
+          "ACTIVE_SIM_BD": {
+            "value": "ultrasonic_sensor.bd"
           },
-          "CLKOUT1_DRIVES": {
-            "value": "BUFG"
+          "ACTIVE_SYNTH_BD": {
+            "value": "ultrasonic_sensor.bd"
           },
-          "CLKOUT1_JITTER": {
-            "value": "288.707"
+          "ENABLE_DFX": {
+            "value": "0"
           },
-          "CLKOUT1_PHASE_ERROR": {
-            "value": "258.220"
+          "LIST_SIM_BD": {
+            "value": "ultrasonic_sensor.bd"
           },
-          "CLKOUT1_REQUESTED_OUT_FREQ": {
-            "value": "50"
+          "LIST_SYNTH_BD": {
+            "value": "ultrasonic_sensor.bd"
           },
-          "CLKOUT2_DRIVES": {
-            "value": "BUFG"
-          },
-          "CLKOUT3_DRIVES": {
-            "value": "BUFG"
-          },
-          "CLKOUT4_DRIVES": {
-            "value": "BUFG"
-          },
-          "CLKOUT5_DRIVES": {
-            "value": "BUFG"
-          },
-          "CLKOUT6_DRIVES": {
-            "value": "BUFG"
-          },
-          "CLKOUT7_DRIVES": {
-            "value": "BUFG"
-          },
-          "CLK_IN1_BOARD_INTERFACE": {
-            "value": "sys_clock"
-          },
-          "MMCM_BANDWIDTH": {
-            "value": "OPTIMIZED"
-          },
-          "MMCM_CLKFBOUT_MULT_F": {
-            "value": "34"
-          },
-          "MMCM_CLKIN1_PERIOD": {
-            "value": "8.000"
-          },
-          "MMCM_CLKIN2_PERIOD": {
-            "value": "10.0"
-          },
-          "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "17"
-          },
-          "MMCM_COMPENSATION": {
-            "value": "ZHOLD"
-          },
-          "MMCM_DIVCLK_DIVIDE": {
-            "value": "5"
-          },
-          "PRIMITIVE": {
-            "value": "PLL"
+          "LOCK_PROPAGATE": {
+            "value": "0"
           }
-        }
-      },
-      "echo_analyzer_0": {
-        "vlnv": "xilinx.com:module_ref:echo_analyzer:1.0",
-        "xci_name": "debug_module_echo_analyzer_0_0",
-        "xci_path": "ip\\debug_module_echo_analyzer_0_0\\debug_module_echo_analyzer_0_0.xci",
-        "inst_hier_path": "echo_analyzer_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "echo_analyzer",
-          "boundary_crc": "0x0"
         },
         "ports": {
-          "clk": {
-            "type": "clk",
+          "clk_1MHz": {
             "direction": "I"
           },
           "echo_pulse": {
             "direction": "I"
           },
-          "pulse_duration": {
+          "distance_output": {
             "direction": "O",
             "left": "15",
             "right": "0"
+          },
+          "trigger_pulse": {
+            "direction": "O"
+          }
+        },
+        "post_compiled_compname": "ultrasonic_sensor_inst_0",
+        "architecture": "zynq",
+        "variant_info": {
+          "ultrasonic_sensor.bd": {
+            "scoped_diagram": "ultrasonic_sensor_inst_0.bd",
+            "design_checksum": "0x233D8ED3",
+            "ref_name": "ultrasonic_sensor",
+            "ref_subinst_path": "debug_module_ultrasonic_sensor_0",
+            "ref_type": "Block Design",
+            "source_type": "all",
+            "active": "all"
           }
         }
       },
-      "seg_buff_0": {
-        "vlnv": "xilinx.com:module_ref:seg_buff:1.0",
-        "xci_name": "debug_module_seg_buff_0_0",
-        "xci_path": "ip\\debug_module_seg_buff_0_0\\debug_module_seg_buff_0_0.xci",
-        "inst_hier_path": "seg_buff_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "seg_buff",
-          "boundary_crc": "0x0"
+      "ultrasonic_sensor_middle": {
+        "parameters": {
+          "ACTIVE_SIM_BD": {
+            "value": "ultrasonic_sensor.bd"
+          },
+          "ACTIVE_SYNTH_BD": {
+            "value": "ultrasonic_sensor.bd"
+          },
+          "ENABLE_DFX": {
+            "value": "0"
+          },
+          "LIST_SIM_BD": {
+            "value": "ultrasonic_sensor.bd"
+          },
+          "LIST_SYNTH_BD": {
+            "value": "ultrasonic_sensor.bd"
+          },
+          "LOCK_PROPAGATE": {
+            "value": "0"
+          }
         },
         "ports": {
-          "reg_buf": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "clk": {
-            "type": "clk",
+          "clk_1MHz": {
             "direction": "I"
           },
-          "distance": {
+          "echo_pulse": {
+            "direction": "I"
+          },
+          "distance_output": {
             "direction": "O",
             "left": "15",
             "right": "0"
+          },
+          "trigger_pulse": {
+            "direction": "O"
+          }
+        },
+        "post_compiled_compname": "ultrasonic_sensor_inst_1",
+        "architecture": "zynq",
+        "variant_info": {
+          "ultrasonic_sensor.bd": {
+            "scoped_diagram": "ultrasonic_sensor_inst_1.bd",
+            "design_checksum": "0x233D8ED3",
+            "ref_name": "ultrasonic_sensor",
+            "ref_subinst_path": "debug_moduleultrasonic_sensor_0",
+            "ref_type": "Block Design",
+            "source_type": "all",
+            "active": "all"
+          }
+        }
+      },
+      "ultrasonic_sensor_right": {
+        "parameters": {
+          "ACTIVE_SIM_BD": {
+            "value": "ultrasonic_sensor.bd"
+          },
+          "ACTIVE_SYNTH_BD": {
+            "value": "ultrasonic_sensor.bd"
+          },
+          "ENABLE_DFX": {
+            "value": "0"
+          },
+          "LIST_SIM_BD": {
+            "value": "ultrasonic_sensor.bd"
+          },
+          "LIST_SYNTH_BD": {
+            "value": "ultrasonic_sensor.bd"
+          },
+          "LOCK_PROPAGATE": {
+            "value": "0"
+          }
+        },
+        "ports": {
+          "clk_1MHz": {
+            "direction": "I"
+          },
+          "echo_pulse": {
+            "direction": "I"
+          },
+          "distance_output": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "trigger_pulse": {
+            "direction": "O"
+          }
+        },
+        "post_compiled_compname": "ultrasonic_sensor_inst_2",
+        "architecture": "zynq",
+        "variant_info": {
+          "ultrasonic_sensor.bd": {
+            "scoped_diagram": "ultrasonic_sensor_inst_2.bd",
+            "design_checksum": "0x233D8ED3",
+            "ref_name": "ultrasonic_sensor",
+            "ref_subinst_path": "debug_moduleultrasonic_sensor_1",
+            "ref_type": "Block Design",
+            "source_type": "all",
+            "active": "all"
+          }
+        }
+      },
+      "global_clock_0": {
+        "parameters": {
+          "ACTIVE_SIM_BD": {
+            "value": "global_clock.bd"
+          },
+          "ACTIVE_SYNTH_BD": {
+            "value": "global_clock.bd"
+          },
+          "ENABLE_DFX": {
+            "value": "0"
+          },
+          "LIST_SIM_BD": {
+            "value": "global_clock.bd"
+          },
+          "LIST_SYNTH_BD": {
+            "value": "global_clock.bd"
+          },
+          "LOCK_PROPAGATE": {
+            "value": "0"
+          }
+        },
+        "ports": {
+          "clk": {
+            "direction": "I"
+          },
+          "nrst": {
+            "direction": "I"
+          },
+          "clk_out_400Hz": {
+            "direction": "O"
+          },
+          "clk_out_1MHz": {
+            "direction": "O"
+          },
+          "clk_out_10MHz": {
+            "direction": "O"
+          }
+        },
+        "post_compiled_compname": "global_clock_inst_0",
+        "architecture": "zynq",
+        "variant_info": {
+          "global_clock.bd": {
+            "scoped_diagram": "global_clock_inst_0.bd",
+            "design_checksum": "0x5FE37952",
+            "ref_name": "global_clock",
+            "ref_subinst_path": "debug_module_global_clock_0",
+            "ref_type": "Block Design",
+            "source_type": "all",
+            "active": "all"
           }
         }
       }
@@ -259,52 +276,28 @@
     "nets": {
       "Clock_div_0_clk_out_1MHz": {
         "ports": [
-          "Clock_div_0/clk_out_1MHz",
-          "echo_analyzer_0/clk",
-          "trigger_pulse_gen_1_0/clk"
-        ]
-      },
-      "Clock_div_0_clk_out_400Hz": {
-        "ports": [
-          "Clock_div_0/clk_out_400Hz",
-          "segment_test_2_0/clk",
-          "seg_buff_0/clk"
-        ]
-      },
-      "GPIO_T14_1": {
-        "ports": [
-          "GPIO_T14",
-          "echo_analyzer_0/echo_pulse"
+          "global_clock_0/clk_out_1MHz",
+          "ultrasonic_sensor_right/clk_1MHz",
+          "ultrasonic_sensor_left/clk_1MHz",
+          "ultrasonic_sensor_middle/clk_1MHz"
         ]
       },
       "clk_1": {
         "ports": [
           "clk",
-          "clk_wiz_0/clk_in1"
+          "global_clock_0/clk"
         ]
       },
-      "clk_wiz_0_clk_out1": {
+      "global_clock_0_clk_out_400Hz": {
         "ports": [
-          "clk_wiz_0/clk_out1",
-          "Clock_div_0/clk"
-        ]
-      },
-      "echo_analyzer_0_pulse_duration": {
-        "ports": [
-          "echo_analyzer_0/pulse_duration",
-          "seg_buff_0/reg_buf"
+          "global_clock_0/clk_out_400Hz",
+          "segment_test_2_0/clk"
         ]
       },
       "nrst_1": {
         "ports": [
           "nrst",
-          "Clock_div_0/nrst"
-        ]
-      },
-      "seg_buff_0_distance": {
-        "ports": [
-          "seg_buff_0/distance",
-          "segment_test_2_0/distance"
+          "global_clock_0/nrst"
         ]
       },
       "segment_test_2_0_control_seg": {
@@ -317,12 +310,6 @@
         "ports": [
           "segment_test_2_0/sgmnt",
           "sgmnt"
-        ]
-      },
-      "trigger_pulse_gen_1_0_GPIO_U12": {
-        "ports": [
-          "trigger_pulse_gen_1_0/GPIO_U12",
-          "GPIO_U12"
         ]
       }
     }

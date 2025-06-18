@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Thu Jun  5 17:19:24 2025
+--Date        : Thu Jun 12 03:49:14 2025
 --Host        : LAPTOP-PGUMC0OJ running 64-bit major release  (build 9200)
 --Command     : generate_target debug_module.bd
 --Design      : debug_module
@@ -16,6 +16,8 @@ entity debug_module is
   port (
     GPIO_T14 : in STD_LOGIC;
     GPIO_U12 : out STD_LOGIC;
+    M19 : in STD_LOGIC;
+    SW : in STD_LOGIC_VECTOR ( 7 downto 0 );
     clk : in STD_LOGIC;
     control_seg : out STD_LOGIC_VECTOR ( 3 downto 0 );
     nrst : in STD_LOGIC;
@@ -58,6 +60,14 @@ architecture STRUCTURE of debug_module is
     locked : out STD_LOGIC
   );
   end component debug_module_clk_wiz_0_0;
+  component debug_module_seg_mux_0_0 is
+  port (
+    M19 : in STD_LOGIC;
+    Seg_out : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    distance : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    SW : in STD_LOGIC_VECTOR ( 7 downto 0 )
+  );
+  end component debug_module_seg_mux_0_0;
   component debug_module_echo_analyzer_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -65,21 +75,16 @@ architecture STRUCTURE of debug_module is
     pulse_duration : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   end component debug_module_echo_analyzer_0_0;
-  component debug_module_seg_buff_0_0 is
-  port (
-    reg_buf : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    clk : in STD_LOGIC;
-    distance : out STD_LOGIC_VECTOR ( 15 downto 0 )
-  );
-  end component debug_module_seg_buff_0_0;
   signal Clock_div_0_clk_out_1MHz : STD_LOGIC;
   signal Clock_div_0_clk_out_400Hz : STD_LOGIC;
   signal GPIO_T14_1 : STD_LOGIC;
+  signal M19_1 : STD_LOGIC;
+  signal SW_1 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal clk_1 : STD_LOGIC;
   signal clk_wiz_0_clk_out1 : STD_LOGIC;
   signal echo_analyzer_0_pulse_duration : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal nrst_1 : STD_LOGIC;
-  signal seg_buff_0_distance : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal seg_mux_0_Seg_out : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal segment_test_2_0_control_seg : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal segment_test_2_0_sgmnt : STD_LOGIC_VECTOR ( 6 downto 0 );
   signal trigger_pulse_gen_1_0_GPIO_U12 : STD_LOGIC;
@@ -87,6 +92,8 @@ architecture STRUCTURE of debug_module is
 begin
   GPIO_T14_1 <= GPIO_T14;
   GPIO_U12 <= trigger_pulse_gen_1_0_GPIO_U12;
+  M19_1 <= M19;
+  SW_1(7 downto 0) <= SW(7 downto 0);
   clk_1 <= clk;
   control_seg(3 downto 0) <= segment_test_2_0_control_seg(3 downto 0);
   nrst_1 <= nrst;
@@ -111,17 +118,18 @@ echo_analyzer_0: component debug_module_echo_analyzer_0_0
       echo_pulse => GPIO_T14_1,
       pulse_duration(15 downto 0) => echo_analyzer_0_pulse_duration(15 downto 0)
     );
-seg_buff_0: component debug_module_seg_buff_0_0
+seg_mux_0: component debug_module_seg_mux_0_0
      port map (
-      clk => Clock_div_0_clk_out_400Hz,
-      distance(15 downto 0) => seg_buff_0_distance(15 downto 0),
-      reg_buf(15 downto 0) => echo_analyzer_0_pulse_duration(15 downto 0)
+      M19 => M19_1,
+      SW(7 downto 0) => SW_1(7 downto 0),
+      Seg_out(15 downto 0) => seg_mux_0_Seg_out(15 downto 0),
+      distance(15 downto 0) => echo_analyzer_0_pulse_duration(15 downto 0)
     );
 segment_test_2_0: component debug_module_segment_test_2_0_0
      port map (
       clk => Clock_div_0_clk_out_400Hz,
       control_seg(3 downto 0) => segment_test_2_0_control_seg(3 downto 0),
-      distance(15 downto 0) => seg_buff_0_distance(15 downto 0),
+      distance(15 downto 0) => seg_mux_0_Seg_out(15 downto 0),
       sgmnt(6 downto 0) => segment_test_2_0_sgmnt(6 downto 0)
     );
 trigger_pulse_gen_1_0: component debug_module_trigger_pulse_gen_1_0_0

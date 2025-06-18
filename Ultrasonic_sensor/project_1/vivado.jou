@@ -1,0 +1,639 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Wed Jun 11 13:37:53 2025
+# Process ID: 20504
+# Current directory: C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6192 C:\Users\mgurl\Documents\GitHub\MO5_MO6\Ultrasonic_sensor\project_1\project_1.xpr
+# Log file: C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/vivado.log
+# Journal file: C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1\vivado.jou
+# Running On: LAPTOP-PGUMC0OJ, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 6, Host memory: 16931 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.xpr
+update_compile_order -fileset sources_1
+close [ open C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/new/pwm_gen.vhd w ]
+add_files C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/new/pwm_gen.vhd
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/debug_module/debug_module.bd}
+create_bd_design "Ultrasonic_right"
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference trigger_pulse_gen_1 trigger_pulse_gen_1_0
+create_bd_cell -type module -reference echo_analyzer echo_analyzer_0
+create_bd_cell -type module -reference seg_buff seg_buff_0
+set_property location {2 410 22} [get_bd_cells seg_buff_0]
+create_bd_cell -type module -reference segment_test_2 segment_test_2_0
+create_bd_cell -type module -reference to_distance_conv to_distance_conv_0
+set_property location {3.5 1105 11} [get_bd_cells segment_test_2_0]
+set_property location {3 672 22} [get_bd_cells to_distance_conv_0]
+set_property location {4 1023 3} [get_bd_cells segment_test_2_0]
+set_property location {3.5 999 11} [get_bd_cells segment_test_2_0]
+delete_bd_objs [get_bd_cells segment_test_2_0]
+connect_bd_net [get_bd_pins echo_analyzer_0/pulse_duration] [get_bd_pins seg_buff_0/reg_buf]
+connect_bd_net [get_bd_pins seg_buff_0/distance] [get_bd_pins to_distance_conv_0/pulse]
+open_bd_design {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/debug_module/debug_module.bd}
+create_bd_cell -type container -reference Ultrasonic_right Ultrasonic_right_0
+open_bd_design {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/Ultrasonic_right/Ultrasonic_right.bd}
+save_bd_design
+open_bd_design {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/debug_module/debug_module.bd}
+create_bd_cell -type container -reference Ultrasonic_right Ultrasonic_right_0
+create_bd_cell -type container -reference Ultrasonic_right Ultrasonic_right_0
+open_bd_design {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/Ultrasonic_right/Ultrasonic_right.bd}
+validate_bd_design
+connect_bd_net [get_bd_pins echo_analyzer_0/clk] [get_bd_pins trigger_pulse_gen_1_0/clk]
+delete_bd_objs [get_bd_nets Net]
+close [ open C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/Ultrasonic_right/clk_buffer.vhd w ]
+add_files C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/Ultrasonic_right/clk_buffer.vhd
+update_compile_order -fileset sources_1
+create_bd_port -dir I clk_1MHz
+set_property location {-165 -243} [get_bd_ports clk_1MHz]
+set_property location {-70 -239} [get_bd_ports clk_1MHz]
+connect_bd_net [get_bd_ports clk_1MHz] [get_bd_pins echo_analyzer_0/clk]
+connect_bd_net [get_bd_ports clk_1MHz] [get_bd_pins trigger_pulse_gen_1_0/clk]
+create_bd_port -dir I echo_right
+connect_bd_net [get_bd_ports echo_right] [get_bd_pins echo_analyzer_0/echo_pulse]
+set_property location {-89 28} [get_bd_ports echo_right]
+create_bd_port -dir I clk_400Hz
+connect_bd_net [get_bd_ports clk_400Hz] [get_bd_pins seg_buff_0/clk]
+create_bd_port -dir O -from 15 -to 0 distance
+startgroup
+connect_bd_net [get_bd_ports distance] [get_bd_pins to_distance_conv_0/distance]
+endgroup
+set_property location {1015 24} [get_bd_ports distance]
+save_bd_design
+validate_bd_design
+open_bd_design {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/debug_module/debug_module.bd}
+create_bd_cell -type container -reference Ultrasonic_right Ultrasonic_right_0
+delete_bd_objs [get_bd_cells Ultrasonic_right_0]
+open_bd_design {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/Ultrasonic_right/Ultrasonic_right.bd}
+create_bd_port -dir I GPIO_right
+delete_bd_objs [get_bd_ports GPIO_right]
+create_bd_port -dir O GPIO_right
+startgroup
+connect_bd_net [get_bd_ports GPIO_right] [get_bd_pins trigger_pulse_gen_1_0/GPIO_U12]
+endgroup
+save_bd_design
+validate_bd_design
+open_bd_design {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/debug_module/debug_module.bd}
+create_bd_cell -type container -reference Ultrasonic_right Ultrasonic_right_0
+delete_bd_objs [get_bd_cells Ultrasonic_right_0]
+update_module_reference {Ultrasonic_right_seg_buff_0_0 debug_module_seg_buff_0_0}
+update_module_reference {Simulation_echo_analyzer_0_0 Ultrasonic_right_echo_analyzer_0_0 debug_module_echo_analyzer_0_0}
+update_module_reference {Simulation_echo_analyzer_0_0 Ultrasonic_right_echo_analyzer_0_0 debug_module_echo_analyzer_0_0}
+update_module_reference {Simulation_echo_analyzer_0_0 Ultrasonic_right_echo_analyzer_0_0 debug_module_echo_analyzer_0_0}
+update_module_reference {Ultrasonic_right_seg_buff_0_0 debug_module_seg_buff_0_0}
+export_ip_user_files -of_objects  [get_files C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/Ultrasonic_right/clk_buffer.vhd] -no_script -reset -force -quiet
+remove_files  C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/Ultrasonic_right/clk_buffer.vhd
+file delete -force C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/Ultrasonic_right/clk_buffer.vhd
+set_property used_in_synthesis false [get_files  C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/Ultrasonic_right/Ultrasonic_right.bd]
+set_property used_in_implementation false [get_files  C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/Ultrasonic_right/Ultrasonic_right.bd]
+set_property used_in_simulation false [get_files  C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/Ultrasonic_right/Ultrasonic_right.bd]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.runs/impl_1/debug_module_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.runs/impl_1/debug_module_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+close_hw_manager
+open_bd_design {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sim_1/bd/Simulation/Simulation.bd}
+create_bd_cell -type module -reference seg_buff seg_buff_0
+set_property location {4 935 89} [get_bd_cells seg_buff_0]
+delete_bd_objs [get_bd_nets echo_analyzer_0_pulse_duration]
+connect_bd_net [get_bd_pins echo_analyzer_0/pulse_duration] [get_bd_pins seg_buff_0/reg_buf]
+connect_bd_net [get_bd_pins seg_buff_0/clk] [get_bd_pins Clock_div_1/clk_out_400Hz]
+connect_bd_net [get_bd_pins to_distance_conv_0/pulse] [get_bd_pins seg_buff_0/distance]
+save_bd_design
+generate_target Simulation [get_files C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sim_1/bd/Simulation/Simulation.bd]
+export_ip_user_files -of_objects [get_files C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sim_1/bd/Simulation/Simulation.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sim_1/bd/Simulation/Simulation.bd] -directory C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.ip_user_files -ipstatic_source_dir C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/Simulation_wrapper_behav.wcfg
+source Simulation_wrapper.tcl
+add_force {/Simulation_wrapper/Simulation_i/echo_analyzer_0/echo_pulse} -radix hex {1 5ms} -cancel_after 15ms
+run 500 ms
+add_force {/Simulation_wrapper/Simulation_i/echo_analyzer_0/echo_pulse} -radix hex {1 10ms} -cancel_after 15ms
+run 200 ms
+open_bd_design {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sim_1/bd/Simulation/Simulation.bd}
+add_force {/Simulation_wrapper/Simulation_i/echo_analyzer_0/echo_pulse} -radix hex {1 6ms} -cancel_after 10ms
+run 50 ms
+run 50 ms
+save_wave_config {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/Simulation_wrapper_behav.wcfg}
+close_sim
+current_bd_design [get_bd_designs Ultrasonic_right]
+close_bd_design [get_bd_designs Ultrasonic_right]
+current_bd_design [get_bd_designs debug_module]
+update_module_reference {Simulation_echo_analyzer_0_0 Ultrasonic_right_echo_analyzer_0_0 debug_module_echo_analyzer_0_0}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.runs/impl_1/debug_module_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.runs/impl_1/debug_module_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+close_hw_manager
+update_module_reference {Simulation_echo_analyzer_0_0 Ultrasonic_right_echo_analyzer_0_0 debug_module_echo_analyzer_0_0}
+update_module_reference {Simulation_echo_analyzer_0_0 Ultrasonic_right_echo_analyzer_0_0 debug_module_echo_analyzer_0_0}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+update_module_reference {Simulation_echo_analyzer_0_0 Ultrasonic_right_echo_analyzer_0_0 debug_module_echo_analyzer_0_0}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+close_design
+reset_run synth_1
+update_module_reference {Simulation_echo_analyzer_0_0 Ultrasonic_right_echo_analyzer_0_0 debug_module_echo_analyzer_0_0}
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+update_module_reference {Simulation_echo_analyzer_0_0 Ultrasonic_right_echo_analyzer_0_0 debug_module_echo_analyzer_0_0}
+reset_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+update_module_reference {Simulation_echo_analyzer_0_0 Ultrasonic_right_echo_analyzer_0_0 debug_module_echo_analyzer_0_0}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.runs/impl_1/debug_module_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.runs/impl_1/debug_module_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+close_hw_manager
+update_module_reference {Simulation_echo_analyzer_0_0 Ultrasonic_right_echo_analyzer_0_0 debug_module_echo_analyzer_0_0}
+delete_bd_objs [get_bd_nets echo_analyzer_0_pulse_duration] [get_bd_nets seg_buff_0_distance] [get_bd_cells seg_buff_0]
+update_compile_order -fileset sources_1
+connect_bd_net [get_bd_pins echo_analyzer_0/pulse_duration] [get_bd_pins to_distance_conv_0/pulse]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.runs/impl_1/debug_module_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.runs/impl_1/debug_module_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+close_hw_manager
+generate_target Simulation [get_files C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sim_1/bd/Simulation/Simulation.bd]
+current_bd_design [get_bd_designs Simulation]
+export_ip_user_files -of_objects [get_files C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sim_1/bd/Simulation/Simulation.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sim_1/bd/Simulation/Simulation.bd] -directory C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.ip_user_files -ipstatic_source_dir C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/Simulation_wrapper_behav.wcfg
+source Simulation_wrapper.tcl
+add_force {/Simulation_wrapper/Simulation_i/echo_analyzer_0/echo_pulse} -radix hex {1 5ms} -cancel_after 10ms
+run 50 ms
+run 50 ms
+run 50 ms
+add_force {/Simulation_wrapper/Simulation_i/echo_analyzer_0/echo_pulse} -radix hex {1 100us} -cancel_after 200us
+run 5 ms
+run 5 ms
+run 200 ms
+add_force {/Simulation_wrapper/Simulation_i/echo_analyzer_0/echo_pulse} -radix hex {1 100us} -cancel_after 450us
+run 200 ms
+close_sim
+update_module_reference {Simulation_echo_analyzer_0_0 Ultrasonic_right_echo_analyzer_0_0 debug_module_echo_analyzer_0_0}
+current_bd_design [get_bd_designs Ultrasonic_right]
+close_bd_design [get_bd_designs Ultrasonic_right]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.runs/impl_1/debug_module_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.runs/impl_1/debug_module_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+close_hw_manager
+update_module_reference {Simulation_echo_analyzer_0_0 Ultrasonic_right_echo_analyzer_0_0 debug_module_echo_analyzer_0_0}
+update_module_reference {Simulation_echo_analyzer_0_0 Ultrasonic_right_echo_analyzer_0_0 debug_module_echo_analyzer_0_0}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+update_module_reference {Simulation_echo_analyzer_0_0 Ultrasonic_right_echo_analyzer_0_0 debug_module_echo_analyzer_0_0}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.runs/impl_1/debug_module_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.runs/impl_1/debug_module_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+close_hw_manager
+update_module_reference {Simulation_echo_analyzer_0_0 Ultrasonic_right_echo_analyzer_0_0 debug_module_echo_analyzer_0_0}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.runs/impl_1/debug_module_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.runs/impl_1/debug_module_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+close_hw_manager
+delete_bd_objs [get_bd_nets echo_analyzer_0_pulse_duration] [get_bd_nets to_distance_conv_0_distance] [get_bd_cells to_distance_conv_0]
+connect_bd_net [get_bd_pins echo_analyzer_0/pulse_duration] [get_bd_pins segment_test_2_0/distance]
+update_compile_order -fileset sources_1
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.runs/impl_1/debug_module_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.runs/impl_1/debug_module_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+close_hw_manager
+generate_target Simulation [get_files C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sim_1/bd/Simulation/Simulation.bd]
+export_ip_user_files -of_objects [get_files C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sim_1/bd/Simulation/Simulation.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sim_1/bd/Simulation/Simulation.bd] -directory C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.ip_user_files -ipstatic_source_dir C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/Simulation_wrapper_behav.wcfg
+source Simulation_wrapper.tcl
+add_force {/Simulation_wrapper/Simulation_i/echo_analyzer_0/echo_pulse} -radix hex {1 5ms} -cancel_after 10ms
+run 200 ms
+open_bd_design {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sim_1/bd/Simulation/Simulation.bd}
+add_force {/Simulation_wrapper/Simulation_i/echo_analyzer_0/echo_pulse} -radix hex {1 5ms} -cancel_after 11ms
+run 200 ms
+close_sim
+update_module_reference {Simulation_echo_analyzer_0_0 Ultrasonic_right_echo_analyzer_0_0 debug_module_echo_analyzer_0_0}
+generate_target Simulation [get_files C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sim_1/bd/Simulation/Simulation.bd]
+export_ip_user_files -of_objects [get_files C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sim_1/bd/Simulation/Simulation.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sim_1/bd/Simulation/Simulation.bd] -directory C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.ip_user_files -ipstatic_source_dir C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/Simulation_wrapper_behav.wcfg
+source Simulation_wrapper.tcl
+add_force {/Simulation_wrapper/Simulation_i/echo_analyzer_0/echo_pulse} -radix hex {1 5ms} -cancel_after 10ms
+run 10 ms
+run 10 ms
+run 10 ms
+run 10 ms
+run 10 ms
+add_force {/Simulation_wrapper/Simulation_i/echo_analyzer_0/echo_pulse} -radix hex {1 5ms} -cancel_after 6ms
+run 10 ms
+close_sim
+update_module_reference {Simulation_echo_analyzer_0_0 Ultrasonic_right_echo_analyzer_0_0 debug_module_echo_analyzer_0_0}
+generate_target Simulation [get_files C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sim_1/bd/Simulation/Simulation.bd]
+export_ip_user_files -of_objects [get_files C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sim_1/bd/Simulation/Simulation.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sim_1/bd/Simulation/Simulation.bd] -directory C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.ip_user_files -ipstatic_source_dir C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/Simulation_wrapper_behav.wcfg
+source Simulation_wrapper.tcl
+add_force {/Simulation_wrapper/Simulation_i/echo_analyzer_0/echo_pulse} -radix hex {1 5ms} -cancel_after 10ms
+run 20 ms
+run 20 ms
+run 20 ms
+run 20 ms
+run 20 ms
+run 200 ms
+close_sim
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.runs/impl_1/debug_module_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.runs/impl_1/debug_module_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+close_hw_manager
+open_bd_design {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/debug_module/debug_module.bd}
+set_property is_enabled true [get_files  C:/Users/mgurl/Documents/School/Year_2/DD/Test_design/project_1/project_1.srcs/sources_1/new/seg_mux.vhd]
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference seg_mux seg_mux_0
+create_bd_port -dir I -from 7 -to 0 SW
+delete_bd_objs [get_bd_ports SW]
+create_bd_port -dir I -from 6 -to 0 SW
+connect_bd_net [get_bd_ports SW] [get_bd_pins seg_mux_0/SW]
+delete_bd_objs [get_bd_nets echo_analyzer_0_pulse_duration]
+connect_bd_net [get_bd_pins echo_analyzer_0/pulse_duration] [get_bd_pins seg_mux_0/distance]
+delete_bd_objs [get_bd_nets SW_1]
+set_property LEFT 7 [get_bd_ports /SW]
+connect_bd_net [get_bd_ports SW] [get_bd_pins seg_mux_0/SW]
+create_bd_port -dir I M19
+connect_bd_net [get_bd_ports M19] [get_bd_pins seg_mux_0/M19]
+connect_bd_net [get_bd_pins seg_mux_0/Seg_out] [get_bd_pins segment_test_2_0/distance]
+save_bd_design
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.runs/impl_1/debug_module_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.runs/impl_1/debug_module_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.runs/impl_1/debug_module_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+close_hw_manager
+open_bd_design {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/debug_module/debug_module.bd}
+update_module_reference {Simulation_echo_analyzer_0_0 Ultrasonic_right_echo_analyzer_0_0 debug_module_echo_analyzer_0_0}
+update_module_reference {Simulation_echo_analyzer_0_0 Ultrasonic_right_echo_analyzer_0_0 debug_module_echo_analyzer_0_0}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.runs/impl_1/debug_module_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.runs/impl_1/debug_module_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+close_hw_manager
+open_bd_design {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/debug_module/debug_module.bd}
+delete_bd_objs [get_bd_nets echo_analyzer_0_pulse_duration] [get_bd_nets seg_mux_0_Seg_out] [get_bd_nets SW_1] [get_bd_nets M19_1] [get_bd_cells seg_mux_0]
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/Ultrasonic_right/Ultrasonic_right.bd}
+delete_bd_objs [get_bd_nets echo_analyzer_0_pulse_duration] [get_bd_nets clk_400Hz_1] [get_bd_nets seg_buff_0_distance] [get_bd_cells seg_buff_0]
+connect_bd_net [get_bd_pins echo_analyzer_0/pulse_duration] [get_bd_pins to_distance_conv_0/pulse]
+set_property location {3 702 9} [get_bd_cells to_distance_conv_0]
+delete_bd_objs [get_bd_ports clk_400Hz]
+save_bd_design
+current_bd_design [get_bd_designs debug_module]
+delete_bd_objs [get_bd_nets GPIO_T14_1] [get_bd_cells echo_analyzer_0]
+update_compile_order -fileset sources_1
+delete_bd_objs [get_bd_nets Clock_div_0_clk_out_1MHz] [get_bd_nets trigger_pulse_gen_1_0_GPIO_U12] [get_bd_cells trigger_pulse_gen_1_0]
+update_compile_order -fileset sources_1
+delete_bd_objs [get_bd_ports M19]
+delete_bd_objs [get_bd_ports SW]
+delete_bd_objs [get_bd_ports GPIO_T14]
+set_property location {5 1533 -136} [get_bd_cells segment_test_2_0]
+set_property used_in_synthesis true [get_files  C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/Ultrasonic_right/Ultrasonic_right.bd]
+set_property used_in_implementation true [get_files  C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/Ultrasonic_right/Ultrasonic_right.bd]
+create_bd_cell -type container -reference Ultrasonic_right Ultrasonic_right_0
+open_bd_design {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/Ultrasonic_right/Ultrasonic_right.bd}
+validate_bd_design
+save_bd_design
+current_bd_design [get_bd_designs debug_module]
+save_bd_design
+create_bd_cell -type container -reference Ultrasonic_right Ultrasonic_right_0
+set_property location {3.5 732 -19} [get_bd_cells Ultrasonic_right_0]
+update_compile_order -fileset sources_1
+set_property location {3 741 232} [get_bd_cells Ultrasonic_right_0]
+create_bd_cell -type container -reference Ultrasonic_right Ultrasonic_right_1
+set_property name Ultrasonic_left_0 [get_bd_cells Ultrasonic_right_1]
+open_bd_design {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/Ultrasonic_right/Ultrasonic_right.bd}
+current_bd_design [get_bd_designs debug_module]
+export_ip_user_files -of_objects  [get_files C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/Ultrasonic_right/Ultrasonic_right.bd] -no_script -reset -force -quiet
+remove_files  C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/Ultrasonic_right/Ultrasonic_right.bd
+file delete -force C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/Ultrasonic_right
+file delete -force c:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/Ultrasonic_right
+create_bd_design -dir {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd} "ultrasonic_sensor"
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference echo_analyzer echo_analyzer_0
+create_bd_cell -type module -reference trigger_pulse_gen_1 trigger_pulse_gen_1_0
+set_property location {2 372 -119} [get_bd_cells trigger_pulse_gen_1_0]
+create_bd_cell -type module -reference to_distance_conv to_distance_conv_0
+set_property location {1.5 728 -100} [get_bd_cells to_distance_conv_0]
+create_bd_port -dir I clk_1MHz
+connect_bd_net [get_bd_ports clk_1MHz] [get_bd_pins trigger_pulse_gen_1_0/clk]
+connect_bd_net [get_bd_ports clk_1MHz] [get_bd_pins echo_analyzer_0/clk]
+create_bd_port -dir I echo_pulse
+connect_bd_net [get_bd_ports echo_pulse] [get_bd_pins echo_analyzer_0/echo_pulse]
+set_property location {-20 -89} [get_bd_ports echo_pulse]
+connect_bd_net [get_bd_pins echo_analyzer_0/pulse_duration] [get_bd_pins to_distance_conv_0/pulse]
+create_bd_port -dir O -from 15 -to 0 distance_output
+set_property location {889 -103} [get_bd_ports distance_output]
+connect_bd_net [get_bd_ports distance_output] [get_bd_pins to_distance_conv_0/distance]
+save_bd_design
+create_bd_port -dir I trigger_pulse
+delete_bd_objs [get_bd_ports trigger_pulse]
+create_bd_port -dir O trigger_pulse
+startgroup
+connect_bd_net [get_bd_ports trigger_pulse] [get_bd_pins trigger_pulse_gen_1_0/GPIO_U12]
+endgroup
+set_property location {890 -214} [get_bd_ports trigger_pulse]
+save_bd_design
+current_bd_design [get_bd_designs debug_module]
+delete_bd_objs [get_bd_cells Ultrasonic_left_0]
+delete_bd_objs [get_bd_cells Ultrasonic_right_0]
+update_compile_order -fileset sources_1
+save_bd_design
+create_bd_cell -type container -reference ultrasonic_sensor ultrasonic_sensor_0
+current_bd_design [get_bd_designs Simulation]
+close_bd_design [get_bd_designs Simulation]
+current_bd_design [get_bd_designs ultrasonic_sensor]
+validate_bd_design
+save_bd_design
+current_bd_design [get_bd_designs debug_module]
+create_bd_cell -type container -reference ultrasonic_sensor ultrasonic_sensor_0
+update_compile_order -fileset sources_1
+set_property location {3.5 753 140} [get_bd_cells ultrasonic_sensor_0]
+copy_bd_objs /  [get_bd_cells {ultrasonic_sensor_0}]
+copy_bd_objs /  [get_bd_cells {ultrasonic_sensor_0}]
+set_property name ultrasonic_sensor_left [get_bd_cells ultrasonic_sensor_0]
+set_property name ultrasonic_sensor_middle [get_bd_cells ultrasonic_sensor_1]
+set_property name ultrasonic_sensor_right [get_bd_cells ultrasonic_sensor_2]
+connect_bd_net [get_bd_pins Clock_div_0/clk_out_1MHz] [get_bd_pins ultrasonic_sensor_right/clk_1MHz]
+connect_bd_net [get_bd_pins ultrasonic_sensor_left/clk_1MHz] [get_bd_pins Clock_div_0/clk_out_1MHz]
+connect_bd_net [get_bd_pins ultrasonic_sensor_middle/clk_1MHz] [get_bd_pins Clock_div_0/clk_out_1MHz]
+save_bd_design
+create_bd_design "global_clock"
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference Clock_div Clock_div_0
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0
+endgroup
+set_property location {1 25 -106} [get_bd_cells clk_wiz_0]
+create_bd_port -dir I clk
+set_property location {-37 -93} [get_bd_ports clk]
+set_property -dict [list \
+  CONFIG.CLKIN1_JITTER_PS {80.0} \
+  CONFIG.CLKIN2_JITTER_PS {89.99} \
+  CONFIG.CLKOUT1_DRIVES {BUFG} \
+  CONFIG.CLKOUT1_JITTER {288.707} \
+  CONFIG.CLKOUT1_PHASE_ERROR {258.220} \
+  CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {50} \
+  CONFIG.CLKOUT2_DRIVES {BUFG} \
+  CONFIG.CLKOUT3_DRIVES {BUFG} \
+  CONFIG.CLKOUT4_DRIVES {BUFG} \
+  CONFIG.CLKOUT5_DRIVES {BUFG} \
+  CONFIG.CLKOUT6_DRIVES {BUFG} \
+  CONFIG.CLKOUT7_DRIVES {BUFG} \
+  CONFIG.CLK_IN1_BOARD_INTERFACE {sys_clock} \
+  CONFIG.CLK_IN2_BOARD_INTERFACE {Custom} \
+  CONFIG.MMCM_BANDWIDTH {OPTIMIZED} \
+  CONFIG.MMCM_CLKFBOUT_MULT_F {34} \
+  CONFIG.MMCM_CLKIN1_PERIOD {8.000} \
+  CONFIG.MMCM_CLKIN2_PERIOD {8.999} \
+  CONFIG.MMCM_CLKOUT0_DIVIDE_F {17} \
+  CONFIG.MMCM_COMPENSATION {ZHOLD} \
+  CONFIG.MMCM_DIVCLK_DIVIDE {5} \
+  CONFIG.PRIMITIVE {PLL} \
+  CONFIG.SECONDARY_SOURCE {Single_ended_clock_capable_pin} \
+  CONFIG.USE_INCLK_SWITCHOVER {true} \
+] [get_bd_cells clk_wiz_0]
+set_property -dict [list \
+  CONFIG.MMCM_CLKIN2_PERIOD {8.499} \
+  CONFIG.SECONDARY_SOURCE {Single_ended_clock_capable_pin} \
+  CONFIG.USE_INCLK_SWITCHOVER {false} \
+] [get_bd_cells clk_wiz_0]
+connect_bd_net [get_bd_ports clk] [get_bd_pins clk_wiz_0/clk_in1]
+set_property location {-49 -95} [get_bd_ports clk]
+set_property location {-46 -102} [get_bd_ports clk]
+set_property USER_COMMENTS.comment_0 {Enter Comments here}  [current_bd_design]
+set_property USER_COMMENTS.comment_0 {}  [current_bd_design]
+create_bd_port -dir I nrst
+set_property location {-46 -121} [get_bd_ports nrst]
+connect_bd_net [get_bd_ports nrst] [get_bd_pins clk_wiz_0/reset]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins Clock_div_0/clk]
+connect_bd_net [get_bd_pins clk_wiz_0/locked] [get_bd_pins Clock_div_0/nrst]
+delete_bd_objs [get_bd_nets nrst_1]
+set_property location {-43 -79} [get_bd_ports nrst]
+delete_bd_objs [get_bd_nets clk_wiz_0_locked]
+connect_bd_net [get_bd_ports nrst] [get_bd_pins Clock_div_0/nrst]
+delete_bd_objs [get_bd_nets nrst_1]
+set_property location {-51 -19} [get_bd_ports nrst]
+connect_bd_net [get_bd_ports nrst] [get_bd_pins Clock_div_0/nrst]
+regenerate_bd_layout -routing
+set_property location {-25 113} [get_bd_ports clk]
+set_property location {-17 182} [get_bd_ports nrst]
+set_property location {-15 130} [get_bd_ports clk]
+set_property location {-18 120} [get_bd_ports clk]
+startgroup
+create_bd_port -dir O clk_out_400Hz
+connect_bd_net [get_bd_pins /Clock_div_0/clk_out_400Hz] [get_bd_ports clk_out_400Hz]
+endgroup
+startgroup
+create_bd_port -dir O clk_out_1MHz
+connect_bd_net [get_bd_pins /Clock_div_0/clk_out_1MHz] [get_bd_ports clk_out_1MHz]
+endgroup
+save_bd_design
+current_bd_design [get_bd_designs debug_module]
+delete_bd_objs [get_bd_nets clk_1] [get_bd_nets clk_wiz_0_clk_out1] [get_bd_cells clk_wiz_0]
+delete_bd_objs [get_bd_nets nrst_1] [get_bd_nets Clock_div_0_clk_out_400Hz] [get_bd_cells Clock_div_0]
+update_compile_order -fileset sources_1
+create_bd_cell -type container -reference global_clock global_clock_0
+current_bd_design [get_bd_designs global_clock]
+validate_bd_design
+save_bd_design
+current_bd_design [get_bd_designs debug_module]
+create_bd_cell -type container -reference global_clock global_clock_0
+set_property location {1.5 249 -109} [get_bd_cells global_clock_0]
+update_compile_order -fileset sources_1
+connect_bd_net [get_bd_ports clk] [get_bd_pins global_clock_0/clk]
+connect_bd_net [get_bd_ports nrst] [get_bd_pins global_clock_0/nrst]
+set_property location {-56 -92} [get_bd_ports nrst]
+set_property location {-53 -97} [get_bd_ports nrst]
+set_property location {-49 -119} [get_bd_ports clk]
+connect_bd_net [get_bd_pins global_clock_0/clk_out_1MHz] [get_bd_pins ultrasonic_sensor_right/clk_1MHz] -boundary_type upper
+connect_bd_net [get_bd_pins global_clock_0/clk_out_400Hz] [get_bd_pins segment_test_2_0/clk]
+set_property location {3 1547 -115} [get_bd_cells segment_test_2_0]
+delete_bd_objs [get_bd_ports GPIO_U12]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0
+endgroup
+delete_bd_objs [get_bd_cells clk_wiz_0]
+current_bd_design [get_bd_designs global_clock]
+update_module_reference {Simulation_Clock_div_0_1 debug_module_Clock_div_0_0 global_clock_Clock_div_0_0}
+startgroup
+create_bd_port -dir O clk_out_10MHz
+connect_bd_net [get_bd_pins /Clock_div_0/clk_out_10MHz] [get_bd_ports clk_out_10MHz]
+endgroup
+set_property location {482 176} [get_bd_ports clk_out_10MHz]
+set_property location {494 90} [get_bd_ports clk_out_400Hz]
+set_property location {493 114} [get_bd_ports clk_out_1MHz]
+set_property location {493 133} [get_bd_ports clk_out_10MHz]
+save_bd_design
+open_bd_design C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/debug_module/debug_module.bd
+upgrade_bd_cells [get_bd_cells global_clock_0]
+current_bd_design [get_bd_designs ultrasonic_sensor]
+close_bd_design [get_bd_designs ultrasonic_sensor]
+current_bd_design [get_bd_designs global_clock]
+close_bd_design [get_bd_designs global_clock]
+current_bd_design [get_bd_designs debug_module]
+save_bd_design
+open_bd_design {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/global_clock/global_clock.bd}
+validate_bd_design -force
+save_bd_design
+current_bd_design [get_bd_designs debug_module]
+close_bd_design [get_bd_designs debug_module]
+close_bd_design [get_bd_designs Simulation]
+close_bd_design [get_bd_designs global_clock]
+open_bd_design {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sim_1/bd/Simulation/Simulation.bd}
+open_bd_design {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sim_1/bd/Simulation/Simulation.bd}
+open_bd_design {C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/debug_module/debug_module.bd}

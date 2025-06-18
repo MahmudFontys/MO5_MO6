@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Thu Jun  5 15:44:57 2025
+--Date        : Thu Jun 12 03:08:14 2025
 --Host        : LAPTOP-PGUMC0OJ running 64-bit major release  (build 9200)
 --Command     : generate_target Simulation.bd
 --Design      : Simulation
@@ -19,7 +19,7 @@ entity Simulation is
     sgmnt : out STD_LOGIC_VECTOR ( 6 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of Simulation : entity is "Simulation,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Simulation,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=5,numReposBlks=5,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of Simulation : entity is "Simulation,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Simulation,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=7,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=6,numPkgbdBlks=0,bdsource=USER,synth_mode=Global}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of Simulation : entity is "Simulation.hwdef";
 end Simulation;
@@ -53,6 +53,19 @@ architecture STRUCTURE of Simulation is
     sync_rst : out STD_LOGIC
   );
   end component Simulation_sim_clk_gen_0_0;
+  component Simulation_to_distance_conv_0_4 is
+  port (
+    pulse : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    distance : out STD_LOGIC_VECTOR ( 15 downto 0 )
+  );
+  end component Simulation_to_distance_conv_0_4;
+  component Simulation_seg_buff_0_0 is
+  port (
+    reg_buf : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    clk : in STD_LOGIC;
+    distance : out STD_LOGIC_VECTOR ( 15 downto 0 )
+  );
+  end component Simulation_seg_buff_0_0;
   component Simulation_echo_analyzer_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -63,10 +76,12 @@ architecture STRUCTURE of Simulation is
   signal Clock_div_0_clk_out_1MHz : STD_LOGIC;
   signal Clock_div_0_clk_out_400Hz : STD_LOGIC;
   signal echo_analyzer_0_pulse_duration : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal seg_buff_0_distance : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal segment_test_2_0_control_seg : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal segment_test_2_0_sgmnt : STD_LOGIC_VECTOR ( 6 downto 0 );
   signal sim_clk_gen_0_clk : STD_LOGIC;
   signal sim_clk_gen_0_sync_rst : STD_LOGIC;
+  signal to_distance_conv_0_distance : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal trigger_pulse_gen_1_0_GPIO_U12 : STD_LOGIC;
 begin
   GPIO_U12 <= trigger_pulse_gen_1_0_GPIO_U12;
@@ -85,17 +100,28 @@ echo_analyzer_0: component Simulation_echo_analyzer_0_0
       echo_pulse => '0',
       pulse_duration(15 downto 0) => echo_analyzer_0_pulse_duration(15 downto 0)
     );
+seg_buff_0: component Simulation_seg_buff_0_0
+     port map (
+      clk => Clock_div_0_clk_out_400Hz,
+      distance(15 downto 0) => seg_buff_0_distance(15 downto 0),
+      reg_buf(15 downto 0) => echo_analyzer_0_pulse_duration(15 downto 0)
+    );
 segment_test_2_0: component Simulation_segment_test_2_0_0
      port map (
       clk => Clock_div_0_clk_out_400Hz,
       control_seg(3 downto 0) => segment_test_2_0_control_seg(3 downto 0),
-      distance(15 downto 0) => echo_analyzer_0_pulse_duration(15 downto 0),
+      distance(15 downto 0) => to_distance_conv_0_distance(15 downto 0),
       sgmnt(6 downto 0) => segment_test_2_0_sgmnt(6 downto 0)
     );
 sim_clk_gen_0: component Simulation_sim_clk_gen_0_0
      port map (
       clk => sim_clk_gen_0_clk,
       sync_rst => sim_clk_gen_0_sync_rst
+    );
+to_distance_conv_0: component Simulation_to_distance_conv_0_4
+     port map (
+      distance(15 downto 0) => to_distance_conv_0_distance(15 downto 0),
+      pulse(15 downto 0) => seg_buff_0_distance(15 downto 0)
     );
 trigger_pulse_gen_1_0: component Simulation_trigger_pulse_gen_1_0_0
      port map (

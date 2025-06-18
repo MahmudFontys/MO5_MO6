@@ -1,0 +1,88 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xD4076CB2A0DB6218",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../trig_pulse_test.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "trig_pulse_0": "",
+      "clk_wiz_0": ""
+    },
+    "ports": {
+      "clk": {
+        "direction": "I"
+      },
+      "GPIO_U13": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "trig_pulse_0": {
+        "vlnv": "xilinx.com:module_ref:trig_pulse:1.0",
+        "xci_name": "design_1_trig_pulse_0_0",
+        "xci_path": "ip\\design_1_trig_pulse_0_0\\design_1_trig_pulse_0_0.xci",
+        "inst_hier_path": "trig_pulse_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "trig_pulse",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "GPIO_U12": {
+            "direction": "O"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_1_clk_wiz_0_0",
+        "xci_path": "ip\\design_1_clk_wiz_0_0\\design_1_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0"
+      }
+    },
+    "nets": {
+      "clk_1": {
+        "ports": [
+          "clk",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "trig_pulse_0/clk"
+        ]
+      },
+      "trig_pulse_0_GPIO_U12": {
+        "ports": [
+          "trig_pulse_0/GPIO_U12",
+          "GPIO_U13"
+        ]
+      }
+    }
+  }
+}

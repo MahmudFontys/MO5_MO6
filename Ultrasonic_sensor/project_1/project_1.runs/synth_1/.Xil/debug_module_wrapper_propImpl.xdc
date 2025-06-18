@@ -1,6 +1,8 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/mgurl/Downloads/base.xdc rfile:../../../../../../../../../Downloads/base.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/mgurl/Downloads/base.xdc rfile:../../../../../../../../Downloads/base.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN H16   IOSTANDARD LVCMOS33 } [get_ports { clk }];
+set_property src_info {type:XDC file:1 line:11 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict {PACKAGE_PIN M19 IOSTANDARD LVCMOS33} [get_ports {M19}]
 set_property src_info {type:XDC file:1 line:27 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN D19 IOSTANDARD LVCMOS33} [get_ports {nrst}]
 set_property src_info {type:XDC file:1 line:48 export:INPUT save:INPUT read:READ} [current_design]

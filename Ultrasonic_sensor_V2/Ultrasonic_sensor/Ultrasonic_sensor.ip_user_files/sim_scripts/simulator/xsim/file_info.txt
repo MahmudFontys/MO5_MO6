@@ -1,0 +1,7 @@
+simulator_sim_clk_gen_0_0.v,verilog,xil_defaultlib,../../../bd/simulator/ip/simulator_sim_clk_gen_0_0/sim/simulator_sim_clk_gen_0_0.v,
+simulator_Clock_div_0_0.vhd,vhdl,xil_defaultlib,../../../bd/simulator/ip/simulator_Clock_div_0_0/sim/simulator_Clock_div_0_0.vhd,
+simulator_xlconstant_0_0.v,verilog,xil_defaultlib,../../../bd/simulator/ip/simulator_xlconstant_0_0/sim/simulator_xlconstant_0_0.v,
+simulator_pwm_gen_0_0.vhd,vhdl,xil_defaultlib,../../../bd/simulator/ip/simulator_pwm_gen_0_0/sim/simulator_pwm_gen_0_0.vhd,
+simulator_trig_pulse_0_0.vhd,vhdl,xil_defaultlib,../../../bd/simulator/ip/simulator_trig_pulse_0_0/sim/simulator_trig_pulse_0_0.vhd,
+simulator.vhd,vhdl,xil_defaultlib,../../../bd/simulator/sim/simulator.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

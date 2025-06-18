@@ -1,0 +1,24 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-140,-404",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_clk_1MHz -pg 1 -lvl 0 -x 0 -y -260 -defaultsOSRD
+preplace port port-id_echo_pulse -pg 1 -lvl 0 -x 0 -y -90 -defaultsOSRD
+preplace port port-id_trigger_pulse -pg 1 -lvl 3 -x 880 -y -210 -defaultsOSRD
+preplace portBus distance_output -pg 1 -lvl 3 -x 880 -y -100 -defaultsOSRD
+preplace inst echo_analyzer_0 -pg 1 -lvl 1 -x 350 -y -100 -defaultsOSRD
+preplace inst trigger_pulse_gen_1_0 -pg 1 -lvl 1 -x 350 -y -210 -defaultsOSRD
+preplace inst to_distance_conv_0 -pg 1 -lvl 2 -x 730 -y -100 -defaultsOSRD
+preplace netloc clk_1MHz_1 1 0 1 200 -260n
+preplace netloc echo_pulse_1 1 0 1 N -90
+preplace netloc echo_analyzer_0_pulse_duration 1 1 1 N -100
+preplace netloc to_distance_conv_0_distance 1 2 1 N -100
+preplace netloc trigger_pulse_gen_1_0_GPIO_U12 1 1 2 NJ -210 N
+levelinfo -pg 1 0 350 730 880
+pagesize -pg 1 -db -bbox -sgen -140 -280 1070 180
+"
+}
+

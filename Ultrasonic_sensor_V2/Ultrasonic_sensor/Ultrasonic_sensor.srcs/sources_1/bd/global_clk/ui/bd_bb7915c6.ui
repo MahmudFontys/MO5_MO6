@@ -1,0 +1,25 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-344,-148",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x -10 -y 90 -defaultsOSRD
+preplace port port-id_nrst -pg 1 -lvl 0 -x -10 -y 150 -defaultsOSRD
+preplace port port-id_clk_out_400Hz -pg 1 -lvl 3 -x 470 -y 50 -defaultsOSRD
+preplace port port-id_clk_out_1MHz -pg 1 -lvl 3 -x 470 -y 80 -defaultsOSRD
+preplace port port-id_clk_out_10MHz -pg 1 -lvl 3 -x 470 -y 100 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 110 -y 80 -defaultsOSRD
+preplace inst Clock_div_0 -pg 1 -lvl 2 -x 330 -y 80 -defaultsOSRD
+preplace netloc Clock_div_0_clk_out_10MHz 1 2 1 N 100
+preplace netloc Clock_div_0_clk_out_1MHz 1 2 1 N 80
+preplace netloc Clock_div_0_clk_out_400Hz 1 2 1 450 50n
+preplace netloc clk_1 1 0 1 NJ 90
+preplace netloc clk_wiz_0_clk_out1 1 1 1 NJ 70
+preplace netloc nrst_1 1 0 2 NJ 150 200J
+levelinfo -pg 1 -10 110 330 470
+pagesize -pg 1 -db -bbox -sgen -90 -20 620 170
+"
+}
+0

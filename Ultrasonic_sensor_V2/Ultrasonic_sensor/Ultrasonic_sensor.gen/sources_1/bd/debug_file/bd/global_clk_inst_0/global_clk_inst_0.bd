@@ -1,0 +1,196 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x59BF73C2B4C02E5D",
+      "design_src": "C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor_V2/Ultrasonic_sensor/Ultrasonic_sensor.srcs/sources_1/bd/global_clk/global_clk.bd",
+      "device": "xc7z020clg400-1",
+      "name": "global_clk_inst_0",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.1",
+      "variant": "true"
+    },
+    "design_tree": {
+      "clk_wiz_0": "",
+      "Clock_div_0": ""
+    },
+    "ports": {
+      "clk": {
+        "direction": "I",
+        "parameters": {
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "strong"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "strong"
+          }
+        }
+      },
+      "nrst": {
+        "direction": "I"
+      },
+      "clk_out_400Hz": {
+        "direction": "O"
+      },
+      "clk_out_1MHz": {
+        "direction": "O"
+      },
+      "clk_out_10MHz": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "global_clk_inst_0_clk_wiz_0_0",
+        "xci_path": "ip\\global_clk_inst_0_clk_wiz_0_0\\global_clk_inst_0_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "80.0"
+          },
+          "CLKOUT1_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "237.312"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "249.865"
+          },
+          "CLKOUT2_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT3_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT4_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT5_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT6_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT7_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "MMCM_BANDWIDTH": {
+            "value": "OPTIMIZED"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "36"
+          },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "8.000"
+          },
+          "MMCM_CLKIN2_PERIOD": {
+            "value": "10.0"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "9"
+          },
+          "MMCM_COMPENSATION": {
+            "value": "ZHOLD"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "5"
+          },
+          "PLL_CLKIN_PERIOD": {
+            "value": "8.000"
+          },
+          "PRIMITIVE": {
+            "value": "PLL"
+          }
+        }
+      },
+      "Clock_div_0": {
+        "vlnv": "xilinx.com:module_ref:Clock_div:1.0",
+        "xci_name": "global_clk_inst_0_Clock_div_0_0",
+        "xci_path": "ip\\global_clk_inst_0_Clock_div_0_0\\global_clk_inst_0_Clock_div_0_0.xci",
+        "inst_hier_path": "Clock_div_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Clock_div",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/global_clk_0/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "nrst": {
+            "direction": "I"
+          },
+          "clk_out_400Hz": {
+            "direction": "O"
+          },
+          "clk_out_1MHz": {
+            "direction": "O"
+          },
+          "clk_out_10MHz": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Clock_div_0_clk_out_10MHz": {
+        "ports": [
+          "Clock_div_0/clk_out_10MHz",
+          "clk_out_10MHz"
+        ]
+      },
+      "Clock_div_0_clk_out_1MHz": {
+        "ports": [
+          "Clock_div_0/clk_out_1MHz",
+          "clk_out_1MHz"
+        ]
+      },
+      "Clock_div_0_clk_out_400Hz": {
+        "ports": [
+          "Clock_div_0/clk_out_400Hz",
+          "clk_out_400Hz"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "Clock_div_0/clk"
+        ]
+      },
+      "nrst_1": {
+        "ports": [
+          "nrst",
+          "Clock_div_0/nrst"
+        ]
+      }
+    }
+  }
+}

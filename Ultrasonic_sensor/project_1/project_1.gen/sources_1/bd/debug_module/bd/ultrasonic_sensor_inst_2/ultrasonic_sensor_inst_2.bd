@@ -1,0 +1,176 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x7A677DD37033F1FD",
+      "design_src": "c:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/bd/ultrasonic_sensor_inst_0/ultrasonic_sensor_inst_0.bd",
+      "device": "xc7z020clg400-1",
+      "name": "ultrasonic_sensor_inst_2",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.1",
+      "variant": "true"
+    },
+    "design_tree": {
+      "echo_analyzer_0": "",
+      "trigger_pulse_gen_1_0": "",
+      "to_distance_conv_0": ""
+    },
+    "ports": {
+      "clk_1MHz": {
+        "direction": "I",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "strong"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "strong"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "strong"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "strong"
+          }
+        }
+      },
+      "echo_pulse": {
+        "direction": "I"
+      },
+      "distance_output": {
+        "direction": "O",
+        "left": "15",
+        "right": "0"
+      },
+      "trigger_pulse": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "echo_analyzer_0": {
+        "vlnv": "xilinx.com:module_ref:echo_analyzer:1.0",
+        "xci_name": "ultrasonic_sensor_inst_2_echo_analyzer_0_0",
+        "xci_path": "ip\\ultrasonic_sensor_inst_2_echo_analyzer_0_0\\ultrasonic_sensor_inst_2_echo_analyzer_0_0.xci",
+        "inst_hier_path": "echo_analyzer_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "echo_analyzer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "echo_pulse": {
+            "direction": "I"
+          },
+          "pulse_duration": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "trigger_pulse_gen_1_0": {
+        "vlnv": "xilinx.com:module_ref:trigger_pulse_gen_1:1.0",
+        "xci_name": "ultrasonic_sensor_inst_2_trigger_pulse_gen_1_0_0",
+        "xci_path": "ip\\ultrasonic_sensor_inst_2_trigger_pulse_gen_1_0_0\\ultrasonic_sensor_inst_2_trigger_pulse_gen_1_0_0.xci",
+        "inst_hier_path": "trigger_pulse_gen_1_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "trigger_pulse_gen_1",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "GPIO_U12": {
+            "direction": "O"
+          }
+        }
+      },
+      "to_distance_conv_0": {
+        "vlnv": "xilinx.com:module_ref:to_distance_conv:1.0",
+        "xci_name": "ultrasonic_sensor_inst_2_to_distance_conv_0_0",
+        "xci_path": "ip\\ultrasonic_sensor_inst_2_to_distance_conv_0_0\\ultrasonic_sensor_inst_2_to_distance_conv_0_0.xci",
+        "inst_hier_path": "to_distance_conv_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "to_distance_conv",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "pulse": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "distance": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_1MHz_1": {
+        "ports": [
+          "clk_1MHz",
+          "trigger_pulse_gen_1_0/clk",
+          "echo_analyzer_0/clk"
+        ]
+      },
+      "echo_analyzer_0_pulse_duration": {
+        "ports": [
+          "echo_analyzer_0/pulse_duration",
+          "to_distance_conv_0/pulse"
+        ]
+      },
+      "echo_pulse_1": {
+        "ports": [
+          "echo_pulse",
+          "echo_analyzer_0/echo_pulse"
+        ]
+      },
+      "to_distance_conv_0_distance": {
+        "ports": [
+          "to_distance_conv_0/distance",
+          "distance_output"
+        ]
+      },
+      "trigger_pulse_gen_1_0_GPIO_U12": {
+        "ports": [
+          "trigger_pulse_gen_1_0/GPIO_U12",
+          "trigger_pulse"
+        ]
+      }
+    }
+  }
+}

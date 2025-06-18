@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Thu Jun  5 17:19:24 2025
+--Date        : Thu Jun 12 03:49:14 2025
 --Host        : LAPTOP-PGUMC0OJ running 64-bit major release  (build 9200)
 --Command     : generate_target debug_module_wrapper.bd
 --Design      : debug_module_wrapper
@@ -16,6 +16,8 @@ entity debug_module_wrapper is
   port (
     GPIO_T14 : in STD_LOGIC;
     GPIO_U12 : out STD_LOGIC;
+    M19 : in STD_LOGIC;
+    SW : in STD_LOGIC_VECTOR ( 7 downto 0 );
     clk : in STD_LOGIC;
     control_seg : out STD_LOGIC_VECTOR ( 3 downto 0 );
     nrst : in STD_LOGIC;
@@ -31,7 +33,9 @@ architecture STRUCTURE of debug_module_wrapper is
     sgmnt : out STD_LOGIC_VECTOR ( 6 downto 0 );
     control_seg : out STD_LOGIC_VECTOR ( 3 downto 0 );
     clk : in STD_LOGIC;
-    nrst : in STD_LOGIC
+    nrst : in STD_LOGIC;
+    SW : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    M19 : in STD_LOGIC
   );
   end component debug_module;
 begin
@@ -39,6 +43,8 @@ debug_module_i: component debug_module
      port map (
       GPIO_T14 => GPIO_T14,
       GPIO_U12 => GPIO_U12,
+      M19 => M19,
+      SW(7 downto 0) => SW(7 downto 0),
       clk => clk,
       control_seg(3 downto 0) => control_seg(3 downto 0),
       nrst => nrst,

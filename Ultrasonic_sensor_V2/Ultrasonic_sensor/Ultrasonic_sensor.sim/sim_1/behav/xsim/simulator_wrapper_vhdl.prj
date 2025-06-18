@@ -1,0 +1,13 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Ultrasonic_sensor.srcs/sources_1/new/Clock_div.vhd" \
+"../../../../Ultrasonic_sensor.srcs/sources_1/new/pwm_gen.vhd" \
+"../../../../Ultrasonic_sensor.srcs/sources_1/new/trig_pulse.vhd" \
+"../../../../Ultrasonic_sensor.ip_user_files/bd/simulator/ip/simulator_Clock_div_0_0/sim/simulator_Clock_div_0_0.vhd" \
+"../../../../Ultrasonic_sensor.ip_user_files/bd/simulator/ip/simulator_pwm_gen_0_0/sim/simulator_pwm_gen_0_0.vhd" \
+"../../../../Ultrasonic_sensor.ip_user_files/bd/simulator/ip/simulator_trig_pulse_0_0/sim/simulator_trig_pulse_0_0.vhd" \
+"../../../../Ultrasonic_sensor.ip_user_files/bd/simulator/sim/simulator.vhd" \
+"../../../../Ultrasonic_sensor.gen/sim_1/bd/simulator/hdl/simulator_wrapper.vhd" \
+
+# Do not sort compile order
+nosort

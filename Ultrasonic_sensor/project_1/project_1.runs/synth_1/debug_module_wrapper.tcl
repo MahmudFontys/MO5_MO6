@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.runs/synth_1/debug_module_wrapper.tcl"
+  variable script "C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.runs/synth_1/debug_module_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -79,23 +79,23 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.cache/wt [current_project]
-set_property parent.project_path C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.cache/wt [current_project]
+set_property parent.project_path C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.xpr [current_project]
 set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part_repo_paths {C:/Users/mgurl/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
-set_property ip_output_repo c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.cache/ip [current_project]
+set_property ip_output_repo c:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/hdl/debug_module_wrapper.vhd
-add_files C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/debug_module/debug_module.bd
-set_property used_in_implementation false [get_files -all c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/ip/debug_module_clk_wiz_0_0/debug_module_clk_wiz_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/ip/debug_module_clk_wiz_0_0/debug_module_clk_wiz_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/ip/debug_module_clk_wiz_0_0/debug_module_clk_wiz_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/debug_module_ooc.xdc]
+read_vhdl -library xil_defaultlib C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/hdl/debug_module_wrapper.vhd
+add_files C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/debug_module/debug_module.bd
+set_property used_in_implementation false [get_files -all c:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/ip/debug_module_clk_wiz_0_0/debug_module_clk_wiz_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/ip/debug_module_clk_wiz_0_0/debug_module_clk_wiz_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/ip/debug_module_clk_wiz_0_0/debug_module_clk_wiz_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/debug_module_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -113,7 +113,7 @@ read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.srcs/utils_1/imports/synth_1/Ultrasonic_module_wrapper.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/utils_1/imports/synth_1/Ultrasonic_module_wrapper.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

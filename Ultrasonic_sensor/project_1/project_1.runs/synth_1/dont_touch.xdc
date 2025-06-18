@@ -9,9 +9,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==debug_modul
 # IP: bd/debug_module/ip/debug_module_Clock_div_0_0/debug_module_Clock_div_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==debug_module_Clock_div_0_0 || ORIG_REF_NAME==debug_module_Clock_div_0_0} -quiet] -quiet
 
-# IP: bd/debug_module/ip/debug_module_echo_analyzer_0_0/debug_module_echo_analyzer_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==debug_module_echo_analyzer_0_0 || ORIG_REF_NAME==debug_module_echo_analyzer_0_0} -quiet] -quiet
-
 # IP: bd/debug_module/ip/debug_module_segment_test_2_0_0/debug_module_segment_test_2_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==debug_module_segment_test_2_0_0 || ORIG_REF_NAME==debug_module_segment_test_2_0_0} -quiet] -quiet
 
@@ -21,7 +18,10 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==debug_modul
 # IP: bd/debug_module/ip/debug_module_clk_wiz_0_0/debug_module_clk_wiz_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==debug_module_clk_wiz_0_0 || ORIG_REF_NAME==debug_module_clk_wiz_0_0} -quiet] -quiet
 
-# IP: bd/debug_module/ip/debug_module_seg_buff_0_0/debug_module_seg_buff_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==debug_module_seg_buff_0_0 || ORIG_REF_NAME==debug_module_seg_buff_0_0} -quiet] -quiet
+# IP: bd/debug_module/ip/debug_module_echo_analyzer_0_0/debug_module_echo_analyzer_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==debug_module_echo_analyzer_0_0 || ORIG_REF_NAME==debug_module_echo_analyzer_0_0} -quiet] -quiet
 
-# XDC: c:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/debug_module_ooc.xdc
+# IP: bd/debug_module/ip/debug_module_seg_mux_0_0/debug_module_seg_mux_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==debug_module_seg_mux_0_0 || ORIG_REF_NAME==debug_module_seg_mux_0_0} -quiet] -quiet
+
+# XDC: c:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.gen/sources_1/bd/debug_module/debug_module_ooc.xdc

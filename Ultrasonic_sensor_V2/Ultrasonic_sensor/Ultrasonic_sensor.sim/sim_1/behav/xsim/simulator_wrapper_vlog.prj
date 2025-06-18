@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../Ultrasonic_sensor.gen/sources_1/bd/debug_file/bd/global_clk_inst_0/ipshared/30ef" \
+"../../../../Ultrasonic_sensor.ip_user_files/bd/simulator/ip/simulator_sim_clk_gen_0_0/sim/simulator_sim_clk_gen_0_0.v" \
+"../../../../Ultrasonic_sensor.ip_user_files/bd/simulator/ip/simulator_xlconstant_0_0/sim/simulator_xlconstant_0_0.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

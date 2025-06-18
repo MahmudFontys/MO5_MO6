@@ -1,0 +1,8 @@
+verilog xil_defaultlib  \
+"../../../bd/simulator/ip/simulator_sim_clk_gen_0_0/sim/simulator_sim_clk_gen_0_0.v" \
+"../../../bd/simulator/ip/simulator_xlconstant_0_0/sim/simulator_xlconstant_0_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

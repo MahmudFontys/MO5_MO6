@@ -10,11 +10,13 @@
       "tool_version": "2023.1"
     },
     "design_tree": {
-      "Clock_div_1": "",
       "segment_test_2_0": "",
       "trigger_pulse_gen_1_0": "",
       "sim_clk_gen_0": "",
-      "echo_analyzer_0": ""
+      "to_distance_conv_0": "",
+      "seg_buff_0": "",
+      "echo_analyzer_0": "",
+      "Clock_div_1": ""
     },
     "ports": {
       "GPIO_U12": {
@@ -32,48 +34,6 @@
       }
     },
     "components": {
-      "Clock_div_1": {
-        "vlnv": "xilinx.com:module_ref:Clock_div:1.0",
-        "xci_name": "Simulation_Clock_div_0_1",
-        "xci_path": "ip\\Simulation_Clock_div_0_1\\Simulation_Clock_div_0_1.xci",
-        "inst_hier_path": "Clock_div_1",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "Clock_div",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "50000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "Simulation_sim_clk_gen_0_0_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "nrst": {
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_HIGH",
-                "value_src": "user_prop"
-              }
-            }
-          },
-          "clk_out_400Hz": {
-            "direction": "O"
-          },
-          "clk_out_1MHz": {
-            "direction": "O"
-          }
-        }
-      },
       "segment_test_2_0": {
         "vlnv": "xilinx.com:module_ref:segment_test_2:1.0",
         "xci_name": "Simulation_segment_test_2_0_0",
@@ -140,6 +100,56 @@
           }
         }
       },
+      "to_distance_conv_0": {
+        "vlnv": "xilinx.com:module_ref:to_distance_conv:1.0",
+        "xci_name": "Simulation_to_distance_conv_0_4",
+        "xci_path": "ip\\Simulation_to_distance_conv_0_4\\Simulation_to_distance_conv_0_4.xci",
+        "inst_hier_path": "to_distance_conv_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "to_distance_conv",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "pulse": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "distance": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "seg_buff_0": {
+        "vlnv": "xilinx.com:module_ref:seg_buff:1.0",
+        "xci_name": "Simulation_seg_buff_0_0",
+        "xci_path": "ip\\Simulation_seg_buff_0_0\\Simulation_seg_buff_0_0.xci",
+        "inst_hier_path": "seg_buff_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "seg_buff",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reg_buf": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "distance": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
       "echo_analyzer_0": {
         "vlnv": "xilinx.com:module_ref:echo_analyzer:1.0",
         "xci_name": "Simulation_echo_analyzer_0_0",
@@ -164,6 +174,35 @@
             "right": "0"
           }
         }
+      },
+      "Clock_div_1": {
+        "vlnv": "xilinx.com:module_ref:Clock_div:1.0",
+        "xci_name": "Simulation_Clock_div_0_1",
+        "xci_path": "ip\\Simulation_Clock_div_0_1\\Simulation_Clock_div_0_1.xci",
+        "inst_hier_path": "Clock_div_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Clock_div",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "nrst": {
+            "direction": "I"
+          },
+          "clk_out_400Hz": {
+            "direction": "O"
+          },
+          "clk_out_1MHz": {
+            "direction": "O"
+          },
+          "clk_out_10MHz": {
+            "direction": "O"
+          }
+        }
       }
     },
     "nets": {
@@ -177,13 +216,20 @@
       "Clock_div_0_clk_out_400Hz": {
         "ports": [
           "Clock_div_1/clk_out_400Hz",
-          "segment_test_2_0/clk"
+          "segment_test_2_0/clk",
+          "seg_buff_0/clk"
         ]
       },
       "echo_analyzer_0_pulse_duration": {
         "ports": [
           "echo_analyzer_0/pulse_duration",
-          "segment_test_2_0/distance"
+          "seg_buff_0/reg_buf"
+        ]
+      },
+      "seg_buff_0_distance": {
+        "ports": [
+          "seg_buff_0/distance",
+          "to_distance_conv_0/pulse"
         ]
       },
       "segment_test_2_0_control_seg": {
@@ -208,6 +254,12 @@
         "ports": [
           "sim_clk_gen_0/sync_rst",
           "Clock_div_1/nrst"
+        ]
+      },
+      "to_distance_conv_0_distance": {
+        "ports": [
+          "to_distance_conv_0/distance",
+          "segment_test_2_0/distance"
         ]
       },
       "trigger_pulse_gen_1_0_GPIO_U12": {

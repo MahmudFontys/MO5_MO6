@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "sim_clk_gen_v1_0_3" -L "xlconstant_v1_1_7" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "simulator_wrapper_behav" "xil_defaultlib.simulator_wrapper" "xil_defaultlib.glbl" -log "elaborate.log" 

@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1.756598910 ms"></ZoomStartTime>
-      <ZoomEndTime time="15.476598911 ms"></ZoomEndTime>
-      <Cursor1Time time="5.001000000 ms"></Cursor1Time>
+      <ZoomStartTime time="739.150605800 ms"></ZoomStartTime>
+      <ZoomEndTime time="808.550605801 ms"></ZoomEndTime>
+      <Cursor1Time time="636.050605800 ms"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="196"></NameColumnWidth>
-      <ValueColumnWidth column_width="149"></ValueColumnWidth>
+      <ValueColumnWidth column_width="141"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="8" />
+   <WVObjectSize size="10" />
    <wvobject fp_name="/Simulation_wrapper/Simulation_i/echo_analyzer_0/echo_pulse" type="logic">
       <obj_property name="ElementShortName">echo_pulse</obj_property>
       <obj_property name="ObjectShortName">echo_pulse</obj_property>
@@ -39,17 +39,30 @@
    <wvobject fp_name="/Simulation_wrapper/Simulation_i/echo_analyzer_0/U0/pulse_duration" type="array">
       <obj_property name="ElementShortName">pulse_duration[15:0]</obj_property>
       <obj_property name="ObjectShortName">pulse_duration[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/Simulation_wrapper/Simulation_i/echo_analyzer_0/U0/counter" type="array">
       <obj_property name="ElementShortName">counter[15:0]</obj_property>
       <obj_property name="ObjectShortName">counter[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/Simulation_wrapper/Simulation_i/echo_analyzer_0/U0/reg" type="array">
       <obj_property name="ElementShortName">reg[15:0]</obj_property>
       <obj_property name="ObjectShortName">reg[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/Simulation_wrapper/Simulation_i/Clock_div_1/clk_out_1MHz" type="logic">
       <obj_property name="ElementShortName">clk_out_1MHz</obj_property>
       <obj_property name="ObjectShortName">clk_out_1MHz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Simulation_wrapper/Simulation_i/to_distance_conv_0/pulse" type="array">
+      <obj_property name="ElementShortName">pulse[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pulse[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Simulation_wrapper/Simulation_i/to_distance_conv_0/distance" type="array">
+      <obj_property name="ElementShortName">distance[15:0]</obj_property>
+      <obj_property name="ObjectShortName">distance[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>

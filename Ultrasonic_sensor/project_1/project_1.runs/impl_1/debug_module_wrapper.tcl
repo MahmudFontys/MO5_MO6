@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.runs/impl_1/debug_module_wrapper.tcl"
+  variable script "C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.runs/impl_1/debug_module_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -133,17 +133,17 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.cache/wt [current_project]
-  set_property parent.project_path C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.xpr [current_project]
-  set_property ip_output_repo C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.cache/wt [current_project]
+  set_property parent.project_path C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.xpr [current_project]
+  set_property ip_output_repo C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.runs/synth_1/debug_module_wrapper.dcp
+  add_files -quiet C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.runs/synth_1/debug_module_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Users/mgurl/Documents/School/Year_2/DD/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/debug_module/debug_module.bd
+  add_files C:/Users/mgurl/Documents/GitHub/MO5_MO6/Ultrasonic_sensor/project_1/project_1.srcs/sources_1/bd/debug_module/debug_module.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
   read_xdc C:/Users/mgurl/Downloads/base.xdc
